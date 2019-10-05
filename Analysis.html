@@ -1,0 +1,1596 @@
+<!DOCTYPE HTML>
+<html>
+<link rel="StyleSheet" href="../../../css/Forms_HTML/Analysis.css" type="text/css">
+<link rel="StyleSheet" href="Analysis.css" type="text/css">
+<link type="text/css" rel="stylesheet" href="../../../css/Forms_HTML/BatchProcess.css">
+<link type="text/css" rel="stylesheet" href="BatchProcess.css">
+<!-- jquery Calender CSS  Files Starts -->
+<link type="text/css" rel="stylesheet" href="../../../css/Forms_HTML/jquery.ui.all.css">
+<link type="text/css" rel="stylesheet" href="jquery.ui.all.css">
+<link type="text/css" rel="stylesheet" href="../../../css/Forms_HTML/Calender.css">
+<link type="text/css" rel="stylesheet" href="Calender.css">
+<!-- jquery Calender CSS  Files Ends -->
+<title>Analysis</title>
+<style type="text/css">
+<!--
+.container { width: 700px;}
+.sectionHeading {font-size: 14px; font-weight: bold; margin-bottom: 5px;}
+.formHeader { width: 700px;}
+.formBody { width: 730px;}
+.sectionData .subSection { width: 100%;}
+.mcPage { page-break-after: always; width: 700px;}
+
+-->
+</style>
+<form id="Analysis" method="post" action="#">
+		<div class="formHeader" width="700px">
+		  <div id="mcPage_001" class="mcPage">
+					<table width="700" align="left" style="margin-left:10px;border-spacing:0;">
+                        <tr valign="middle">
+                            <td style="height:60px;" class="nobdrLtMid">
+                                <img src="../../../css/Forms_HTML/images/factorytalkLogo.jpg"></td>
+                            <td colspan="2" class="formTitle"style="text-align: center; padding-left:150px;">ANALYSIS</td>
+                            <td class="templateNumber">Template:&nbsp;
+                                <span id="tempno"></span>&nbsp;&nbsp;&nbsp;Rev: <span id="revno"></span>
+            <span style="display:none">
+                <input type="text" class="headerfield" id="mastercontrol.template.number"
+                       name="mastercontrol.template.number" title="Template Number" readonly="yes" value="" />
+                <input type="text" class="headerfield" id="mastercontrol.template.revision"
+                       name="mastercontrol.template.revision" title="Template Revision" readonly="yes" value="">
+            </span>
+                            </td>
+                        </tr>
+                          <tr>
+                            <td width="150" class="nobdrRtMid"><label for="mastercontrol.form.number">Analysis Number: </label></td>
+                            <td width="200" class="nobdrLtTop"><input name="mastercontrol.form.number" type="text" class="textfield readonly"
+                       id="mastercontrol.form.number" title="Analysis Number" readonly="readonly"style="width:100%;"/></td>
+                            <td class="nobdrRtMid"><label for="mastercontrol.form.created">Date Created:</label></td>
+                            <td width="200" class="nobdrLtTop"><input name="mastercontrol.form.created" type="text" class="textfield readonly"
+                       id="mastercontrol.form.created" title="Date Created" 
+                       readonly="readonly"style="width:100%;"/></td>
+                          </tr>
+                          <tr>
+                            <td width="150" class="nobdrRtMid"><label for="mastercontrol.form.creatorname">Created By:</label></td>
+                            <td width="200" class="nobdrLtTop"><input name="mastercontrol.form.creatorname" type="text" id="mastercontrol.form.creatorname"
+                                   class="textfield readonly" title="Creator Name" style="width:100%;"></td>
+                            <td class="nobdrRtMid"><label for="mastercontrol.route.stepname">Current Route Step:</label></td>
+                            <td width="200" class="nobdrLtMid"><span class="nobdrLtTop">
+                              <input name="mastercontrol.route.stepname" type="text" class="textfield readonly"
+                       id="mastercontrol.route.stepname" title="Current Route Step"
+                       readonly="readonly"style="width:100%;"/>
+                            </span></td>
+                          </tr>
+                          <tr class="botcapCenTop">
+                            <td width="150" class="nobdrLtMid">&nbsp;</td>
+                            <td width="200" class="nobdrLtMid">&nbsp;</td>
+                            <td class="nobdrLtMid">&nbsp;</td>
+                            <td width="200" class="nobdrLtMid">&nbsp;</td>
+                          </tr>
+            </table>
+		  </div>
+		</div>
+	  <div class="formBody"><div class="tabber" id="AITabs">
+	    <div class="tabbertab" title="General Information">
+					<div id="mcPage_003" class="mcPage">
+						<div class="sectionData">
+							<div class="subSection">
+
+								<div class="leftLabel">
+
+									<table width="700" align="left" style="margin-left:10px;border-spacing:0;">
+                                      <tr class="botcapCenTop">
+                                        <td class="nobdrLtMid">&nbsp;</td>
+                                        <td width="170" class="nobdrLtMid">&nbsp;</td>
+                                        <td class="nobdrLtMid">&nbsp;</td>
+                                        <td width="170" class="nobdrLtMid">&nbsp;</td>
+                                      </tr>
+                                      <tr class="nobdrLtMid">
+                                        <td class="nobdrRtMid">Source:</td>
+                                        <td width="170" class="nobdrLtTop"><input name="txtSource" type="text" class="textfield readonly" id="txtSource"
+                                               title="Source"  value="" readonly="readonly">
+                                        </td>
+                                        <td class="nobdrRtMid">Sample Size:</td>
+                                        <td width="170" class="nobdrLtMid"><input name="txtSampleSize" type="text" class="readonly"
+                                               id="txtSampleSize" title="Sample Size"
+                                               maxlength="5" readonly="readonly" style="width: 50px;"> kg
+                                        </td>
+                                      </tr>
+                                      <tr class="nobdrLtMid">
+                                        <td class="nobdrRtMid">Source Reference:</td>
+                                        <td width="170" class="nobdrLtTop"><input name="txtSourceReference" type="text" class="readonly"
+                                               id="txtSourceReference" title="Source Reference" style="width: 100%"
+                                               readonly="readonly" >
+                                        </td>
+                                        <td class="nobdrLtMid"><span class="subField">
+                                          <input name="mastercontrol.links.view.source" type="button" class="toolbarOrangebtn"
+                                               id="mastercontrol.links.view.source" title="View Source"
+                                              value="View Source">
+                                        </span></td>
+                                        <td width="170" class="nobdrLtMid"><span class="subField"> </span></td>
+                                      </tr>
+                                      <tr class="nobdrLtMid">
+                                        <td class="nobdrRtMid"><label for="txtSourceTitle">Source Title:</label>
+                                        </td>
+                                        <td colspan="3" class="nobdrLtTop"><input name="txtSourceTitle" type="text" class="readonly"
+                                               id="txtSourceTitle" title="Source Title" readonly="readonly"
+                                                style="width: 100%;">
+                                        </td>
+                                      </tr>
+                                      <tr class="nobdrLtMid">
+                                        <td class="nobdrRtTop"><label for="txtAnalysisDesc">Analysis Description:</label>
+                                        </td>
+                                        <td colspan="4" class="nobdrLtMid">
+                                            <textarea name="txtAnalysisDesc" class="longtextarea" id="txtAnalysisDesc"
+                                                      style="width: 100%" title="Analysis Description"></textarea></td>
+                                      </tr>
+                                      <tr class="nobdrLtMid">
+                                        <td colspan="2" class="nobdrLtMid">Related Documents - Attachments and Links</td>
+                                        <td class="nobdrLtMid">&nbsp;</td>
+                                        <td width="170" class="nobdrLtMid">&nbsp;</td>
+                                      </tr>
+                                        <tr>
+                                            <td width="21%" align="right" valign="top">
+                                                <input name="mastercontrol.attachments.add.Related" type="button" class="toolbarOrangebtn"
+                                                       id="mastercontrol.attachments.add.Related"
+                                                       title="Click to View or Add Attachments" value="Attached Files"
+                                                       onfocus="SetSize()" onmouseup="checkWin()" /></td>
+                                            <td width="29%" valign="top">
+                                                <select name="mastercontrol.attachments.Related" size="1" multiple="multiple"
+                                                        disabled="disabled" class="listfield" id="mastercontrol.attachments.Related"
+                                                        title="Related Files" style="width: 100%;height: 22px;">
+                                                </select>
+                                            </td>
+                                            <td width="21%" align="right" valign="top">
+                                                <input name="mastercontrol.links.add.Related" type="button" class="toolbarOrangebtn"
+                                                       id="mastercontrol.links.add.Related" title="Click to View or Add Links"
+                                                       value="Linked Documents" onfocus="SetSize()"
+                                                       onmouseup="checkWin()"/></td>
+                                            <td width="29%" valign="top">
+                                                <select name="mastercontrol.links.Related" size="1" multiple="multiple"
+                                                        disabled="disabled" class="listfield" id="mastercontrol.links.Related"
+                                                        title="Related Documentation" style="width: 100%;height: 22px;">
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </table>
+							  </div>
+								<div class="clearBoth"></div>
+							</div>
+							<div class="subSection">
+								
+								<div class="clearBoth"></div>
+						  </div>
+						</div>
+					</div>
+				</div>
+				<!-- TAB DIV ENDS -->
+				<!-- TAB DIV STARTS -->
+				<div class="tabbertab" title="Analysis">
+					<div id="mcPage_004">
+						<div class="sectionData">
+							<div class="subSection">
+								<table width="700" align="left" style="margin-left:10px;border-spacing:0;">
+              <tr class="nobdrLtMid">
+                <td class="nobdrRtTop"><label for="txtAnalysisNotes">Analysis Details:</label>
+                </td>
+                <td colspan="4" class="nobdrLtMid">
+                    <textarea name="txtAnalysisNotes" class="longtextarea" id="txtAnalysisNotes"
+                              title="Analysis Notes" style="width: 100%" ></textarea>
+                </td>
+              </tr>
+              <tr class="nobdrLtMid">
+                <td class="nobdrRtMid">&nbsp;</td>
+                <td width="170" class="nobdrLtMid">&nbsp;</td>
+                <td class="nobdrLtMid">&nbsp;</td>
+                <td width="170" class="nobdrLtMid">&nbsp;</td>
+              </tr>
+              <tr class="nobdrLtMid">
+                  <td width="170" class="nobdrRtMid"><label for="chbAnalysisDispo">Sample Disposition:</label></td>
+                <td class="nobdrCenMid"><input type="radio" id="chbAnalysisDispo" name="chbAnalysisDispo"
+                                                   class="checkboxfield" title="Issue Disposition"
+                                                   value="Pass">
+                    <span style="vertical-align:middle; padding-right:10px;">Pass</span> </td>
+                <td width="170"><span style="vertical-align:middle;">
+                  <input type="radio" id="chbAnalysisDispo" name="chbAnalysisDispo"
+                                                   class="checkboxfield" title="Issue Disposition"
+                                                   value="Fail">
+                </span> <span style="vertical-align:middle; padding-right:10px;">Fail</span></td>
+                  <td width="170" class="nobdrLtMid">&nbsp;</td>
+              </tr>
+              <tr class="nobdrLtMid">
+                <td class="nobdrLtMid">&nbsp;</td>
+                <td width="170" class="nobdrLtMid">&nbsp;</td>
+                <td class="nobdrLtMid">&nbsp;</td>
+                <td width="170" class="nobdrLtMid">&nbsp;</td>
+              </tr>
+              <tr class="nobdrLtMid">
+                <td colspan="2" class="nobdrLtMid"><span class="nobdrLtMid">Analysis Attachments and Links</span></td>
+                <td class="nobdrLtMid">&nbsp;</td>
+                <td width="170" class="nobdrLtMid">&nbsp;</td>
+              </tr>
+            <tr>
+                <td width="21%" align="right" valign="top">
+                    <input name="mastercontrol.attachments.add.Analysis" type="button" class="toolbarOrangebtn"
+                           id="mastercontrol.attachments.add.Analysis"
+                           title="Click to View or Add Attachments" value="Attached Files"
+                           onfocus="SetSize()" onmouseup="checkWin()" /></td>
+                <td width="29%" valign="top">
+                    <select name="mastercontrol.attachments.Analysis" size="1" multiple="multiple"
+                            disabled="disabled" class="listfield" id="mastercontrol.attachments.Analysis"
+                            title="Analysis Files" style="width: 100%;height: 22px;">
+                    </select>
+                </td>
+                <td width="21%" align="right" valign="top">
+                    <input name="mastercontrol.links.add.Analysis" type="button" class="toolbarOrangebtn"
+                           id="mastercontrol.links.add.Analysis" title="Click to View or Add Links"
+                           value="Linked Documents" onfocus="SetSize()"
+                           onmouseup="checkWin()"/></td>
+                <td width="29%" valign="top">
+                    <select name="mastercontrol.links.Analysis" size="1" multiple="multiple"
+                            disabled="disabled" class="listfield" id="mastercontrol.links.Analysis"
+                            title="Analysis Documentation" style="width: 100%;height: 22px;">
+                    </select>
+                </td>
+            </tr>
+            </table>
+					  </div>
+					</div>
+				</div>
+			</div>		
+			<!-- TAB DIV ENDS -->
+			<!-- Signatures T1) Start -->
+			<div class="tabbertab" title="Signatures">
+				<!-- Page 2 Start -->
+				<div id="mcPage_002" class="mcPage">
+					<div class="sectionData">
+						<div class="sectionHeading">
+							<input type="text" id="mastercontrol.route.stepnameat.step1"
+								   name="mastercontrol.route.stepnameat.step1" title="Step1 Esig Meaning"
+								   value="Analysis Initiation" size="100" class="sigmeaning" readonly="readonly" >
+						</div>
+						<div class="signatureData">
+							<!-- Begin step 1 signature data -->
+							<table class="signatureTable" cellpadding="0" cellspacing="0">
+							  <thead>
+								<tr>
+								  <th scope="col" class="signatureName"><label
+					for="mastercontrol.route.esig.users.step1">Name</label></th>
+								  <th scope="col" class="signatureDate"><label
+					for="mastercontrol.route.esig.timestamps.step1">Date</label>
+								  </th>
+								  <th scope="col" class="signatureStatus"><label for="mastercontrol.route.esig.sigstatus.step1">Signoff Status</label></th>
+								</tr>
+							  </thead>
+							  <tbody>
+								<tr>
+								  <td><textarea id="mastercontrol.route.esig.users.step1"
+							  name="mastercontrol.route.esig.users.step1"
+							  class="signatureField" rows="1" title="Step1 Name"
+							  readonly="readonly"></textarea></td>
+								  <td><textarea id="mastercontrol.route.esig.timestamps.step1"
+							  name="mastercontrol.route.esig.timestamps.step1"
+							  class="signatureField"  rows="1" title="Step1 Date"
+							  readonly="readonly"></textarea></td>
+								  <td><textarea id="mastercontrol.route.esig.sigstatus.step1"
+							  name="mastercontrol.route.esig.sigstatus.step1"
+							  class="signatureField" rows="1" title="Step1 Signoff Status"
+							  readonly="readonly"></textarea></td>
+								</tr>
+							  </tbody>
+							</table>
+					  </div>
+
+						<div class="sectionHeading">
+							<input type="text" id="mastercontrol.route.stepnameat.step2"
+								   name="mastercontrol.route.stepnameat.step2" title="Step2 Esig Meaning"
+								   value="Analysis Completion" size="100" class="sigmeaning" readonly="readonly" >
+						</div>
+						<div class="signatureData">
+							<!-- Begin step 2 signature data -->
+							<table class="signatureTable" cellpadding="0" cellspacing="0">
+							  <thead>
+								<tr>
+								  <th scope="col" class="signatureName"> <label for="mastercontrol.route.esig.users.step2">Name</label></th>
+								  <th scope="col" class="signatureDate"> <label for="mastercontrol.route.esig.timestamps.step2">Date</label></th>
+								  <th scope="col" class="signatureStatus"> <label for="mastercontrol.route.esig.sigstatus.step2">Signoff Status </label></th>
+								</tr>
+							  </thead>
+							  <tbody>
+								<tr>
+								  <td><textarea id="mastercontrol.route.esig.users.step2"
+												  name="mastercontrol.route.esig.users.step2"
+												  class="signatureField" rows="1" title="Step2 Name"
+												  readonly="readonly"></textarea></td>
+								  <td><textarea id="mastercontrol.route.esig.timestamps.step2"
+												  name="mastercontrol.route.esig.timestamps.step2"
+												  class="signatureField" rows="1" title="Step2 Date"
+												  readonly="readonly"></textarea></td>
+								  <td><textarea id="mastercontrol.route.esig.sigstatus.step2"
+												  name="mastercontrol.route.esig.sigstatus.step2"
+												  class="signatureField" rows="1" title="Step2 Signoff Status"
+												  readonly="readonly"></textarea></td>
+								</tr>
+							  </tbody>
+							</table>
+					  </div>
+
+						<div class="sectionHeading">
+							<input type="text" id="mastercontrol.route.stepnameat.step3"
+								   name="mastercontrol.route.stepnameat.step3" title="Step3 Esig Meaning"
+								   value="Completion Acknowledgment" size="100" class="sigmeaning" readonly="readonly" >
+						</div>
+						<div class="signatureData">
+							<!-- Begin step 3 signature data -->
+							<table class="signatureTable" cellpadding="0" cellspacing="0">
+							  <thead>
+								<tr>
+								  <th scope="col" class="signatureName"><label
+					for="mastercontrol.route.esig.users.step3">Name</label></th>
+								  <th scope="col" class="signatureDate"><label
+					for="mastercontrol.route.esig.timestamps.step3">Date</label>
+								  </th>
+								  <th scope="col" class="signatureStatus"><label for="mastercontrol.route.esig.sigstatus.step3">Signoff Status</label></th>
+								</tr>
+							  </thead>
+							  <tbody>
+								<tr>
+								  <td><textarea id="mastercontrol.route.esig.users.step3"
+												  name="mastercontrol.route.esig.users.step3"
+												  class="signatureField" rows="1" title="Step3 Name"
+												  readonly="readonly"></textarea></td>
+								  <td><textarea id="mastercontrol.route.esig.timestamps.step3"
+												  name="mastercontrol.route.esig.timestamps.step3"
+												  class="signatureField" rows="1" title="Step3 Date"
+												  readonly="readonly"></textarea></td>
+								  <td><textarea id="mastercontrol.route.esig.sigstatus.step3"
+												  name="mastercontrol.route.esig.sigstatus.step3"
+												  class="signatureField" rows="1" title="Step3 Signoff Status"
+												  readonly="readonly"></textarea></td>
+								</tr>
+							  </tbody>
+							</table>
+					  </div>
+						<!-- DIV contains all hidden and keyword fields -->
+						<div style="display:none">
+
+							<input name="mastercontrol.route.stepnumber" type="hidden"
+								   id="mastercontrol.route.stepnumber" title="Step Number">
+							<input name="mastercontrol.route.stepid" type="hidden"
+								   id="mastercontrol.route.stepid" title="Step ID">
+							<input name="mastercontrol.form.title" type="hidden"
+								   id="mastercontrol.form.title" title="Form Title">
+
+							<select name="mastercontrol.route.stepstatus.step1" size="1" multiple
+									id="mastercontrol.route.stepstatus.step1" title="Step1 Statuses" style="display:none">
+							</select>
+							<select name="mastercontrol.route.stepstatus.step2" size="1" multiple
+									id="mastercontrol.route.stepstatus.step2" title="Step2 Statuses" style="display:none">
+							</select>
+							<select name="mastercontrol.route.stepstatus.step3" size="1" multiple
+									id="mastercontrol.route.stepstatus.step3" title="Step3 Statuses" style="display:none">
+							</select>
+							<select id="mastercontrol.route.stepusers.step2"  name="mastercontrol.route.stepusers.step2"
+									title="Route Step2 Users" style="display:none" multiple="multiple"> </select>
+							<select id="mastercontrol.route.currentstepusers"  name="mastercontrol.route.currentstepusers"
+									title="Current step Users" style="display:none" multiple="multiple"> </select>
+							<input  type="hidden" name="ProxyAIFields" id="ProxyAIFields" title="ProxyAIFields" value="">
+							<input  type="hidden" name="hlpCAPANoImpTask" id="hlpCAPANoImpTask" title="CAPA No Imp Task"
+									value="">
+							<input  type="hidden" name="hlpCAPAImpTaskProxy" id="hlpCAPAImpTaskProxy"
+									title="CAPA ImpTask Proxy" value="">
+							<!-- Added for bug ref #23410-->
+							<input  type="hidden" name="hlpLaunchingFormUsersList" id="hlpLaunchingFormUsersList"
+									title="Task Owners List" value="">
+							<!--Added For 26185-->
+							<select id="mastercontrol.links.source" multiple  size="1" name="mastercontrol.links.source"
+									title="Source Ref Links" style="display:none"></select>
+							<input type="hidden" id="txtDefaultTab" name="txtDefaultTab" title="Default Tab To Open">
+						</div>
+						<!-- DIV contains all hidden and keyword fields ENDS-->
+					</div>
+				</div>
+			</div>
+			<!-- TAB DIV ENDS-->
+		</div>
+	</div>
+</form>
+
+<script type="text/javascript" src="../../../js/Forms_HTML/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="../../../js/Forms_HTML/sharedFunctions.js"></script>
+
+<script type="text/javascript">
+// Global Variables
+var nTA3Width = 610;
+var nTA3Height = 45;
+var nTA5Width = 610;
+var nTA5Height = 75;
+var nMaxChars = 2000;
+var nStepID;
+// Startup Script
+function StartupScript()
+{
+	nStepID = document.getElementById("mastercontrol.route.stepid").value;
+	document.getElementById("tempno").innerHTML = document.getElementById("mastercontrol.template.number").value;
+	document.getElementById("revno").innerHTML = document.getElementById("mastercontrol.template.revision").value;
+	// Setting date format 'dd-mmm-yyyy'
+	setDateFormat(document.getElementById("mastercontrol.form.created"));
+
+	if( nStepID == 1 )
+	{
+	  try
+	  {
+	  	 CopyCAPARefValues();
+
+		/* AI launched from CAPA General  added under bug ref #23383*/
+		 var capaImpTask = document.getElementById("hlpCAPAImpTaskProxy");
+		 var impTaskCAPANo = document.getElementById("hlpCAPANoImpTask");
+		 if(capaImpTask.value!="")
+		 {
+		   document.getElementById("txtAnalysisDesc").value = capaImpTask.value;
+		 }
+
+		 var usersList = document.getElementById("hlpLaunchingFormUsersList").value;
+		 if(usersList!="")
+		 {
+		    usersList = usersList.split('*');
+			var oStepUsers = document.getElementById("mastercontrol.route.stepusers.step2");
+			ClearList(oStepUsers);
+			
+			for(var i=0; i<usersList.length; i++)
+			{
+				oStepUsers.options.add(new Option(usersList[i],usersList[i]));
+				oStepUsers.options[i].selected = true;
+			}
+		 }
+	  }
+	  catch(ex)
+	  {
+	     var errMsg=ex;
+	  }
+	}
+	SetTaskTitle();
+	try
+	{
+		SetSize();
+	}
+	catch(e)
+	{}
+	RetainHeightWidth();
+}
+
+function SetTaskTitle()
+{
+	// Set Title to include the Finding Summary so it appears in My Tasks and Tracking.
+	var taskTitle = document.getElementById("mastercontrol.form.title");
+	var formNum = document.getElementById("mastercontrol.form.number");
+    var refNum = document.getElementById("txtSourceReference");
+	taskTitle.value = formNum.value +": "+ refNum.value;
+}
+
+/*
+function to manipulate toolbar button
+button_signoff
+*/
+
+/* Expandable Multiline Textarea Functions */
+function RetainHeightWidth()
+{
+	var i, count = 0;
+	for (i=0; i<document.forms[0].elements.length; i++)
+	{
+		if (document.forms[0].elements[i].type=="textarea")
+		{
+			if (document.forms[0].elements[i].name.indexOf('mastercontrol.route.esig')<0)
+			{
+				setTextAreaHeightWidth(document.forms[0].elements[i]);
+			}
+		}
+	}
+}
+function GrowUP(oTextArea)
+{
+	//var oTextArea = document.getElementById(sTextAreaName);
+	var nTextLength = oTextArea.value.length;
+	
+	// adding a fix to firefox behavior on a long text without space
+	if (navigator.appName.indexOf("Microsoft") == -1)
+	{
+		// SPACE COUNT
+		var aSpaces = oTextArea.value.match(/(\s)/g);
+		var nSpaceCount;
+		aSpaces==null?nSpaceCount=0:nSpaceCount=aSpaces.length;
+		
+		// ENTER COUNT
+		var aEnter = oTextArea.value.match(/(\r\n|[\r\n])/g);
+		var nEnterCount
+		aEnter==null?nEnterCount=0:nEnterCount=aEnter.length;
+		
+
+		// oneline paragraph without spaces
+		if (nTextLength>0 && oTextArea.scrollWidth>nTA3Width)
+		{
+			var nChars = 80;
+			var aLine = oTextArea.value.match(RegExp('.{1,'+ nChars +'}','g'));
+			oTextArea.value = aLine.join("\n");
+		}
+		
+		if (nSpaceCount==nEnterCount && oTextArea.scrollWidth>nTA3Width)
+		{
+			var sValue1 = oTextArea.value.substring(0,nTextLength-2);
+			var sValue2 = oTextArea.value.substring(nTextLength-2,nTextLength);
+			
+			oTextArea.value = sValue1 + "\n" + sValue2;
+		}
+	}
+	
+	setTextAreaHeightWidth(oTextArea);
+	
+	if (nTextLength >= nMaxChars)
+	{
+		oTextArea.value = oTextArea.value.substring(0, nMaxChars);
+		return;
+	}
+}
+
+function setTextAreaHeightWidth(oTextArea)
+{
+	var nTextLength = oTextArea.value.length;
+	var sTextAreaType = oTextArea.className;
+	var nHeight, nWidth;
+	
+	if (sTextAreaType.indexOf("long")>=0)
+	{
+		nHeight = nTA5Height;
+	}
+	else
+	{
+		nHeight = 18;
+		nWidth = 200;
+	}
+		
+	// setting default height and width for the text area
+	//oTextArea.style.width = nWidth+"px";
+	oTextArea.style.height = nHeight+"px";
+	if (nTextLength>0 && oTextArea.scrollHeight>=nHeight)
+	{
+		oTextArea.style.height = oTextArea.scrollHeight + "px";
+		if(navigator.userAgent.indexOf("Firefox") > 0)
+		{
+			oTextArea.style.height = oTextArea.scrollHeight+20 + "px";
+		}
+		if(navigator.userAgent.indexOf("IE") > 0)
+		{
+			if(oTextArea.name == "txtAnalysisNotes")
+			{
+				oTextArea.style.height = oTextArea.scrollHeight+10 + "px";
+			}
+		}
+	}
+}
+
+function ClearList(list)
+{
+ list.length =0;
+}
+
+//This method sets the date format
+//
+function setDateFormat(thisDate)
+{
+			if(thisDate.value.search(' ') <= 0)
+				return;
+			var myDate = new Date(thisDate.value);
+			var allMonths = new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+			var day = myDate.getDate();
+			var monthInteger = myDate.getMonth();
+			var year = myDate.getFullYear();
+			var monthString = "";
+			
+			switch (monthInteger)
+			{
+				case 0 :
+						monthString = allMonths[0];
+						break;
+				case 1 :
+						monthString = allMonths[1];
+						break;
+				case 2 :
+						monthString = allMonths[2];
+						break;
+				case 3:
+						monthString = allMonths[3];
+						break;
+				case 4:
+						monthString = allMonths[4];
+						break;
+				case 5:
+						monthString = allMonths[5];
+						break;
+				case 6:
+						monthString = allMonths[6];
+						break;
+				case 7:
+						monthString = allMonths[7];
+						break;
+				case 8:
+						monthString = allMonths[8];
+						break;
+				case 9:
+						monthString = allMonths[9];
+						break;
+				case 10:
+						monthString = allMonths[10];
+						break;
+				case 11:
+						monthString = allMonths[11];
+						break;
+				case 12:
+						monthString = allMonths[12];
+						break;
+			}
+
+			if(day < 10)
+			{
+				day = "0"+day;
+			}
+			
+			thisDate.value =  day+"-"+monthString+"-"+year;
+}
+
+// Check Date Format should be dd-mmm-yyyy
+function CheckDateFormat(theField)
+{
+	var dMonth,dDay,dYear;
+	var found = false;
+	var thisDateField = document.getElementById(theField.name);
+		if(thisDateField.value != "")
+		{
+			var month = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec".split(",");
+			  dPart = theField.value.split("-");
+			  if(dPart.length!=3)
+			  {
+				alert("Enter Date in this format: dd-mmm-yyyy");
+				document.getElementById(theField.name).value = "";
+				theField.focus();
+				return false;
+			  }
+			  if(dPart[2] < 1000 || dPart[2] >9999 )
+			  {
+			  	alert("Enter Date in this format: dd-mmm-yyyy");
+				document.getElementById(theField.name).value = "";
+				 theField.select();
+				 theField.focus();
+				return false;
+			  }
+			  else
+			  {
+			  	dYear = dPart[2];
+			  }
+			  if(dPart[0] < 10 )
+			  {
+			  	var dayInteger = parseInt(dPart[0],10);
+			  	dDay = "0"+dayInteger;
+			  }
+			  else
+			  {
+			  	dDay = parseInt(dPart[0],10);
+			  }
+			  
+			  for(i=0;i<month.length;i++)
+			  {
+				if(dPart[1].toLowerCase()==month[i].toLowerCase())
+				{
+				  dPart[1]=i;
+				  found = true;
+				  dMonth = month[i];
+				  break;
+				}
+			  }
+			  nDate = new Date(dPart[2], dPart[1], dPart[0]);
+			  var nYear = nDate.getFullYear(); // Bug 27595
+			  nYear = Trim(nYear.toString());
+			  var year = Trim(dPart[2]);
+			  if(isNaN(nDate) || dPart[2]!=nDate.getFullYear()|| year.length!=nYear.length || dPart[1]!=nDate.getMonth() || dPart[0]!=nDate.getDate())
+			  {
+				alert("Enter Date in this format: dd-mmm-yyyy");
+				document.getElementById(theField.name).value = "";
+				 theField.select();
+				 theField.focus();
+				return false;
+			  } 
+			  else 
+			  {
+			  		 if(found == false)
+					 {
+							alert("Enter Date in this format: dd-mmm-yyyy");
+							document.getElementById(theField.name).value = "";
+							 theField.select();
+							 theField.focus();
+							return false;
+					  }
+					  else
+					  {
+					  	thisDateField.value = dDay+"-"+dMonth+"-"+dYear;
+						return true;
+					  }
+			  }
+		}
+}
+
+// adding workaround to execute StartupScript() because body tag is removed.
+function addLoadEvent(func)
+{
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function')
+	{
+		window.onload = func;
+	}
+	else
+	{
+		window.onload = function() 
+		{
+			if (oldonload)
+			{
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+
+function encryptString()
+{
+	var sepStr = ".a<=~@z>^*15m~Z{$}';!";
+	var sepStr_esc = escape(sepStr);
+	var split_escString = sepStr_esc.split("%");
+	return split_escString.join("+");
+}
+
+// For Sizing the Attachment & Links Set
+var timer; 
+function checkWin()
+{
+	timer = self.setInterval("clearTimer()",10);
+}
+function clearTimer()
+{
+	try
+	{
+		if(wDocTypes.closed)
+		{
+			SetSize();
+			timer = window.clearInterval(timer);
+		}
+	 
+	}
+	catch(ex)
+	{}
+	  
+}
+/* Following function added to make form printing look better in IE */
+function IEPrintScale() {
+	// only do this for ie7
+	if(parent.document.getElementById("print") && navigator.userAgent.indexOf("Firefox") == -1) {
+		var myRatio=parseInt((parseInt(parent.document.body.offsetWidth)/640)*100);
+		myRatio=(myRatio > 100 ? myRatio : 100);
+		document.styleSheets[document.styleSheets.length-1].rules[0].style.zoom=myRatio+"%";
+	}
+}
+addLoadEvent(StartupScript);
+
+/* Following function added to make form printing look better in IE */
+addLoadEvent(IEPrintScale);
+</script>
+
+<script type="text/javascript">
+/*==================================================
+             START TABING INTERFACE JavaScript 
+(LAST MODIFIED/Configured:21-Dec-2009, Developer: Zubair Aslam (ZASLAM), Bug Ref: 24415)
+*===================================================*/
+/*==================================================
+  $Id: tabber.js,v 1.9 2006/04/27 20:51:51 pat Exp $
+  tabber.js by Patrick Fitzgerald pat@barelyfitz.com
+
+  Documentation can be found at the following URL:
+  http://www.barelyfitz.com/projects/tabber/
+
+  License (http://www.opensource.org/licenses/mit-license.php)
+
+  Copyright (c) 2006 Patrick Fitzgerald
+
+  Permission is hereby granted, free of charge, to any person
+  obtaining a copy of this software and associated documentation files
+  (the "Software"), to deal in the Software without restriction,
+  including without limitation the rights to use, copy, modify, merge,
+  publish, distribute, sublicense, and/or sell copies of the Software,
+  and to permit persons to whom the Software is furnished to do so,
+  subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be
+  included in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+  ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+  ==================================================*/
+
+function tabberObj(argsObj)
+{
+  var arg; /* name of an argument to override */
+
+  /* Element for the main tabber div. If you supply this in argsObj,
+     then the init() method will be called.
+  */
+  this.div = null;
+
+  /* Class of the main tabber div */
+  this.classMain = "tabber";
+
+  /* Rename classMain to classMainLive after tabifying
+     (so a different style can be applied)
+  */
+  this.classMainLive = "tabberlive";
+
+  /* Class of each DIV that contains a tab */
+  this.classTab = "tabbertab";
+
+  /* Class to indicate which tab should be active on startup */
+  this.classTabDefault = "tabbertabdefault";
+
+  /* Class for the navigation UL */
+  this.classNav = "tabbernav";
+
+  /* When a tab is to be hidden, instead of setting display='none', we
+     set the class of the div to classTabHide. In your screen
+     stylesheet you should set classTabHide to display:none.  In your
+     print stylesheet you should set display:block to ensure that all
+     the information is printed.
+  */
+  this.classTabHide = "tabbertabhide";
+
+  /* Class to set the navigation LI when the tab is active, so you can
+     use a different style on the active tab.
+  */
+  this.classNavActive = "tabberactive";
+
+  /* Elements that might contain the title for the tab, only used if a
+     title is not specified in the TITLE attribute of DIV classTab.
+  */
+  this.titleElements = ['h2','h3','h4','h5','h6'];
+
+  /* Should we strip out the HTML from the innerHTML of the title elements?
+     This should usually be true.
+  */
+  this.titleElementsStripHTML = true;
+
+  /* If the user specified the tab names using a TITLE attribute on
+     the DIV, then the browser will display a tooltip whenever the
+     mouse is over the DIV. To prevent this tooltip, we can remove the
+     TITLE attribute after getting the tab name.
+  */
+  this.removeTitle = true;
+
+  /* If you want to add an id to each link set this to true */
+  this.addLinkId = true;
+
+  /* If addIds==true, then you can set a format for the ids.
+     <tabberid> will be replaced with the id of the main tabber div.
+     <tabnumberzero> will be replaced with the tab number
+       (tab numbers starting at zero)
+     <tabnumberone> will be replaced with the tab number
+       (tab numbers starting at one)
+     <tabtitle> will be replaced by the tab title
+       (with all non-alphanumeric characters removed)
+   */
+  this.linkIdFormat = '<tabberid>nav<tabnumberone>';
+
+  /* You can override the defaults listed above by passing in an object:
+     var mytab = new tabber({property:value,property:value});
+  */
+  for (arg in argsObj) { this[arg] = argsObj[arg]; }
+
+  /* Create regular expressions for the class names; Note: if you
+     change the class names after a new object is created you must
+     also change these regular expressions.
+  */
+  this.REclassMain = new RegExp('\\b' + this.classMain + '\\b', 'gi');
+  this.REclassMainLive = new RegExp('\\b' + this.classMainLive + '\\b', 'gi');
+  this.REclassTab = new RegExp('\\b' + this.classTab + '\\b', 'gi');
+  this.REclassTabDefault = new RegExp('\\b' + this.classTabDefault + '\\b', 'gi');
+  this.REclassTabHide = new RegExp('\\b' + this.classTabHide + '\\b', 'gi');
+
+  /* Array of objects holding info about each tab */
+  this.tabs = new Array();
+
+  /* If the main tabber div was specified, call init() now */
+  if (this.div) {
+
+    this.init(this.div);
+
+    /* We don't need the main div anymore, and to prevent a memory leak
+       in IE, we must remove the circular reference between the div
+       and the tabber object. */
+    this.div = null;
+  }
+}
+
+
+/*--------------------------------------------------
+  Methods for tabberObj
+  --------------------------------------------------*/
+
+
+tabberObj.prototype.init = function(e)
+{
+  /* Set up the tabber interface.
+
+     e = element (the main containing div)
+
+     Example:
+     init(document.getElementById('mytabberdiv'))
+   */
+
+  var
+  childNodes, /* child nodes of the tabber div */
+  i, i2, /* loop indices */
+  t, /* object to store info about a single tab */
+  defaultTab=0, /* which tab to select by default */
+  DOM_ul, /* tabbernav list */
+  DOM_li, /* tabbernav list item */
+  DOM_a, /* tabbernav link */
+  aId, /* A unique id for DOM_a */
+  headingElement; /* searching for text to use in the tab */
+
+  /* Verify that the browser supports DOM scripting */
+  if (!document.getElementsByTagName) { return false; }
+
+  /* If the main DIV has an ID then save it. */
+  if (e.id) {
+    this.id = e.id;
+  }
+
+  /* Clear the tabs array (but it should normally be empty) */
+  this.tabs.length = 0;
+
+  /* Loop through an array of all the child nodes within our tabber element. */
+  childNodes = e.childNodes;
+  for(i=0; i < childNodes.length; i++) {
+
+    /* Find the nodes where class="tabbertab" */
+    if(childNodes[i].className &&
+       childNodes[i].className.match(this.REclassTab)) {
+      
+      /* Create a new object to save info about this tab */
+      t = new Object();
+      
+      /* Save a pointer to the div for this tab */
+      t.div = childNodes[i];
+      
+      /* Add the new object to the array of tabs */
+      this.tabs[this.tabs.length] = t;
+
+      /* If the class name contains classTabDefault,
+	 then select this tab by default.
+      */
+      if (childNodes[i].className.match(this.REclassTabDefault)) {
+	defaultTab = this.tabs.length-1;
+      }
+    }
+  }
+
+  /* Create a new UL list to hold the tab headings */
+  DOM_ul = document.createElement("ul");
+  DOM_ul.className = this.classNav;
+  
+  /* Loop through each tab we found */
+  for (i=0; i < this.tabs.length; i++) {
+
+    t = this.tabs[i];
+
+    /* Get the label to use for this tab:
+       From the title attribute on the DIV,
+       Or from one of the this.titleElements[] elements,
+       Or use an automatically generated number.
+     */
+    t.headingText = t.div.title;
+
+    /* Remove the title attribute to prevent a tooltip from appearing */
+    if (this.removeTitle) { t.div.title = ''; }
+
+    if (!t.headingText) {
+
+      /* Title was not defined in the title of the DIV,
+	 So try to get the title from an element within the DIV.
+	 Go through the list of elements in this.titleElements
+	 (typically heading elements ['h2','h3','h4'])
+      */
+      for (i2=0; i2<this.titleElements.length; i2++) {
+	headingElement = t.div.getElementsByTagName(this.titleElements[i2])[0];
+	if (headingElement) {
+	  t.headingText = headingElement.innerHTML;
+	  if (this.titleElementsStripHTML) {
+	    t.headingText.replace(/<br>/gi," ");
+	    t.headingText = t.headingText.replace(/<[^>]+>/g,"");
+	  }
+	  break;
+	}
+      }
+    }
+
+    if (!t.headingText) {
+      /* Title was not found (or is blank) so automatically generate a
+         number for the tab.
+      */
+      t.headingText = i + 1;
+    }
+
+    /* Create a list element for the tab */
+    DOM_li = document.createElement("li");
+
+    /* Save a reference to this list item so we can later change it to
+       the "active" class */
+    t.li = DOM_li;
+
+    /* Create a link to activate the tab */
+    DOM_a = document.createElement("a");
+    DOM_a.appendChild(document.createTextNode(t.headingText));
+    DOM_a.href = "javascript:void(null);";
+    DOM_a.title = t.headingText;
+    DOM_a.onclick = this.navClick;
+
+    /* Add some properties to the link so we can identify which tab
+       was clicked. Later the navClick method will need this.
+    */
+    DOM_a.tabber = this;
+    DOM_a.tabberIndex = i;
+
+    /* Do we need to add an id to DOM_a? */
+    if (this.addLinkId && this.linkIdFormat) {
+
+      /* Determine the id name */
+      aId = this.linkIdFormat;
+      aId = aId.replace(/<tabberid>/gi, this.id);
+      aId = aId.replace(/<tabnumberzero>/gi, i);
+      aId = aId.replace(/<tabnumberone>/gi, i+1);
+      aId = aId.replace(/<tabtitle>/gi, t.headingText.replace(/[^a-zA-Z0-9\-]/gi, ''));
+
+      DOM_a.id = aId;
+    }
+
+    /* Add the link to the list element */
+    DOM_li.appendChild(DOM_a);
+
+    /* Add the list element to the list */
+    DOM_ul.appendChild(DOM_li);
+  }
+
+  /* Add the UL list to the beginning of the tabber div */
+  e.insertBefore(DOM_ul, e.firstChild);
+
+  /* Make the tabber div "live" so different CSS can be applied */
+  e.className = e.className.replace(this.REclassMain, this.classMainLive);
+
+  /* Activate the default tab, and do not call the onclick handler */
+  this.tabShow(defaultTab);
+  
+  /* If the user specified an onLoad function, call it now. */
+  if (typeof this.onLoad == 'function') {
+    this.onLoad({tabber:this});
+  }
+
+  return this;
+};
+
+
+tabberObj.prototype.navClick = function(event)
+{
+  /* This method should only be called by the onClick event of an <A>
+     element, in which case we will determine which tab was clicked by
+     examining a property that we previously attached to the <A>
+     element.
+
+     Since this was triggered from an onClick event, the variable
+     "this" refers to the <A> element that triggered the onClick
+     event (and not to the tabberObj).
+
+     When tabberObj was initialized, we added some extra properties
+     to the <A> element, for the purpose of retrieving them now. Get
+     the tabberObj object, plus the tab number that was clicked.
+  */
+
+  var
+  rVal, /* Return value from the user onclick function */
+  a, /* element that triggered the onclick event */
+  self, /* the tabber object */
+  tabberIndex, /* index of the tab that triggered the event */
+  onClickArgs; /* args to send the onclick function */
+
+  a = this;
+  if (!a.tabber) { return false; }
+
+  self = a.tabber;
+  tabberIndex = a.tabberIndex;
+
+  /* Remove focus from the link because it looks ugly.
+     I don't know if this is a good idea...
+  */
+  a.blur();
+
+  /* If the user specified an onClick function, call it now.
+     If the function returns false then do not continue.
+  */
+  if (typeof self.onClick == 'function') {
+
+    onClickArgs = {'tabber':self, 'index':tabberIndex, 'event':event};
+
+    /* IE uses a different way to access the event object */
+    if (!event) { onClickArgs.event = window.event; }
+
+    rVal = self.onClick(onClickArgs);
+    if (rVal === false) { return false; }
+  }
+
+  self.tabShow(tabberIndex);
+  
+
+  return false;
+};
+
+
+tabberObj.prototype.tabHideAll = function()
+{
+  var i; /* counter */
+
+  /* Hide all tabs and make all navigation links inactive */
+  for (i = 0; i < this.tabs.length; i++) {
+    this.tabHide(i);
+  }
+};
+
+
+tabberObj.prototype.tabHide = function(tabberIndex)
+{
+  var div;
+
+  if (!this.tabs[tabberIndex]) { return false; }
+
+  /* Hide a single tab and make its navigation link inactive */
+  div = this.tabs[tabberIndex].div;
+
+  /* Hide the tab contents by adding classTabHide to the div */
+  if (!div.className.match(this.REclassTabHide)) {
+    div.className += ' ' + this.classTabHide;
+  }
+  this.navClearActive(tabberIndex);
+
+  return this;
+};
+
+
+tabberObj.prototype.tabShow = function(tabberIndex)
+{
+  var div;
+
+  if (!this.tabs[tabberIndex]) { return false; }
+
+  /* Hide all the tabs first */
+  this.tabHideAll();
+
+  /* Get the div that holds this tab */
+  div = this.tabs[tabberIndex].div;
+
+  /* Remove classTabHide from the div */
+  div.className = div.className.replace(this.REclassTabHide, '');
+
+  /* Mark this tab navigation link as "active" */
+  this.navSetActive(tabberIndex);
+
+  /* If the user specified an onTabDisplay function, call it now. */
+  if (typeof this.onTabDisplay == 'function') {
+    this.onTabDisplay({'tabber':this, 'index':tabberIndex});
+  }
+
+  return this;
+};
+
+tabberObj.prototype.navSetActive = function(tabberIndex)
+{
+
+  this.tabs[tabberIndex].li.className = this.classNavActive;
+
+  return this;
+};
+
+
+tabberObj.prototype.navClearActive = function(tabberIndex)
+{
+
+  this.tabs[tabberIndex].li.className = '';
+
+  return this;
+};
+
+function tabberAutomatic(tabberArgs)
+{
+  /* This function finds all DIV elements in the document where
+     class=tabber.classMain, then converts them to use the tabber
+     interface.
+
+     tabberArgs = an object to send to "new tabber()"
+  */
+  var
+    tempObj, /* Temporary tabber object */
+    divs, /* Array of all divs on the page */
+    i; /* Loop index */
+
+  if (!tabberArgs) { tabberArgs = {}; }
+
+  /* Create a tabber object so we can get the value of classMain */
+  tempObj = new tabberObj(tabberArgs);
+
+  /* Find all DIV elements in the document that have class=tabber */
+
+  /* First get an array of all DIV elements and loop through them */
+  divs = document.getElementsByTagName("div");
+  for (i=0; i < divs.length; i++) {
+    
+    /* Is this DIV the correct class? */
+    if (divs[i].className &&
+	divs[i].className.match(tempObj.REclassMain)) {
+      
+      /* Now tabify the DIV */
+      tabberArgs.div = divs[i];
+      divs[i].tabber = new tabberObj(tabberArgs);
+    }
+  }
+  
+  return this;
+}
+
+function tabberAutomaticOnLoad(tabberArgs)
+{
+  var oldOnLoad;
+
+  if (!tabberArgs) { tabberArgs = {}; }
+
+  oldOnLoad = window.onload;
+  if (typeof window.onload != 'function') {
+    window.onload = function() {
+      tabberAutomatic(tabberArgs);
+    };
+  } else {
+    window.onload = function() {
+      oldOnLoad();
+      tabberAutomatic(tabberArgs);
+	  SetTabsFormat();
+    };
+  }
+}
+
+if (typeof tabberOptions == 'undefined') {
+
+    tabberAutomaticOnLoad();
+
+} else {
+
+  if (!tabberOptions['manualStartup']) {
+    tabberAutomaticOnLoad(tabberOptions);
+  }
+
+}
+</script>
+
+<script type="text/javascript">
+
+// Global Variables
+var DataExist = false;
+var EditablefieldExist = false;
+
+
+/**************
+START SCRIPT TO SETUP DYNAMIC TAB FORMATTING
+****************/
+function SetTabsFormat()
+{
+	var i;
+	var TabObject;
+	var ValueExist;
+	
+	var stepId;
+	var AInum;
+	AInum = document.getElementById("mastercontrol.form.number").value;
+	stepId  =  document.getElementById("mastercontrol.route.stepid").value*1;
+
+
+	// Following check make ensure Form is online.
+	 if(AInum != "")
+	 {
+		//--------- FORMAT ALL Issue Review TABS----------------------------
+		for(i=1; i<=3; i++)
+		{
+			switch (i)
+			{
+				case 1:
+				TabObject =  document.getElementById("mcPage_002");
+				ValueExist = isTabContainData(TabObject);
+					if(ValueExist)
+					{
+						document.getElementById('AITabsnav'+i).style.color = 'black';
+					}
+					else
+						{
+							document.getElementById('AITabsnav'+i).style.color = 'gray';
+						}
+				break;
+				
+				case 2:
+				TabObject =  document.getElementById("mcPage_003");
+				FormatingTab(TabObject, i);
+				break;
+				
+				case 3:
+				TabObject =  document.getElementById("mcPage_004");
+				FormatingTab(TabObject, i);
+				break;
+							
+			} // End Switch
+				
+		 } //End For Loop for Issue Review Tabs Numbering
+		
+			
+	} // End   if(IRnum != "")
+
+
+}
+//=================== End Function SetTabsFormat() ================
+
+function isTabContainData(TabObj)
+{
+	DataExist = false;
+	var inputElements=TabObj.getElementsByTagName("input");
+	var TextAreaElements = TabObj.getElementsByTagName("textarea");
+	var SelectElements = TabObj.getElementsByTagName("select");
+		
+	for (var x = 0; x < inputElements.length; x++)
+		{ 
+		if(!DataExist)
+		{
+	
+			if(inputElements[x].type != "hidden")
+			{
+				//alert(inputElements[x].type);
+				if(inputElements[x].className=="longtextfield readonly" || inputElements[x].className=="textfield" || inputElements[x].className=="textfield Step2Calendar" || inputElements[x].className=="textfield readonly" || inputElements[x].className=="checkboxfield" || inputElements[x].className=="longtextfield" || inputElements[x].className=="textfield1" || inputElements[x].className=="ttextfield" || inputElements[x].className=="ttextfield readonly" || inputElements[x].className=="textfieldnowidth readonly" || inputElements[x].className=="checkboxfield required")
+				if(inputElements[x].value != "")
+				{
+					if(inputElements[x].className!="checkboxfield")
+					{
+						if(inputElements[x].className!="checkboxfield required")
+						{
+							
+							DataExist = true; 
+						}
+						else
+						{	
+					
+							if(inputElements[x].checked)
+							DataExist = true;
+						}
+					}
+					else
+					{
+						if(inputElements[x].checked)
+						DataExist = true;
+					}
+						
+				} //End if(inputElements[x].value != "")
+				
+			}	//End if(inputElements[x].type != "hidden")  
+			
+		}	//End If (!DataExist)			
+		} //End For Loop
+	
+		//Now Check Values in TextArea Fields
+		if(!DataExist)
+		{
+		 	
+		 for (var x = 0; x < TextAreaElements.length; x++)
+		 {
+		
+			if(TextAreaElements[x].className=="textarea" || TextAreaElements[x].className=="ttextarea" || TextAreaElements[x].className=="ltextarea" || TextAreaElements[x].className=="shorttextarea" || TextAreaElements[x].className=="shorttextarea readonly" || TextAreaElements[x].className=="longtextarea readonly" || TextAreaElements[x].className=="longtextarea" || TextAreaElements[x].className=="signatureField")
+		
+				if(TextAreaElements[x].value != "")
+				{
+				
+					DataExist = true; 
+					
+				} //End if(TextAreaElements[x].value != "")
+				 			
+		 }	//End For Loop	
+		
+		} //End If (!DataExist)
+
+		//Now Check Values in Single-Select/Mult-Select Fields
+		if(!DataExist)
+		{
+	
+		 for (var x = 0; x < SelectElements.length; x++)
+		 {
+			if(SelectElements[x].style.display != 'none')
+			{
+			SelectElements[x].className = Trim(SelectElements[x].className);
+			
+			if(SelectElements[x].className=="dropdownfield" || SelectElements[x].className=="dropdownfield readonly" || SelectElements[x].className=="listfield" || SelectElements[x].className=="listfield readonly" || SelectElements[x].className=="tdropdownfield1" || SelectElements[x].className=="tdropdownfield")
+				//Check Value 
+				if(SelectElements[x].value != "")
+				{
+					if(SelectElements[x].value != 0)
+					{					
+						DataExist = true; 
+					}
+				} 
+				else if(SelectElements[x].length != 0)
+				{
+					DataExist = true;
+				}
+				//End if(SelectElements[x].value != "")
+				
+			}//End if(SelectElements[x].style.display != 'none')
+		
+		 }	//End For Loop		
+		} //End If (!DataExist)
+
+	
+	return DataExist;
+
+
+}
+
+function EditableFields(TabObj)
+{
+	EditablefieldExist = false;
+	var inputElements=TabObj.getElementsByTagName("input");
+	var TextAreaElements = TabObj.getElementsByTagName("textarea");
+	var SelectElements = TabObj.getElementsByTagName("select");
+	
+	//----------- LOOP FOR INPUT ELEMENTS ------------
+	for (var x = 0; x < inputElements.length; x++)
+		{
+			if(!EditablefieldExist)
+			{
+				if(inputElements[x].type != "hidden")
+				{
+				
+					if(inputElements[x].className=="longtextfield readonly" || inputElements[x].className=="textfield" || inputElements[x].className=="textfield readonly" || inputElements[x].className=="checkboxfield" || inputElements[x].className=="longtextfield" || inputElements[x].className=="textfield1" || inputElements[x].className=="ttextfield" || inputElements[x].className=="ttextfield readonly" || inputElements[x].className=="textfieldnowidth" || inputElements[x].className=="textfieldnowidth readonly" || inputElements[x].className=="checkboxfield required")
+					{
+						if(!inputElements[x].disabled)
+						{
+							EditablefieldExist = true;
+						}
+						
+					}
+					
+					
+				}	//End if(inputElements[x].type != "hidden")  
+			
+			} // End if(!EditablefieldExist)
+		} //End For Loop
+	
+		//----------- LOOP FOR TEXTAREA ELEMENTS ------------
+		if(!EditablefieldExist)
+		{
+		//Now Check Disabled TextArea Fields
+		 for (var x = 0; x < TextAreaElements.length; x++)
+		 {
+		
+			if(TextAreaElements[x].className=="textarea" || TextAreaElements[x].className=="ttextarea" || TextAreaElements[x].className=="ltextarea" || TextAreaElements[x].className=="shorttextarea" || TextAreaElements[x].className=="shorttextarea readonly" || TextAreaElements[x].className=="longtextarea readonly" || TextAreaElements[x].className=="longtextarea")
+			{
+				
+				if(!TextAreaElements[x].disabled)
+				{
+					EditablefieldExist = true;
+					
+				} //End if(TextAreaElements[x].disabled)
+				
+			}
+				 			
+		 }	//End For Loop	
+		
+		} //End if(!EditablefieldExist)
+
+		//----------- LOOP FOR SELECT ELEMENTS ------------
+		if(!EditablefieldExist)
+		{
+	
+		//Now Check Disabled Single-Select/Mult-Select Fields
+		 for (var x = 0; x < SelectElements.length; x++)
+		 {
+						
+			if(SelectElements[x].className=="dropdownfield" || SelectElements[x].className=="dropdownfield readonly" || SelectElements[x].className=="listfield" || SelectElements[x].className=="listfield readonly" || SelectElements[x].className=="tdropdownfield1" || SelectElements[x].className=="tdropdownfield")
+			 { 
+			
+				if(SelectElements[x].name.indexOf("mastercontrol.attachments") == 0 || SelectElements[x].name.indexOf("mastercontrol.links") == 0)
+				{
+					//do nothing				
+				}
+				else if(!SelectElements[x].disabled)
+				{
+					EditablefieldExist = true;
+					
+				} //End if(!SelectElements[x].disabled)
+				
+			}
+		
+		 }	//End For Loop		
+		} //End if(!EditablefieldExist)
+		
+	
+	return EditablefieldExist;
+
+
+}
+// ========= END FUNCTION EditableFields(TabObj) ===================
+
+function DynamicTabLabel(TabLabelText, DynamicFieldLabel)
+{
+	var xy;
+	for(xy=0; xy<document.anchors.length; xy++)
+	{	
+		if(document.anchors[xy].innerHTML==TabLabelText)
+		{
+			if(document.getElementById(DynamicFieldLabel).className == "dynamicRequiredLabel")
+			document.anchors[xy].innerHTML = "* "+ TabLabelText;
+		}
+		else if(document.anchors[xy].innerHTML=="* "+ TabLabelText)
+		{
+			if(document.getElementById(DynamicFieldLabel).className != "dynamicRequiredLabel")
+			{
+			TabLabelText = TabLabelText.slice(0);
+			document.anchors[xy].innerHTML = TabLabelText;
+			}
+		}
+	}
+}
+
+function FormatingTab(TabPage, TabNum)
+{
+			var ValueExist = false;
+			var FieldsEnabled = false;
+			
+			ValueExist = isTabContainData(TabPage);
+			FieldsEnabled = EditableFields(TabPage);
+		
+				if(ValueExist == true && FieldsEnabled == true)
+				{
+					document.getElementById('AITabsnav'+TabNum).style.color = 'black';
+					document.getElementById('AITabsnav'+TabNum).style.fontWeight = '700';
+				}
+				else if(ValueExist == false && FieldsEnabled == true)
+				{
+					document.getElementById('AITabsnav'+TabNum).style.color = 'black';
+					document.getElementById('AITabsnav'+TabNum).style.fontWeight = '700';
+				}
+				else if(ValueExist == true && FieldsEnabled == false)
+				{
+					document.getElementById('AITabsnav'+TabNum).style.color = 'black';
+					document.getElementById('AITabsnav'+TabNum).style.fontWeight = 'normal';
+				}
+				else if(ValueExist == false && FieldsEnabled == false)
+				{
+					document.getElementById('AITabsnav'+TabNum).style.color = 'gray';
+					document.getElementById('AITabsnav'+TabNum).style.fontWeight = 'normal';
+				}
+
+} // End function FormatingTab(TabPage, TabNum)
+
+function Trim(value) 
+{
+  return value.replace(/^\s+|\s+$/g, "");
+}
+
+</script>
+</html>

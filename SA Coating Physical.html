@@ -1,0 +1,934 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0013)about:internet -->
+<html>
+<head>
+   <title>Coating Physical</title>
+<link rel="stylesheet" href="../../../css/Forms_HTML/BatchProcess.css" />
+<link rel="stylesheet" href="BatchProcess.css" />
+<script type="text/javascript" src="../../../js/Forms_HTML/eBPR.js"></script>
+<script type="text/javascript" src="eBPR.js"></script>
+</head>
+    <body>
+    <div style="display:none">
+        <select id="mastercontrol.links.source" multiple  size="1" name="mastercontrol.links.source"
+                title="Source Ref Links" style="display:none"></select>
+
+    </div>
+    <div id="FormTitle" class="formTitle" style="text-align:center;width:800px;margin-left:15px;"></div>
+        <form id="formc" title="formc" method="post" action="" target="_top">
+          <table width="700" align="left" style="margin-left:10px;border-spacing:0;">
+                          <tr align="center" valign="middle">
+                            <td height="60" colspan="2" class="nobdrRtMid"><div align="center">
+							<img src="factorytalkLogo.jpg" 
+							style="float: left;width:175px;height:37px;"></div></td>
+                            <td height="60" colspan="12" valign="middle" class="formTitle"><div align="left">
+                                <p>PHYSICAL INSPECTION OF COATED TABLETS<br>
+                              </p>
+                                </div></td>
+                          </tr>
+                          <tr>
+                            <td height="23" class="nobdrRtMid">Product Code:</td>
+                            <td class="nobdrLtMid">
+                              <input id="Product Code" type="text" title="Product Code" class="readonly" readonly="yes"
+                                     style="width:100%;"></td>
+                            <td class="nobdrRtMid">Product Description:</td>
+                            <td colspan="3" class="nobdrLtMid">
+                              <input id="Description" title="Product Description" class="readonly" style="width:100%;"
+                                     type="text" readonly="readonly"/>
+                              <span style="display:none">
+                              <input type="text" class="headerfield" id="mastercontrol.template.number" 
+                                   name="mastercontrol.template.number" title="Template Number" readonly="readonly" value="" >
+                              <input type="text" class="headerfield" id="mastercontrol.template.revision" 
+                                   name="mastercontrol.template.revision" title="Template Revision" readonly="readonly" value="">
+                            </span> </td>
+                          </tr>
+                          <tr>
+                            <td class="nobdrRtMid"><label for="mastercontrol.form.number">Record #</label></td>
+                            <td class="nobdrLtTop">
+                              <input id="mastercontrol.form.number" name="mastercontrol.form.number"  type="text" class="readonly"
+                           readonly="readonly" style="width:100%;" title="Coat InProcess number" value=""/>
+                            </td>
+                            <td class="nobdrRtMid">Batch size:</td>
+                            <td class="nobdrLtMid">
+                              <input id="BatchSize" type="text" value="" class="readonly" title="BatchSize" style="width:100%;"/>
+                           </td>
+                            <td class="nobdrRtMid">Form Issued:</td>
+                            <td class="nobdrLtMid">
+                              <input id="mastercontrol.form.created" name="mastercontrol.form.created" title="InProcess Date"
+                           type="text" value="" class="readonly" readonly="readonly" style="width:100%;"/>
+                          </td>
+                          </tr>
+                          <tr>
+                            <td class="nobdrRtMid">MBR#</td>
+                            <td class="nobdrLtTop">
+                              <input id="MBRNo" type="text" class="readonly" readonly="yes" title="Batch number" value="" style="width:100%;"/>
+							</td>
+                            <td class="nobdrLtMid">
+                              <input name="mastercontrol.links.view.source" type="button" class="toolbarOrangebtn" id="mastercontrol.links.view.source"
+                           title="View Source" value="View Source" alt="View Source">
+                            </span></td>
+                            <td class="nobdrRtMid">&nbsp;</td>
+                            <td class="nobdrRtMid">Issued by:</td>
+                            <td class="nobdrLtMid">
+                              <input id="mastercontrol.form.creator" name="mastercontrol.form.creator" title="creator"
+                           type="text"
+                           value="" class="readonly" readonly="readonly" style="width:100%;"/>
+                           </td>
+                          </tr>
+                          <tr class="botcapCenTop">
+                            <td class="nobdrLtMid">&nbsp;</td>
+                            <td class="nobdrLtMid">&nbsp;</td>
+                            <td class="nobdrLtMid">&nbsp;</td>
+                            <td class="nobdrLtMid">&nbsp;</td>
+                            <td class="nobdrLtMid">&nbsp;</td>
+                            <td class="nobdrLtMid">&nbsp;</td>
+                          </tr>
+      </table>
+		<br>
+        <div class="clearBoth"></div>
+        <div id="tab">
+                 <div id="sheet-1" style="padding: 1em 1.4em;">
+                    <table width= "700" cellspacing="0" cellpadding="0" style="border-spacing:0;">
+					<col width="64"/>
+					<col width="64"/>
+					<col width="61"/>
+					<col width="61"/>
+					<col width="19"/>
+					<col width="89"/>
+					<col width="19"/>
+					<col width="89"/>
+					<col width="19"/>
+					<col width="89"/>
+					<col width="19"/>
+					<col width="89"/>
+					<col width="19"/>
+					<col width="89"/>
+					<col width="19"/>
+					<col width="89"/>
+					<tr>
+                        <td class="allbdrRtMid" rowspan = "2">Notes:</td>
+						<td class="allbdrLtMid" colspan = "15"> 1. Click checkbox if no defects observed. 
+                            Enter serial number for observed defects and inform QA-Executive for AQL inspection.</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrLtMid" colspan = "15"> 2. Sample size for this inspection
+                            <input id="SampleSize" title="SampleSize" class="readonly" readonly="readonly"
+                                   type="text" style="width:50px; height:18px;"/> pills.</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" colspan = "4">DEFECTS</td>
+						<td class="allbdrCenMid" colspan = "2">Sample 1</td>
+						<td class="allbdrCenMid" colspan = "2">Sample 2</td>
+						<td class="allbdrCenMid" colspan = "2">Sample 3</td>
+						<td class="allbdrCenMid" colspan = "2">Sample 4</td>
+						<td class="allbdrCenMid" colspan = "2">Sample 5</td>
+						<td class="allbdrCenMid" colspan = "2">Sample 6</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrLtMid" colspan = "4">Foreign product</td>
+						<td class="allbdrLtMid">
+							<input id="FOD1" type="checkbox" class="enterdata" style=""  onclick="" title="FOD1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="FODsn1" type="text" value="" class="enterdata" style="width:100%" onchange="" title="FODsn1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="FOD2" type="checkbox" class="enterdata" style=""  onclick="" title="FOD2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="FODsn2" type="text" value="" class="enterdata" style="width:100%" onchange="" title="FODsn2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="FOD3" type="checkbox" class="enterdata" style=""  onclick="" title="FOD3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="FODsn3" type="text" value="" class="enterdata" style="width:100%" onchange="" title="FODsn3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="FOD4" type="checkbox" class="enterdata" style=""  onclick="" title="FOD4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="FODsn4" type="text" value="" class="enterdata" style="width:100%" onchange="" title="FODsn4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="FOD5" type="checkbox" class="enterdata" style=""  onclick="" title="FOD5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="FODsn5" type="text" value="" class="enterdata" style="width:100%" onchange="" title="FODsn5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="FOD6" type="checkbox" class="enterdata" style=""  onclick="" title="FOD6" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="FODsn6" type="text" value="" class="enterdata" style="width:100%" onchange="" title="FODsn6" />
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrLtMid" colspan = "4">Broken</td>
+						<td class="allbdrLtMid">
+							<input id="Broken1" type="checkbox" class="enterdata" style=""  onclick="" title="Broken1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BrokenSN1" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BrokenSN1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Broken2" type="checkbox" class="enterdata" style=""  onclick="" title="Broken2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BrokenSN2" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BrokenSN2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Broken3" type="checkbox" class="enterdata" style=""  onclick="" title="Broken3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BrokenSN3" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BrokenSN3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Broken4" type="checkbox" class="enterdata" style=""  onclick="" title="Broken4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BrokenSN4" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BrokenSN4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Broken5" type="checkbox" class="enterdata" style=""  onclick="" title="Broken5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BrokenSN5" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BrokenSN5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Broken6" type="checkbox" class="enterdata" style=""  onclick="" title="Broken6" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BrokenSN6" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BrokenSN6" />
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrLtMid" colspan = "4">Capping</td>
+						<td class="allbdrLtMid">
+							<input id="Capping1" type="checkbox" class="enterdata" style=""  onclick="" title="Capping1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="CappingSN1" type="text" value="" class="enterdata" style="width:100%" onchange="" title="CappingSN1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Capping2" type="checkbox" class="enterdata" style=""  onclick="" title="Capping2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="CappingSN2" type="text" value="" class="enterdata" style="width:100%" onchange="" title="CappingSN2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Capping3" type="checkbox" class="enterdata" style=""  onclick="" title="Capping3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="CappingSN3" type="text" value="" class="enterdata" style="width:100%" onchange="" title="CappingSN3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Capping4" type="checkbox" class="enterdata" style=""  onclick="" title="Capping4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="CappingSN4" type="text" value="" class="enterdata" style="width:100%" onchange="" title="CappingSN4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Capping5" type="checkbox" class="enterdata" style=""  onclick="" title="Capping5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="CappingSN5" type="text" value="" class="enterdata" style="width:100%" onchange="" title="CappingSN5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Capping6" type="checkbox" class="enterdata" style=""  onclick="" title="Capping6" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="CappingSN6" type="text" value="" class="enterdata" style="width:100%" onchange="" title="CappingSN6" />
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrLtMid" colspan = "4">Film peeling off</td>
+						<td class="allbdrLtMid">
+							<input id="Peeling1" type="checkbox" class="enterdata" style=""  onclick="" title="Peeling1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="PeelingSN1" type="text" value="" class="enterdata" style="width:100%" onchange="" title="PeelingSN1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Peeling2" type="checkbox" class="enterdata" style=""  onclick="" title="Peeling2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="PeelingSN2" type="text" value="" class="enterdata" style="width:100%" onchange="" title="PeelingSN2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Peeling3" type="checkbox" class="enterdata" style=""  onclick="" title="Peeling3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="PeelingSN3" type="text" value="" class="enterdata" style="width:100%" onchange="" title="PeelingSN3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Peeling4" type="checkbox" class="enterdata" style=""  onclick="" title="Peeling4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="PeelingSN4" type="text" value="" class="enterdata" style="width:100%" onchange="" title="PeelingSN4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Peeling5" type="checkbox" class="enterdata" style=""  onclick="" title="Peeling5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="PeelingSN5" type="text" value="" class="enterdata" style="width:100%" onchange="" title="PeelingSN5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Peeling6" type="checkbox" class="enterdata" style=""  onclick="" title="Peeling6" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="PeelingSN6" type="text" value="" class="enterdata" style="width:100%" onchange="" title="PeelingSN6" />
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrLtMid" colspan = "4">Illegible embossing</td>
+						<td class="allbdrLtMid">
+							<input id="Illegible1" type="checkbox" class="enterdata" style=""  onclick="" title="Illegible1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="IllegibleSN1" type="text" value="" class="enterdata" style="width:100%" onchange="" title="IllegibleSN1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Illegible2" type="checkbox" class="enterdata" style=""  onclick="" title="Illegible2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="IllegibleSN2" type="text" value="" class="enterdata" style="width:100%" onchange="" title="IllegibleSN2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Illegible3" type="checkbox" class="enterdata" style=""  onclick="" title="Illegible3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="IllegibleSN3" type="text" value="" class="enterdata" style="width:100%" onchange="" title="IllegibleSN3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Illegible4" type="checkbox" class="enterdata" style=""  onclick="" title="Illegible4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="IllegibleSN4" type="text" value="" class="enterdata" style="width:100%" onchange="" title="IllegibleSN4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Illegible5" type="checkbox" class="enterdata" style=""  onclick="" title="Illegible5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="IllegibleSN5" type="text" value="" class="enterdata" style="width:100%" onchange="" title="IllegibleSN5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Illegible6" type="checkbox" class="enterdata" style=""  onclick="" title="Illegible6" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="IllegibleSN6" type="text" value="" class="enterdata" style="width:100%" onchange="" title="IllegibleSN6" />
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrLtMid" colspan = "4">Coating eruption</td>
+						<td class="allbdrLtMid">
+							<input id="Eruption1" type="checkbox" class="enterdata" style=""  onclick="" title="Eruption1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="EruptionSN1" type="text" value="" class="enterdata" style="width:100%" onchange="" title="EruptionSN1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Eruption2" type="checkbox" class="enterdata" style=""  onclick="" title="Eruption2" />
+						</td>
+                        <td class="allbdrCenMid">
+                            <input id="EruptionSN2" type="text" value="" class="enterdata" style="width:100%" onchange="" title="EruptionSN2" />
+                        </td>
+                        <td class="allbdrCenMid">
+							<input id="Eruption3" type="checkbox" class="enterdata" style=""  onclick="" title="Eruption3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="EruptionSN3" type="text" value="" class="enterdata" style="width:100%" onchange="" title="EruptionSN3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Eruption4" type="checkbox" class="enterdata" style=""  onclick="" title="Eruption4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="EruptionSN4" type="text" value="" class="enterdata" style="width:100%" onchange="" title="EruptionSN4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Eruption5" type="checkbox" class="enterdata" style=""  onclick="" title="Eruption5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="EruptionSN5" type="text" value="" class="enterdata" style="width:100%" onchange="" title="EruptionSN5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Eruption6" type="checkbox" class="enterdata" style=""  onclick="" title="Eruption6" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="EruptionSN6" type="text" value="" class="enterdata" style="width:100%" onchange="" title="EruptionSN6" />
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrLtMid" colspan = "4">Embedded surface spots</td>
+						<td class="allbdrLtMid">
+							<input id="EmbeddedSpots1" type="checkbox" class="enterdata" style=""  onclick="" title="EmbeddedSpots1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="EmbeddedSpotsSN1" type="text" value="" class="enterdata" style="width:100%" onchange="" title="EmbeddedSpotsSN1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="EmbeddedSpots2" type="checkbox" class="enterdata" style=""  onclick="" title="EmbeddedSpots2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="EmbeddedSpotsSN2" type="text" value="" class="enterdata" style="width:100%" onchange="" title="EmbeddedSpotsSN2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="EmbeddedSpots3" type="checkbox" class="enterdata" style=""  onclick="" title="EmbeddedSpots3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="EmbeddedSpotsSN3" type="text" value="" class="enterdata" style="width:100%" onchange="" title="EmbeddedSpotsSN3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="EmbeddedSpots4" type="checkbox" class="enterdata" style=""  onclick="" title="EmbeddedSpots4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="EmbeddedSpotsSN4" type="text" value="" class="enterdata" style="width:100%" onchange="" title="EmbeddedSpotsSN4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="EmbeddedSpots5" type="checkbox" class="enterdata" style=""  onclick="" title="EmbeddedSpots5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="EmbeddedSpotsSN5" type="text" value="" class="enterdata" style="width:100%" onchange="" title="EmbeddedSpotsSN5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="EmbeddedSpots6" type="checkbox" class="enterdata" style=""  onclick="" title="EmbeddedSpots6" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="EmbeddedSpotsSN6" type="text" value="" class="enterdata" style="width:100%" onchange="" title="EmbeddedSpotsSN6" />
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrLtMid" colspan = "4">Picking</td>
+						<td class="allbdrLtMid">
+							<input id="Picking1" type="checkbox" class="enterdata" style=""  onclick="" title="Picking1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="PickingSN1" type="text" value="" class="enterdata" style="width:100%" onchange="" title="PickingSN1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Picking2" type="checkbox" class="enterdata" style=""  onclick="" title="Picking2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="PickingSN2" type="text" value="" class="enterdata" style="width:100%" onchange="" title="PickingSN2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Picking3" type="checkbox" class="enterdata" style=""  onclick="" title="Picking3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="PickingSN3" type="text" value="" class="enterdata" style="width:100%" onchange="" title="PickingSN3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Picking4" type="checkbox" class="enterdata" style=""  onclick="" title="Picking4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="PickingSN4" type="text" value="" class="enterdata" style="width:100%" onchange="" title="PickingSN4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Picking5" type="checkbox" class="enterdata" style=""  onclick="" title="Picking5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="PickingSN5" type="text" value="" class="enterdata" style="width:100%" onchange="" title="PickingSN5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Picking6" type="checkbox" class="enterdata" style=""  onclick="" title="Picking6" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="PickingSN6" type="text" value="" class="enterdata" style="width:100%" onchange="" title="PickingSN6" />
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrLtMid" colspan = "4">Surface not smooth</td>
+						<td class="allbdrLtMid">
+							<input id="SurfaceRough1" type="checkbox" class="enterdata" style=""  onclick="" title="SurfaceRough1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="SurfaceRoughSN1" type="text" value="" class="enterdata" style="width:100%" onchange="" title="SurfaceRoughSN1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="SurfaceRough2" type="checkbox" class="enterdata" style=""  onclick="" title="SurfaceRough2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="SurfaceRoughSN2" type="text" value="" class="enterdata" style="width:100%" onchange="" title="SurfaceRoughSN2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="SurfaceRough3" type="checkbox" class="enterdata" style=""  onclick="" title="SurfaceRough3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="SurfaceRoughSN3" type="text" value="" class="enterdata" style="width:100%" onchange="" title="SurfaceRoughSN3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="SurfaceRough4" type="checkbox" class="enterdata" style=""  onclick="" title="SurfaceRough4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="SurfaceRoughSN4" type="text" value="" class="enterdata" style="width:100%" onchange="" title="SurfaceRoughSN4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="SurfaceRough5" type="checkbox" class="enterdata" style=""  onclick="" title="SurfaceRough5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="SurfaceRoughSN5" type="text" value="" class="enterdata" style="width:100%" onchange="" title="SurfaceRoughSN5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="SurfaceRough6" type="checkbox" class="enterdata" style=""  onclick="" title="SurfaceRough6" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="SurfaceRoughSN6" type="text" value="" class="enterdata" style="width:100%" onchange="" title="SurfaceRoughSN6" />
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrLtMid" colspan = "4">Surface blemishes</td>
+						<td class="allbdrLtMid">
+							<input id="Blemishes1" type="checkbox" class="enterdata" style=""  onclick="" title="Blemishes1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BlemishesSN1" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BlemishesSN1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Blemishes2" type="checkbox" class="enterdata" style=""  onclick="" title="Blemishes2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BlemishesSN2" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BlemishesSN2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Blemishes3" type="checkbox" class="enterdata" style=""  onclick="" title="Blemishes3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BlemishesSN3" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BlemishesSN3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Blemishes4" type="checkbox" class="enterdata" style=""  onclick="" title="Blemishes4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BlemishesSN4" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BlemishesSN4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Blemishes5" type="checkbox" class="enterdata" style=""  onclick="" title="Blemishes5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BlemishesSN5" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BlemishesSN5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Blemishes6" type="checkbox" class="enterdata" style=""  onclick="" title="Blemishes6" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BlemishesSN6" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BlemishesSN6" />
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrLtMid" colspan = "4">Chips</td>
+						<td class="allbdrLtMid">
+							<input id="Chips1" type="checkbox" class="enterdata" style=""  onclick="" title="Chips1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="ChipsSN1" type="text" value="" class="enterdata" style="width:100%" onchange="" title="ChipsSN1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Chips2" type="checkbox" class="enterdata" style=""  onclick="" title="Chips2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="ChipsSN2" type="text" value="" class="enterdata" style="width:100%" onchange="" title="ChipsSN2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Chips3" type="checkbox" class="enterdata" style=""  onclick="" title="Chips3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="ChipsSN3" type="text" value="" class="enterdata" style="width:100%" onchange="" title="ChipsSN3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Chips4" type="checkbox" class="enterdata" style=""  onclick="" title="Chips4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="ChipsSN4" type="text" value="" class="enterdata" style="width:100%" onchange="" title="ChipsSN4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Chips5" type="checkbox" class="enterdata" style=""  onclick="" title="Chips5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="ChipsSN5" type="text" value="" class="enterdata" style="width:100%" onchange="" title="ChipsSN5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Chips6" type="checkbox" class="enterdata" style=""  onclick="" title="Chips6" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="ChipsSN6" type="text" value="" class="enterdata" style="width:100%" onchange="" title="ChipsSN6" />
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrLtMid" colspan = "4">Coating not uniform in color</td>
+						<td class="allbdrLtMid">
+							<input id="Discoloration1" type="checkbox" class="enterdata" style=""  onclick="" title="Discoloration1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="DiscolorationSN1" type="text" value="" class="enterdata" style="width:100%" onchange="" title="DiscolorationSN1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Discoloration2" type="checkbox" class="enterdata" style=""  onclick="" title="Discoloration2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="DiscolorationSN2" type="text" value="" class="enterdata" style="width:100%" onchange="" title="DiscolorationSN2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Discoloration3" type="checkbox" class="enterdata" style=""  onclick="" title="Discoloration3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="DiscolorationSN3" type="text" value="" class="enterdata" style="width:100%" onchange="" title="DiscolorationSN3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Discoloration4" type="checkbox" class="enterdata" style=""  onclick="" title="Discoloration4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="DiscolorationSN4" type="text" value="" class="enterdata" style="width:100%" onchange="" title="DiscolorationSN4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Discoloration5" type="checkbox" class="enterdata" style=""  onclick="" title="Discoloration5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="DiscolorationSN5" type="text" value="" class="enterdata" style="width:100%" onchange="" title="DiscolorationSN5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Discoloration6" type="checkbox" class="enterdata" style=""  onclick="" title="Discoloration6" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="DiscolorationSN6" type="text" value="" class="enterdata" style="width:100%" onchange="" title="DiscolorationSN6" />
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrLtMid" colspan = "4">Core not fully coated</td>
+						<td class="allbdrLtMid">
+							<input id="IncompleteCoating1" type="checkbox" class="enterdata" style=""  onclick="" title="IncompleteCoating1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="IncompleteCoatingSN1" type="text" value="" class="enterdata" style="width:100%" onchange="" title="IncompleteCoatingSN1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="IncompleteCoating" type="checkbox" class="enterdata" style=""  onclick="" title="IncompleteCoating" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="IncompleteCoatingSN2" type="text" value="" class="enterdata" style="width:100%" onchange="" title="IncompleteCoatingSN2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="IncompleteCoating3" type="checkbox" class="enterdata" style=""  onclick="" title="IncompleteCoating3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="IncompleteCoatingSN3" type="text" value="" class="enterdata" style="width:100%" onchange="" title="IncompleteCoatingSN3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="IncompleteCoating4" type="checkbox" class="enterdata" style=""  onclick="" title="IncompleteCoating4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="IncompleteCoatingSN4" type="text" value="" class="enterdata" style="width:100%" onchange="" title="IncompleteCoatingSN4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="IncompleteCoating5" type="checkbox" class="enterdata" style=""  onclick="" title="IncompleteCoating5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="IncompleteCoatingSN5" type="text" value="" class="enterdata" style="width:100%" onchange="" title="IncompleteCoatingSN5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="IncompleteCoating6" type="checkbox" class="enterdata" style=""  onclick="" title="IncompleteCoating6" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="IncompleteCoatingSN6" type="text" value="" class="enterdata" style="width:100%" onchange="" title="IncompleteCoatingSN6" />
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrLtMid" colspan = "4">Checked PDE (sign)</td>
+						<td class="allbdrCenMid">
+							<input id="BadPDE1" type="checkbox" class="enterdata" style=""  onclick="" title="BadPDE1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BadPDEsn1" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BadPDEsn1" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BadPDE2" type="checkbox" class="enterdata" style=""  onclick="" title="BadPDE2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BadPDEsn2" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BadPDEsn2" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BadPDE3" type="checkbox" class="enterdata" style=""  onclick="" title="BadPDE3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BadPDEsn3" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BadPDEsn3" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BadPDE4" type="checkbox" class="enterdata" style=""  onclick="" title="BadPDE4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BadPDEsn4" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BadPDEsn4" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BadPDE5" type="checkbox" class="enterdata" style=""  onclick="" title="BadPDE5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BadPDEsn5" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BadPDEsn5" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BadPDE6" type="checkbox" class="enterdata" style=""  onclick="" title="BadPDE6" />
+						</td>
+						<td class="allbdrCenMid">
+							<input id="BadPDEsn6" type="text" value="" class="enterdata" style="width:100%" onchange="" title="BadPDEsn6" />
+						</td>
+                    </tr>
+                    <tr style="height:30pt;">
+						<td class="allbdrRtTop" style="height:30pt;">Remarks:</td>
+						<td class="allbdrLtTop" style="height:30pt;" colspan = "15">
+							<textarea id="Remarks" class="enterdata"
+                                      style="width:100%;height:31pt;text-align:left;overflow-y:scroll;"
+                                      onchange="" onKeyDown="" title="Remarks" data-sheet="1" ></textarea>
+						</td>
+                    </tr>
+                </table>
+                </div>
+          </div>
+            <div class="sectionHeading" style="margin-left:20px;">
+                <input type="text" id="mastercontrol.route.stepnameat.step1"
+                       name="mastercontrol.route.stepnameat.step1"
+                       title="Step1 Esig Meaning" value="Inspection" size="100" class="sigmeaning" readonly="yes"/>
+            </div>
+            <div class="subSection">
+                <div class="signatureData">
+                    <table class="signatureTable" cellpadding="0" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th scope="col" class="signatureName"><label
+                                    for="mastercontrol.route.esig.users.step1">Name</label></th>
+                            <th scope="col" class="signatureDate"><label
+                                    for="mastercontrol.route.esig.timestamps.step1">Date</label>
+                            </th>
+                            <th scope="col" class="signatureStatus"><label for="mastercontrol.route.esig.sigstatus.step1">Signoff Status</label></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><textarea id="mastercontrol.route.esig.users.step1"
+                                          name="mastercontrol.route.esig.users.step1" class="signatureField"
+                                          title="Step1 Name" readonly="readonly"></textarea></td>
+                            <td><textarea id="mastercontrol.route.esig.timestamps.step1"
+                                          name="mastercontrol.route.esig.timestamps.step1" class="signatureField"
+                                          title="Step1 Date" readonly="readonly"></textarea></td>
+                            <td><textarea id="mastercontrol.route.esig.sigstatus.step1"
+                                          name="mastercontrol.route.esig.sigstatus.step1" class="signatureField"
+                                          title="Step1 Signoff Status" readonly="readonly"></textarea></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Signature Section Ends -->
+            <!-- Signature Section Starts -->
+            <div class="sectionHeading" style="margin-left:20px;">
+                <input type="text" id="mastercontrol.route.stepnameat.step2"
+                       name="mastercontrol.route.stepnameat.step2"
+                       title="Step2 Esig Meaning" value="Verification" size="100" class="sigmeaning" readonly="yes"/>
+            </div>
+            <div class="subSection">
+                <div class="signatureData">
+
+                    <table class="signatureTable" cellpadding="0" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th scope="col" class="signatureName"><label
+                                    for="mastercontrol.route.esig.users.step2">Name</label></th>
+                            <th scope="col" class="signatureDate"><label
+                                    for="mastercontrol.route.esig.timestamps.step2">Date</label>
+                            </th>
+                            <th scope="col" class="signatureStatus"><label for="mastercontrol.route.esig.sigstatus.step2">Signoff Status</label></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><textarea id="mastercontrol.route.esig.users.step2"
+                                          name="mastercontrol.route.esig.users.step2" class="signatureField"
+                                          title="Step2 Name" readonly="readonly"></textarea></td>
+                            <td><textarea id="mastercontrol.route.esig.timestamps.step2"
+                                          name="mastercontrol.route.esig.timestamps.step2" class="signatureField"
+                                          title="Step2 Date" readonly="readonly"></textarea></td>
+                            <td><textarea id="mastercontrol.route.esig.sigstatus.step2"
+                                          name="mastercontrol.route.esig.sigstatus.step2" class="signatureField"
+                                          title="Step2 Signoff Status" readonly="readonly"></textarea></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Signature Section Ends -->
+    </form>
+    </body>
+    <script type="text/javascript">
+function resetClick(){
+            document.formc.reset();
+            postcode();
+            recalc_onclick('');
+            LoadFromQueryString();
+        }
+
+function recalc_onclick(ctl){if (true) { }}
+function calc(data){var c1B19=data['Remarks'];var c1P18=data['BadPDEsn6'];var c1O18=data['BadPDE6'];var c1N18=data['BadPDEsn5'];var c1M18=data['BadPDE5'];var c1L18=data['BadPDEsn4'];var c1K18=data['BadPDE4'];var c1J18=data['BadPDEsn3'];var c1I18=data['BadPDE3'];var c1H18=data['BadPDEsn2'];var c1G18=data['BadPDE2'];var c1F18=data['BadPDEsn1'];var c1E18=data['BadPDE1'];var c1P17=data['IncompleteCoatingSN6'];var c1O17=data['IncompleteCoating6'];var c1N17=data['IncompleteCoatingSN5'];var c1M17=data['IncompleteCoating5'];var c1L17=data['IncompleteCoatingSN4'];var c1K17=data['IncompleteCoating4'];var c1J17=data['IncompleteCoatingSN3'];var c1I17=data['IncompleteCoating3'];var c1H17=data['IncompleteCoatingSN2'];var c1G17=data['IncompleteCoating'];var c1F17=data['IncompleteCoatingSN1'];var c1E17=data['IncompleteCoating1'];var c1P16=data['DiscolorationSN6'];var c1O16=data['Discoloration6'];var c1N16=data['DiscolorationSN5'];var c1M16=data['Discoloration5'];var c1L16=data['DiscolorationSN4'];var c1K16=data['Discoloration4'];var c1J16=data['DiscolorationSN3'];var c1I16=data['Discoloration3'];var c1H16=data['DiscolorationSN2'];var c1G16=data['Discoloration2'];var c1F16=data['DiscolorationSN1'];var c1E16=data['Discoloration1'];var c1P15=data['ChipsSN6'];var c1O15=data['Chips6'];var c1N15=data['ChipsSN5'];var c1M15=data['Chips5'];var c1L15=data['ChipsSN4'];var c1K15=data['Chips4'];var c1J15=data['ChipsSN3'];
+var c1I15=data['Chips3'];var c1H15=data['ChipsSN2'];var c1G15=data['Chips2'];var c1F15=data['ChipsSN1'];var c1E15=data['Chips1'];var c1P14=data['BlemishesSN6'];var c1O14=data['Blemishes6'];var c1N14=data['BlemishesSN5'];var c1M14=data['Blemishes5'];var c1L14=data['BlemishesSN4'];var c1K14=data['Blemishes4'];var c1J14=data['BlemishesSN3'];var c1I14=data['Blemishes3'];var c1H14=data['BlemishesSN2'];var c1G14=data['Blemishes2'];var c1F14=data['BlemishesSN1'];var c1E14=data['Blemishes1'];var c1P13=data['SurfaceRoughSN6'];var c1O13=data['SurfaceRough6'];var c1N13=data['SurfaceRoughSN5'];var c1M13=data['SurfaceRough5'];var c1L13=data['SurfaceRoughSN4'];var c1K13=data['SurfaceRough4'];var c1J13=data['SurfaceRoughSN3'];var c1I13=data['SurfaceRough3'];var c1H13=data['SurfaceRoughSN2'];var c1G13=data['SurfaceRough2'];var c1F13=data['SurfaceRoughSN1'];var c1E13=data['SurfaceRough1'];var c1P12=data['PickingSN6'];var c1O12=data['Picking6'];var c1N12=data['PickingSN5'];var c1M12=data['Picking5'];var c1L12=data['PickingSN4'];var c1K12=data['Picking4'];var c1J12=data['PickingSN3'];var c1I12=data['Picking3'];var c1H12=data['PickingSN2'];var c1G12=data['Picking2'];var c1F12=data['PickingSN1'];var c1E12=data['Picking1'];var c1P11=data['EmbeddedSpotsSN6'];var c1O11=data['EmbeddedSpots6'];var c1N11=data['EmbeddedSpotsSN5'];var c1M11=data['EmbeddedSpots5'];var c1L11=data['EmbeddedSpotsSN4'];var c1K11=data['EmbeddedSpots4'];
+var c1J11=data['EmbeddedSpotsSN3'];var c1I11=data['EmbeddedSpots3'];var c1H11=data['EmbeddedSpotsSN2'];var c1G11=data['EmbeddedSpots2'];var c1F11=data['EmbeddedSpotsSN1'];var c1E11=data['EmbeddedSpots1'];var c1P10=data['EruptionSN6'];var c1O10=data['Eruption6'];var c1N10=data['EruptionSN5'];var c1M10=data['Eruption5'];var c1L10=data['EruptionSN4'];var c1K10=data['Eruption4'];var c1J10=data['EruptionSN3'];var c1I10=data['Eruption3'];var c1G10=data['Eruption2'];var c1F10=data['EruptionSN1'];var c1E10=data['Eruption1'];var c1P9=data['IllegibleSN6'];var c1O9=data['Illegible6'];var c1N9=data['IllegibleSN5'];var c1M9=data['Illegible5'];var c1L9=data['IllegibleSN4'];var c1K9=data['Illegible4'];var c1J9=data['IllegibleSN3'];var c1I9=data['Illegible3'];var c1H9=data['IllegibleSN2'];var c1G9=data['Illegible2'];var c1F9=data['IllegibleSN1'];var c1E9=data['Illegible1'];var c1P8=data['PeelingSN6'];var c1O8=data['Peeling6'];var c1N8=data['PeelingSN5'];var c1M8=data['Peeling5'];var c1L8=data['PeelingSN4'];var c1K8=data['Peeling4'];var c1J8=data['PeelingSN3'];var c1I8=data['Peeling3'];var c1H8=data['PeelingSN2'];var c1G8=data['Peeling2'];var c1F8=data['PeelingSN1'];var c1E8=data['Peeling1'];var c1P7=data['CappingSN6'];var c1O7=data['Capping6'];var c1N7=data['CappingSN5'];var c1M7=data['Capping5'];var c1L7=data['CappingSN4'];var c1K7=data['Capping4'];var c1J7=data['CappingSN3'];var c1I7=data['Capping3'];
+var c1H7=data['CappingSN2'];var c1G7=data['Capping2'];var c1F7=data['CappingSN1'];var c1E7=data['Capping1'];var c1P6=data['BrokenSN6'];var c1O6=data['Broken6'];var c1N6=data['BrokenSN5'];var c1M6=data['Broken5'];var c1L6=data['BrokenSN4'];var c1K6=data['Broken4'];var c1J6=data['BrokenSN3'];var c1I6=data['Broken3'];var c1H6=data['BrokenSN2'];var c1G6=data['Broken2'];var c1F6=data['BrokenSN1'];var c1E6=data['Broken1'];var c1P5=data['FODsn6'];var c1O5=data['FOD6'];var c1N5=data['FODsn5'];var c1M5=data['FOD5'];var c1L5=data['FODsn4'];var c1K5=data['FOD4'];var c1J5=data['FODsn3'];var c1I5=data['FOD3'];var c1H5=data['FODsn2'];var c1G5=data['FOD2'];var c1F5=data['FODsn1'];var c1E5=data['FOD1'];};
+function postcode() {
+};
+function TriggerOnchange(hiddenId)
+{
+    var e = jQuery.Event('change');
+    $('#'+hiddenId).trigger(e);
+}
+var eeisus=1;var eetrue="TRUE";var eefalse="FALSE";var eedec=".";var eeth=",";var eedecreg=new RegExp("\\.","g");var eethreg=new RegExp(",","g");var eecurrencyreg=new RegExp("[$]","g");var eepercentreg=new RegExp("%","g");
+var jsonLocal='{"eeisus":1,"eetrue":"TRUE","eefalse":"FALSE","eedec":".","eeth":",","eedecreg":["\\\\.","g"],"eethreg":[",","g"],"eecurrencyreg":["[$]","g"],"eepercentreg":["%","g"]}';
+function printClick(){
+           recalc_onclick('');		  
+           document.getElementById('printallcss').href='';           
+           window.print();
+		}
+function eequerystring(){
+    var variable,key,value,ii,querystring,variables;querystring=document.location.search;
+    if(querystring.length>0){
+        variables=querystring.substring(1).split('&');
+        for(ii=0;ii<variables.length;ii++){
+            variable=variables[ii].split('=');
+            key=unescape(variable[0])
+            value=unescape(variable[1]);
+            if(document.formc[key]!=null)
+                document.formc[key].value=value;
+        }
+    }
+}
+      function LoadFromQueryString(){
+    eequerystring();
+    recalc_onclick('');}
+function navigate(evt)
+{
+	var key = evt.keyCode | evt.which;
+	
+	/* handle only Enter (13), arrow down key(40) and arrow up key (38) */
+	if(key != 13 && key != 40 && key != 38) return; 
+	
+	/* IE 8 does not have target so will resolve with srcElement */
+	/* thought accessing target is faster than another jquery selector $(':focus'); */
+	var cur_elem = $(evt.target || evt.srcElement);
+
+	// implementing textarea logic
+	if(cur_elem.is("textarea")) return;
+	
+	////discarding slider navigation using arrow key.
+	//if((cur_elem.hasClass('ui-slider-handle')) && (key == 40 || key == 38)) {return;}
+	
+	/*{
+		
+		if(key == 13) return;
+		
+		var firstNewline = cur_elem.val().indexOf('\n');		
+		var lastNewline = cur_elem.val().lastIndexOf('\n');	
+		var cursorPos = cur_elem.prop("selectionStart");	
+				
+		if(firstNewline > -1)
+		{	
+			// if we are not in first or last line, don't navigate. 
+			if (cursorPos > firstNewline && cursorPos <= lastNewline) return;
+
+			// if we are in the first line, but up key was not pressed, don't navigate. 
+			if(cursorPos <= firstNewline && key != 38) return;
+			
+			// if we are in last line, but down key was not pressed, don't navigate. 
+			if(cursorPos > lastNewline && key != 40) return;		
+		}
+		
+	}*/
+	
+	/* getting current field location.. */
+	/* here 10 means we want to use decimal number system for parsing */
+	var cur_sheet = parseInt(cur_elem.attr('data-sheet'), 10);
+	var cur_row = parseInt(cur_elem.attr('data-row'), 10);		
+	var cur_col = parseInt(cur_elem.attr('data-col'), 10);
+	
+	var foundFocus = false;
+	
+	/* caching the sheet div selector */
+	var sheetSelector = $('#sheet-' + cur_sheet + '');
+	var inputSelector = 'input:not(":hidden,:button,[readonly=readonly],:disabled"),select,a.ui-slider-handle,textarea';
+	var next_row = cur_row + 1;	
+	var prev_row = cur_row - 1;	
+	
+	/* assuming next row is the last row */
+	var max_row = next_row; 
+	var min_row = prev_row;
+	
+	while((key == 40 && next_row <= max_row) || (key == 38 && prev_row >= min_row))	
+	{			
+		/* looking for next higher data-row with same data-sheet and data-col.. */
+		/* if found, it results in faster navigation */
+		var next_focus_elem = sheetSelector.find(inputSelector).filter('[data-sheet='+ cur_sheet +'][data-row='+ (key == 38 ? prev_row  : next_row) + '][data-col='+ cur_col + ']');
+		if(next_focus_elem.length > 0)
+		{
+			next_focus_elem[0].focus();
+			foundFocus = true;
+			break;
+		}			
+		else
+		{
+			var arrRows;
+			
+			/* if not saved eariler into jquery data store of sheet div  */
+			if(sheetSelector.data('col'+ cur_col) == undefined)
+			{	
+				/* create array of data-row for given data-sheet and data-col */
+				arrRows = sheetSelector.find(inputSelector).filter('[data-sheet=' + cur_sheet + '][data-col='+ cur_col + ']').map(					
+				function(){
+						return parseInt($(this).attr('data-row'), 10);
+					}).toArray();
+					
+				/* store into data-colx data store of sheet div where x is the cur_col */
+				sheetSelector.data('col' + cur_col, arrRows);
+			}
+			else
+			{
+				/* fetch from jquery data store of sheet div */
+				arrRows = sheetSelector.data('col' + cur_col);				
+			}
+			
+			/* assuming array is sorted.. */
+			max_row = arrRows[arrRows.length - 1];
+			min_row = arrRows[0];
+			/* IE 8 does not have indexOf so using jquery method inArray as alternative */
+			var rowIndex = ('indexOf' in Array.prototype) ? arrRows.indexOf(cur_row): $.inArray(cur_row, arrRows);
+						
+			if(key == 40 && cur_row < max_row)
+			{
+				next_row =  arrRows[rowIndex + 1];
+			}
+			else if(key == 38 && cur_row > min_row)
+			{
+				prev_row =  arrRows[rowIndex - 1];
+			}
+			else
+			{ 
+				break;				
+			}		
+		}
+	}
+	if(!foundFocus) /* navigate to next tab index if not found. */
+	{
+		var next_idx;
+		if(key == 38) next_idx = parseInt(cur_elem.attr('tabindex'), 10) - 1;
+		else next_idx = parseInt(cur_elem.attr('tabindex'), 10) + 1;
+		
+		/* look for next navigable field with higher tab index..*/
+		var next_input = sheetSelector.find(inputSelector).filter('[data-sheet][data-row][data-col][tabindex=' + next_idx + ']');
+		if(next_input.length > 0)
+		{
+			next_input.focus();
+		}
+		else
+		{	
+			/* move to first tab index as last resort. */
+			sheetSelector.find(inputSelector).filter('[data-sheet][data-row][data-col][tabindex]:first').focus(); 
+		}
+	}
+	/* IE lack preventDefault so */
+	evt.preventDefault ? evt.preventDefault() : evt.returnValue = false;
+}
+
+  </script>
+</html>

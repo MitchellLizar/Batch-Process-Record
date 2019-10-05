@@ -1,0 +1,1598 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>WTH</title>
+<link rel="stylesheet" href="../../../css/Forms_HTML/BatchProcess.css" />
+<link rel="stylesheet" href="BatchProcess.css" />
+<script type="text/javascript" src="../../../js/Forms_HTML/eBPR.js"></script>
+<script type="text/javascript" src="eBPR.js"></script>
+    </head>
+    <body>
+    <div style="display:none">
+        <select id="mastercontrol.links.source" multiple  size="1" name="mastercontrol.links.source"
+                title="Source Ref Links" style="display:none"></select>
+
+    </div>
+        <div id="FormTitle" class="formTitle" style="text-align:center; width:900px;margin-left: 30px;"></div>
+        <form id="formc" title="formc" method="post" action="" target="_top">
+        <table width="700" align="left" style="margin-left:10px;border-spacing:0;">
+                          <tr align="center" valign="middle">
+                            <td height="60" colspan="2" class="nobdrRtMid"><div align="center">
+                                <img src="factorytalkLogo.jpg" style="float: left;width:175px;height:37px;"></div></td>
+                            <td height="60" colspan="12" valign="middle" class="formTitle"><div align="left">
+                                <p>TABLET IN-PROCESS CHECK RECORD<br>
+                              </p>
+                                </div></td>
+                          </tr>
+                          <tr>
+                            <td height="23" class="nobdrRtMid">Product Code:</td>
+                            <td class="nobdrLtMid">
+                              <input id="Product Code" type="text" title="Product Code" class="readonly" readonly="yes" style="width:100%;">
+                           </td>
+                            <td class="nobdrRtMid">Product Description:</td>
+                            <td colspan="3" class="nobdrLtMid">
+                              <input id="Description" title="Product Description" class="readonly" style="width:100%;"
+                                     type="text" readonly="readonly"/>
+                              <span style="display:none">
+                              <input type="text" class="headerfield" id="mastercontrol.template.number" 
+                                   name="mastercontrol.template.number" title="Template Number" readonly="readonly" value="" >
+                              <input type="text" class="headerfield" id="mastercontrol.template.revision" 
+                                   name="mastercontrol.template.revision" title="Template Revision" readonly="readonly" value="">
+                            </span> </td>
+                          </tr>
+                          <tr>
+                            <td class="nobdrRtMid"><label for="mastercontrol.form.number">Record #</label></td>
+                            <td class="nobdrLtTop">
+                              <input id="mastercontrol.form.number" name="mastercontrol.form.number" type="text" class="readonly"
+                           readonly="readonly" style="width:100%;" title="Coat InProcess number" value=""/>
+                            </td>
+                            <td class="nobdrRtMid">Batch size:</td>
+                            <td class="nobdrLtMid">
+                              <input id="BatchSize" type="text" value="" class="readonly" title="BatchSize" style="width:100%;"/>
+                           </td>
+                            <td class="nobdrRtMid">Form Issued:</td>
+                            <td class="nobdrLtMid">
+                              <input id="mastercontrol.form.created" name="mastercontrol.form.created" title="InProcess Date"
+                           type="text" value="" class="readonly" readonly="readonly" style="width:100%;"/>
+                          </td>
+                          </tr>
+                          <tr>
+                            <td class="nobdrRtMid">MBR#</td>
+                            <td class="nobdrLtTop">
+                              <input id="MBRNo" type="text" class="readonly" readonly="yes" title="Batch number" value="" style="width:100%;"/>
+							</td>
+                            <td class="nobdrLtMid">
+                              <input name="mastercontrol.links.view.source" type="button" class="toolbarOrangebtn" id="mastercontrol.links.view.source"
+                           title="View Source" value="View Source" alt="View Source">
+                            </span></td>
+                            <td class="nobdrRtMid">&nbsp;</td>
+                            <td class="nobdrRtMid">Issued by:</td>
+                            <td class="nobdrLtMid">
+                              <input id="mastercontrol.form.creator" name="mastercontrol.form.creator" title="creator"
+                           type="text"
+                           value="" class="readonly" readonly="readonly" style="width:100%;"/>
+                           </td>
+                          </tr>
+                          <tr class="botcapCenTop">
+                            <td class="nobdrLtMid">&nbsp;</td>
+                            <td class="nobdrLtMid">&nbsp;</td>
+                            <td class="nobdrLtMid">&nbsp;</td>
+                            <td class="nobdrLtMid">&nbsp;</td>
+                            <td class="nobdrLtMid">&nbsp;</td>
+                            <td class="nobdrLtMid">&nbsp;</td>
+                          </tr>
+          </table>
+		
+		
+		<div class="clearBoth"></div>
+			<div id="tab">
+                 <div id="sheet-1" style="padding: 1em 1.4em;">
+                    <table width= "700" cellspacing="0" cellpadding="0" style="border-spacing:0;">
+					<col width="40"/>
+					<col width="75"/>
+					<col width="75"/>
+					<col width="75"/>
+					<col width="75"/>
+					<col width="75"/>
+					<col width="75"/>
+					<col width="40"/>
+					<col width="75"/>
+					<col width="75"/>
+					<col width="75"/>
+					<col width="75"/>
+					<col width="75"/>
+					<col width="75"/>
+					<col width="64"/>
+                    <tr style="height:14pt">
+						<td class="allbdrCenMid" style="height:14pt;" colspan = "14"> (FOR WEIGHT VARIATION, THICKNESS
+                            &amp; HARDNESS)</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;" colspan = "14"> LIMITS</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenBot" style="height:15pt;" rowspan = "3">&nbsp;</td>
+						<td class="allbdrCenBot" style="height:15pt;" colspan = "3">
+							Weight Variation (mg)
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;" rowspan = "3">&nbsp;</td>
+						<td class="allbdrCenBot" style="height:15pt;" colspan = "2">
+							Individual Thickness (mm)
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;" rowspan = "3">&nbsp;</td>
+						<td class="allbdrCenBot" style="height:15pt;" colspan = "4">
+							Individual Hardness (Kg/cm²) or N or KP
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;" colspan = "2" rowspan = "3">&nbsp;</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							Min
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							Target
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							Max
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							Min
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							Max
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;" colspan = "2">
+							Min
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;" colspan = "2">
+							Max
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="CompTabWtMin" type="text" value="285" class="enterdata" style="width:100%"
+                                   onchange="this.value=eedisplayFloat(eeparseFloat(this.value)); " title="CompTabWtMin"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="CompTabWtTarget" type="text" value="300" class="enterdata" style="width:100%"
+                                   onchange="this.value=eedisplayFloat(eeparseFloat(this.value)); " title="CompTabWtTarget"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="CompTabWtMax" type="text" value="315" class="enterdata" style="width:100%"
+                                   onchange="this.value=eedisplayFloat(eeparseFloat(this.value)); " title="CompTabWtMax"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="CompTabThkMin" type="text" value="4.0" class="enterdata" style="width:100%"
+                                   onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),1); " title="CompTabThkMin"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="CompTabThkMax" type="text" value="4.6" class="enterdata" style="width:100%"
+                                   onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),1); " title="CompTabThkMax"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;" colspan = "2">
+							<input id="CompTabHardMin" type="text" value="" class="enterdata" style="width:100%"
+                                   title="CompTabHardMin"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;" colspan = "2">
+							<input id="CompTabHardMax" type="text" value="" class="enterdata" style="width:100%"
+                                   title="CompTabHardMax"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrRtMid" style="height:15pt;" colspan = "2">
+							Balance No.:
+						</td>
+						<td class="allbdrLtMid" style="height:15pt;" colspan = "2">
+							<input id="BalanceID" type="text" value="" class="enterdata" style="width:100%" title="BalanceID"/>
+						</td>
+						<td class="nobdrCenMid" style="height:15pt;">&nbsp;</td>
+						<td class="allbdrRtMid" style="height:15pt;" colspan = "2">
+							Hardness testerNo.:
+						</td>
+						<td class="allbdrLtMid" style="height:15pt;" colspan = "2">
+							<input id="HardnessID" type="text" value="" class="enterdata" style="width:100%" title="HardnessID"/>
+						</td>
+						<td class="nobdrCenMid" style="height:15pt;">&nbsp;</td>
+						<td class="allbdrRtMid" style="height:15pt;" colspan = "2">
+							Thickness tester No.:
+						</td>
+						<td class="allbdrLtMid" style="height:15pt;" colspan = "2">
+							<input id="ThicknessID" type="text" value="" class="enterdata" style="width:100%" title="ThicknessID"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;" colspan = "7">
+							I
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;" colspan = "7">
+							II
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrRtMid" style="height:15pt;" colspan = "2">
+							Date &amp; Time:
+                            <img src="../../../css/Forms_HTML/images/cal.gif" id="WTHDT1" width="16" height="16"
+                                 border="0" alt="Pick a date" onclick="insertDT(this.id)">
+						</td>
+						<td class="allbdrLtMid" style="height:15pt;" colspan = "2">
+                            <input id="txtWTHDT1" title="WTH DateTime 1" style="width:100%" type="text" class="enterdata"
+                                   size="18"></td>
+						<td class="allbdrRtMid" style="height:15pt;">
+							Bin No.:
+						</td>
+						<td class="allbdrLtMid" style="height:15pt;" colspan = "2">
+							<input id="WTH1Bin" type="text" value="" class="enterdata" style="width:100%" title="WTH1Bin"/>
+						</td>
+						<td class="allbdrRtMid" style="height:15pt;" colspan = "2">
+							Date &amp; Time:<img src="../../../css/Forms_HTML/images/cal.gif" id="WTHDT2" width="16"
+                                                 height="16" border="0" alt="Pick a date" onclick="insertDT(this.id)">
+						</td>
+						<td class="allbdrLtMid" style="height:15pt;" colspan = "2">
+                            <input id="txtWTHDT2" title="WTH DateTime 2" style="width:100%" type="text" class="enterdata"
+                                   size="18"></td>
+						<td class="allbdrRtMid" style="height:15pt;">
+							Bin No.:
+						</td>
+						<td class="allbdrLtMid" style="height:15pt;" colspan = "2">
+							<input id="WTH2Bin" type="text" value="" class="enterdata" style="width:100%" title="WTH2Bin"/>
+						</td>
+
+                    </tr>
+                    <tr style="height:30pt">
+						<td class="allbdrCenBot" style="height:30pt;" rowspan = "2">
+							Tab. No.
+						</td>
+						<td class="allbdrCenBot" style="height:30pt;" colspan = "2">
+							Weight (mg)
+						</td>
+						<td class="allbdrCenBot" style="height:30pt;" colspan = "2">
+							Thickness (mm)
+						</td>
+						<td class="allbdrCenBot" style="height:30pt;" colspan = "2">
+							Hardness(Kg/cm²) or N or KP
+						</td>
+						<td class="allbdrCenBot" style="height:30pt;" rowspan = "2">
+							Tab. No.
+						</td>
+						<td class="allbdrCenBot" style="height:30pt;" colspan = "2">
+							Weight (mg)
+						</td>
+						<td class="allbdrCenBot" style="height:30pt;" colspan = "2">
+							Thickness (mm)
+						</td>
+						<td class="allbdrCenBot" style="height:30pt;" colspan = "2">
+							Hardness(Kg/cm²) or N or KP
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							L
+						</td>
+						<td class="allbdrCenBot" style="height:15pt;">
+							R
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							L
+						</td>
+						<td class="allbdrCenBot" style="height:15pt;">
+							R
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							L
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							R
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							L
+						</td>
+						<td class="allbdrCenBot" style="height:15pt;">
+							R
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							L
+						</td>
+						<td class="allbdrCenBot" style="height:15pt;">
+							R
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							L
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							R
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							1
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-1LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_1LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-1RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_1RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-1LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_1LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-1RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_1RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-1LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_1LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-1RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_1RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							1
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-1LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_1LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-1RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_1RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-1LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_1LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-1RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_1RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-1LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_1LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-1RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_1RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							2
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-2LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_2LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-2RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_2RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-2LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_2LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-2RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_2RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-2LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_2LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-2RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_2RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							2
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-2LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_2LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-2RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_2RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-2LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_2LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-12Thk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_12Thk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-2LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_2LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-2RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_2RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							3
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-3LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_3LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-3RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_3RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-3LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_3LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-3RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_3RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-3LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_3LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-3RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_3RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							3
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-3LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_3LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-3RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_3RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-3LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_3LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-3RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_3RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-3LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_3LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-3RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_3RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							4
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-4LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_4LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-4RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_4RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-4LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_4LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-4RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_4RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-4LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_4LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-4RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_4RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							4
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-4LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_4LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-4RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_4RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-4LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_4LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-4RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_4RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-4LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_4LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-4RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_4RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							5
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-5LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_5LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-5RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_5RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-5LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_5LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-5RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_5RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-5LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_5LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-5RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_5RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							5
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-5LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_5LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-5RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_5RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-5LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_5LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-5RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_5RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-5LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_5LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-5RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_5RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							6
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-6LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_6LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-6RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_6RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-6LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_6LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-6RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_6RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-6LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_6LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-6RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_6RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							6
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-6LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_6LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-6RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_6RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-6LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_6LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-6RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_6RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-6LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_6LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-6RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_6RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							7
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-7LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_7LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-7RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_7RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-7LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_7LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-7RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_7RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-7LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_7LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-7RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_7RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							7
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-7LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_7LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-7RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_7RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-7LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_7LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-7RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_7RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-7LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_7LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-7RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_7RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							8
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-8LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_8LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-8RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_8RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-8LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_8LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-8RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_8RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-8LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_8LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-8RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_8RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							8
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-8LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_8LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-8RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_8RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-8LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_8LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-8RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_8RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-8LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_8LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-8RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_8RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							9
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-9LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_9LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-9RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_9RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-9LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_9LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-9RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_9RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-9LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_9LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-9RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_9RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							9
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-9LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_9LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-9RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_9RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-9LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_9LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-9RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_9RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-9LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_9LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-9RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_9RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							10
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-10LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_10LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-10RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH1_10RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-10LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_10LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-10RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH1_10RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-10LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_10LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH1-10RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH1_10RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							10
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-10LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_10LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-10RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH2_10RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-10LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_10LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-10RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH2_10RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-10LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_10LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH2-10RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH2_10RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrRtMid" style="height:15pt;" colspan = "2">
+							Done By:
+						</td>
+						<td class="allbdrLtMid" style="height:15pt;" colspan = "2">
+							<input id="WTHBin1DoneBy" type="text" value="" class="enterdata" style="width:100%" title="WTHBin1DoneBy"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;" colspan = "3">&nbsp;</td>
+						<td class="allbdrRtMid" style="height:15pt;" colspan = "2">
+							Done By:
+						</td>
+						<td class="allbdrLtMid" style="height:15pt;" colspan = "2">
+							<input id="WTHBin2DoneBy" type="text" value="" class="enterdata" style="width:100%" title="WTHBin2DoneBy"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;" colspan = "3">&nbsp;</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;" colspan = "7">
+							III
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;" colspan = "7">
+							IV
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrRtMid" style="height:15pt;" colspan = "2">
+							Date &amp; Time:<img src="../../../css/Forms_HTML/images/cal.gif" id="WTHDT3" width="16"
+                                                 height="16" border="0" alt="Pick a date" onclick="insertDT(this.id)">
+						</td>
+						<td class="allbdrLtMid" style="height:15pt;" colspan = "2">
+                            <input id="txtWTHDT3" title="WTH DateTime 3" style="width:100%" type="text"
+                                   class="enterdata" size="18"></td>
+						<td class="allbdrRtMid" style="height:15pt;">
+							Bin No.:
+						</td>
+						<td class="allbdrLtMid" style="height:15pt;" colspan = "2">
+							<input id="WTH3Bin" type="text" value="" class="enterdata" style="width:100%" title="WTH3Bin"/>
+						</td>
+						<td class="allbdrRtMid" style="height:15pt;" colspan = "2">
+							Date &amp; Time:<img src="../../../css/Forms_HTML/images/cal.gif" id="WTHDT4" width="16"
+                                                 height="16" border="0" alt="Pick a date" onclick="insertDT(this.id)">
+						</td>
+						<td class="allbdrLtMid" style="height:15pt;" colspan = "2">
+                            <input id="txtWTHDT4" title="WTH DateTime 4" style="width:100%" type="text" class="enterdata"
+                                   size="18"></td>
+						<td class="allbdrRtMid" style="height:15pt;">
+							Bin No.:
+						</td>
+						<td class="allbdrLtMid" style="height:15pt;" colspan = "2">
+							<input id="WTH4Bin" type="text" value="" class="enterdata" style="width:100%" title="WTH4Bin"/>
+						</td>
+
+                    </tr>
+                    <tr style="height:30pt">
+						<td class="allbdrCenBot" style="height:30pt;" rowspan = "2"> Tab. No.</td>
+						<td class="allbdrCenBot" style="height:30pt;" colspan = "2"> Weight (mg)</td>
+						<td class="allbdrCenBot" style="height:30pt;" colspan = "2"> Thickness (mm)</td>
+						<td class="allbdrCenBot" style="height:30pt;" colspan = "2"> Hardness(Kg/cm²) or N or KP</td>
+						<td class="allbdrCenBot" style="height:30pt;" rowspan = "2"> Tab. No.</td>
+						<td class="allbdrCenBot" style="height:30pt;" colspan = "2"> Weight (mg)</td>
+						<td class="allbdrCenBot" style="height:30pt;" colspan = "2"> Thickness (mm)</td>
+						<td class="allbdrCenBot" style="height:30pt;" colspan = "2"> Hardness(Kg/cm²) or N or KP</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							L
+						</td>
+						<td class="allbdrCenBot" style="height:15pt;">
+							R
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							L
+						</td>
+						<td class="allbdrCenBot" style="height:15pt;">
+							R
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							L
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							R
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							L
+						</td>
+						<td class="allbdrCenBot" style="height:15pt;">
+							R
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							L
+						</td>
+						<td class="allbdrCenBot" style="height:15pt;">
+							R
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							L
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							R
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							1
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-1LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_1LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-1RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_1RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-1LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_1LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-1RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_1RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-1LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_1LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-1RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_1RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							1
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-1LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_1LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-1RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_1RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-1LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_1LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-1RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_1RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-1LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_1LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-1RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_1RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							2
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-2LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_2LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-2RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_2RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-2LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_2LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-2RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_2RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-2LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_2LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-2RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_2RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							2
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-2LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_2LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-2RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_2RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-2LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_2LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-2RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_2RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-2LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_2LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-2RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_2RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							3
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-3LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_3LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-3RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_3RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-3LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_3LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-3RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_3RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-3LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_3LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-3RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_3RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							3
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-3LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_3LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-3RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_3RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-3LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_3LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-3RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_3RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-3LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_3LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-3RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_3RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							4
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-4LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_4LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-4RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_4RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-4LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_4LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-4RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_4RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-4LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_4LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-4RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_4RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							4
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-4LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_4LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-4RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_4RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-4LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_4LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-4RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_4RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-4LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_4LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-4RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_4RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							5
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-5LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_5LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-5RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_5RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-5LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_5LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-5RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_5RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-5LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_5LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-5RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_5RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							5
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-5LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_5LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-5RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_5RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-5LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_5LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-5RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_5RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-5LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_5LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-5RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_5RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							6
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-6LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_6LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-6RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_6RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-6LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_6LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-6RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_6RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-6LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_6LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-6RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_6RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							6
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-6LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_6LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-6RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_6RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-6LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_6LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-6RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_6RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-6LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_6LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-6RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_6RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							7
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-7LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_7LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-7RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_7RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-7LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_7LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-7RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_7RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-7LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_7LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-7RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_7RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							7
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-7LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_7LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-7RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_7RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-7LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_7LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-7RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_7RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-7LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_7LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-7RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_7RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							8
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-8LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_8LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-8RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_8RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-8LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_8LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-8RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_8RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-8LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_8LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-8RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_8RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							8
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-8LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_8LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-8RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_8RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-8LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_8LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-8RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_8RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-8LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_8LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-8RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_8RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							9
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-9LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_9LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-9RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_9RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-9LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_9LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-9RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_9RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-9LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_9LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-9RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_9RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							9
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-9LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_9LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-9RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_9RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-9LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_9LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-9RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_9RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-9LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_9LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-9RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_9RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" style="height:15pt;">
+							10
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-10LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_10LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-10RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH3_10RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-10LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_10LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-10RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH3_10RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-10LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_10LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH3-10RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH3_10RHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							10
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-10LWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_10LWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-10RWt" type="text" value="" class="enterdata" style="width:100%" title="WTH4_10RWt"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-10LThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_10LThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-10RThk" type="text" value="" class="enterdata" style="width:100%" title="WTH4_10RThk"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-10LHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_10LHard"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;">
+							<input id="WTH4-10RHard" type="text" value="" class="enterdata" style="width:100%" title="WTH4_10RHard"/>
+						</td>
+
+                    </tr>
+                    <tr>
+						<td class="allbdrRtMid" style="height:15pt;" colspan = "2">
+							Done By:
+						</td>
+						<td class="allbdrLtMid" style="height:15pt;" colspan = "2">
+							<input id="WTHBin3DoneBy" type="text" value="" class="enterdata" style="width:100%" title="WTHBin3DoneBy"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;" colspan = "3">&nbsp;</td>
+						<td class="allbdrRtMid" style="height:15pt;" colspan = "2">
+							Done By:
+						</td>
+						<td class="allbdrLtMid" style="height:15pt;" colspan = "2">
+							<input id="WTHBin4DoneBy" type="text" value="" class="enterdata" style="width:100%" title="WTHBin4DoneBy"/>
+						</td>
+						<td class="allbdrCenMid" style="height:15pt;" colspan = "3">&nbsp;</td>
+
+                    </tr>
+                    <tr style="height:30pt">
+						<td class="allbdrRtTop" style="height:30pt;vertical-align:top;" colspan = "2">
+                        Remarks:
+						</td>
+						<td class="allbdrLtTop" style="height:30pt;" colspan = "12">
+							<textarea id="WTHRemarks" class="allbdrLtTop enterdata" style="width:100%" onKeyDown=""
+                                      title="WTHRemarks" rows="3"></textarea>
+						</td>
+
+                    </tr>
+                </table>
+               </div>
+                 <div class="sectionHeading" style="margin-left:20px;">
+                     <input type="text" id="mastercontrol.route.stepnameat.step1"
+                            name="mastercontrol.route.stepnameat.step1" title="Step1 Esig Meaning" value="Inspection"
+                            size="100" class="sigmeaning" readonly="yes"/>
+                 </div>
+                 <div class="subSection">
+                     <div class="signatureData">
+                         <table class="signatureTable" cellpadding="0" cellspacing="0">
+                             <thead>
+                             <tr>
+                                 <th scope="col" class="signatureName"><label
+                                         for="mastercontrol.route.esig.users.step1">Name</label></th>
+                                 <th scope="col" class="signatureDate"><label
+                                         for="mastercontrol.route.esig.timestamps.step1">Date</label>
+                                 </th>
+                                 <th scope="col" class="signatureStatus">
+                                     <label for="mastercontrol.route.esig.sigstatus.step1">Signoff Status</label></th>
+                             </tr>
+                             </thead>
+                             <tbody>
+                             <tr>
+                                 <td><textarea id="mastercontrol.route.esig.users.step1"
+                                               name="mastercontrol.route.esig.users.step1" class="signatureField"
+                                               title="Step1 Name" readonly="readonly"></textarea></td>
+                                 <td><textarea id="mastercontrol.route.esig.timestamps.step1"
+                                               name="mastercontrol.route.esig.timestamps.step1" class="signatureField"
+                                               title="Step1 Date" readonly="readonly"></textarea></td>
+                                 <td><textarea id="mastercontrol.route.esig.sigstatus.step1"
+                                               name="mastercontrol.route.esig.sigstatus.step1" class="signatureField"
+                                               title="Step1 Signoff Status" readonly="readonly"></textarea></td>
+                             </tr>
+                             </tbody>
+                         </table>
+                     </div>
+                 </div>
+                 <!-- Signature Section Ends -->
+                 <!-- Signature Section Starts -->
+                 <div class="sectionHeading" style="margin-left:20px;">
+                     <input type="text" id="mastercontrol.route.stepnameat.step2"
+                            name="mastercontrol.route.stepnameat.step2" title="Step2 Esig Meaning" value="Verification"
+                            size="100" class="sigmeaning" readonly="yes"/>
+                 </div>
+                 <div class="subSection">
+                     <div class="signatureData">
+
+                         <table class="signatureTable" cellpadding="0" cellspacing="0">
+                             <thead>
+                             <tr>
+                                 <th scope="col" class="signatureName"><label
+                                         for="mastercontrol.route.esig.users.step2">Name</label></th>
+                                 <th scope="col" class="signatureDate"><label
+                                         for="mastercontrol.route.esig.timestamps.step2">Date</label>
+                                 </th>
+                                 <th scope="col" class="signatureStatus">
+                                     <label for="mastercontrol.route.esig.sigstatus.step2">Signoff Status</label></th>
+                             </tr>
+                             </thead>
+                             <tbody>
+                             <tr>
+                                 <td><textarea id="mastercontrol.route.esig.users.step2"
+                                               name="mastercontrol.route.esig.users.step2" class="signatureField"
+                                               title="Step2 Name" readonly="readonly"></textarea></td>
+                                 <td><textarea id="mastercontrol.route.esig.timestamps.step2"
+                                               name="mastercontrol.route.esig.timestamps.step2" class="signatureField"
+                                               title="Step2 Date" readonly="readonly"></textarea></td>
+                                 <td><textarea id="mastercontrol.route.esig.sigstatus.step2"
+                                               name="mastercontrol.route.esig.sigstatus.step2" class="signatureField"
+                                               title="Step2 Signoff Status" readonly="readonly"></textarea></td>
+                             </tr>
+                             </tbody>
+                         </table>
+                     </div>
+                 </div>
+                 <!-- Signature Section Ends -->
+            </div>
+        </form>
+    </body>
+<script type="text/javascript">
+function recalc_onclick(ctl){if (true) { }}
+function calc(data){var c1C38=data['WTHRemarks'];var c1J37=data['WTHBin4DoneBy'];var c1C37=data['WTHBin3DoneBy'];var c1N36=data['WTH4-10RHard'];var c1M36=data['WTH4-10LHard'];var c1L36=data['WTH4-10RThk'];var c1K36=data['WTH4-10LThk'];var c1J36=data['WTH4-10RWt'];var c1I36=data['WTH4-10LWt'];var c1G36=data['WTH3-10RHard'];var c1F36=data['WTH3-10LHard'];var c1E36=data['WTH3-10RThk'];var c1D36=data['WTH3-10LThk'];var c1C36=data['WTH3-10RWt'];var c1B36=data['WTH3-10LWt'];var c1N35=data['WTH4-9RHard'];var c1M35=data['WTH4-9LHard'];var c1L35=data['WTH4-9RThk'];var c1K35=data['WTH4-9LThk'];var c1J35=data['WTH4-9RWt'];var c1I35=data['WTH4-9LWt'];var c1G35=data['WTH3-9RHard'];var c1F35=data['WTH3-9LHard'];var c1E35=data['WTH3-9RThk'];var c1D35=data['WTH3-9LThk'];var c1C35=data['WTH3-9RWt'];var c1B35=data['WTH3-9LWt'];var c1N34=data['WTH4-8RHard'];var c1M34=data['WTH4-8LHard'];var c1L34=data['WTH4-8RThk'];var c1K34=data['WTH4-8LThk'];var c1J34=data['WTH4-8RWt'];var c1I34=data['WTH4-8LWt'];var c1G34=data['WTH3-8RHard'];var c1F34=data['WTH3-8LHard'];var c1E34=data['WTH3-8RThk'];var c1D34=data['WTH3-8LThk'];var c1C34=data['WTH3-8RWt'];var c1B34=data['WTH3-8LWt'];var c1N33=data['WTH4-7RHard'];var c1M33=data['WTH4-7LHard'];var c1L33=data['WTH4-7RThk'];var c1K33=data['WTH4-7LThk'];var c1J33=data['WTH4-7RWt'];var c1I33=data['WTH4-7LWt'];var c1G33=data['WTH3-7RHard'];var c1F33=data['WTH3-7LHard'];var c1E33=data['WTH3-7RThk'];
+var c1D33=data['WTH3-7LThk'];var c1C33=data['WTH3-7RWt'];var c1B33=data['WTH3-7LWt'];var c1N32=data['WTH4-6RHard'];var c1M32=data['WTH4-6LHard'];var c1L32=data['WTH4-6RThk'];var c1K32=data['WTH4-6LThk'];var c1J32=data['WTH4-6RWt'];var c1I32=data['WTH4-6LWt'];var c1G32=data['WTH3-6RHard'];var c1F32=data['WTH3-6LHard'];var c1E32=data['WTH3-6RThk'];var c1D32=data['WTH3-6LThk'];var c1C32=data['WTH3-6RWt'];var c1B32=data['WTH3-6LWt'];var c1N31=data['WTH4-5RHard'];var c1M31=data['WTH4-5LHard'];var c1L31=data['WTH4-5RThk'];var c1K31=data['WTH4-5LThk'];var c1J31=data['WTH4-5RWt'];var c1I31=data['WTH4-5LWt'];var c1G31=data['WTH3-5RHard'];var c1F31=data['WTH3-5LHard'];var c1E31=data['WTH3-5RThk'];var c1D31=data['WTH3-5LThk'];var c1C31=data['WTH3-5RWt'];var c1B31=data['WTH3-5LWt'];var c1N30=data['WTH4-4RHard'];var c1M30=data['WTH4-4LHard'];var c1L30=data['WTH4-4RThk'];var c1K30=data['WTH4-4LThk'];var c1J30=data['WTH4-4RWt'];var c1I30=data['WTH4-4LWt'];var c1G30=data['WTH3-4RHard'];var c1F30=data['WTH3-4LHard'];var c1E30=data['WTH3-4RThk'];var c1D30=data['WTH3-4LThk'];var c1C30=data['WTH3-4RWt'];var c1B30=data['WTH3-4LWt'];var c1N29=data['WTH4-3RHard'];var c1M29=data['WTH4-3LHard'];var c1L29=data['WTH4-3RThk'];var c1K29=data['WTH4-3LThk'];var c1J29=data['WTH4-3RWt'];var c1I29=data['WTH4-3LWt'];var c1G29=data['WTH3-3RHard'];var c1F29=data['WTH3-3LHard'];var c1E29=data['WTH3-3RThk'];var c1D29=data['WTH3-3LThk'];
+var c1C29=data['WTH3-3RWt'];var c1B29=data['WTH3-3LWt'];var c1N28=data['WTH4-2RHard'];var c1M28=data['WTH4-2LHard'];var c1L28=data['WTH4-2RThk'];var c1K28=data['WTH4-2LThk'];var c1J28=data['WTH4-2RWt'];var c1I28=data['WTH4-2LWt'];var c1G28=data['WTH3-2RHard'];var c1F28=data['WTH3-2LHard'];var c1E28=data['WTH3-2RThk'];var c1D28=data['WTH3-2LThk'];var c1C28=data['WTH3-2RWt'];var c1B28=data['WTH3-2LWt'];var c1N27=data['WTH4-1RHard'];var c1M27=data['WTH4-1LHard'];var c1L27=data['WTH4-1RThk'];var c1K27=data['WTH4-1LThk'];var c1J27=data['WTH4-1RWt'];var c1I27=data['WTH4-1LWt'];var c1G27=data['WTH3-1RHard'];var c1F27=data['WTH3-1LHard'];var c1E27=data['WTH3-1RThk'];var c1D27=data['WTH3-1LThk'];var c1C27=data['WTH3-1RWt'];var c1B27=data['WTH3-1LWt'];var c1M24=data['WTH4Bin'];var c1F24=data['WTH3Bin'];var c1J22=data['WTHBin2DoneBy'];var c1C22=data['WTHBin1DoneBy'];var c1N21=data['WTH2-10RHard'];var c1M21=data['WTH2-10LHard'];var c1L21=data['WTH2-10RThk'];var c1K21=data['WTH2-10LThk'];var c1J21=data['WTH2-10RWt'];var c1I21=data['WTH2-10LWt'];var c1G21=data['WTH1-10RHard'];var c1F21=data['WTH1-10LHard'];var c1E21=data['WTH1-10RThk'];var c1D21=data['WTH1-10LThk'];var c1C21=data['WTH1-10RWt'];var c1B21=data['WTH1-10LWt'];var c1N20=data['WTH2-9RHard'];var c1M20=data['WTH2-9LHard'];var c1L20=data['WTH2-9RThk'];var c1K20=data['WTH2-9LThk'];var c1J20=data['WTH2-9RWt'];var c1I20=data['WTH2-9LWt'];var c1G20=data['WTH1-9RHard'];
+var c1F20=data['WTH1-9LHard'];var c1E20=data['WTH1-9RThk'];var c1D20=data['WTH1-9LThk'];var c1C20=data['WTH1-9RWt'];var c1B20=data['WTH1-9LWt'];var c1N19=data['WTH2-8RHard'];var c1M19=data['WTH2-8LHard'];var c1L19=data['WTH2-8RThk'];var c1K19=data['WTH2-8LThk'];var c1J19=data['WTH2-8RWt'];var c1I19=data['WTH2-8LWt'];var c1G19=data['WTH1-8RHard'];var c1F19=data['WTH1-8LHard'];var c1E19=data['WTH1-8RThk'];var c1D19=data['WTH1-8LThk'];var c1C19=data['WTH1-8RWt'];var c1B19=data['WTH1-8LWt'];var c1N18=data['WTH2-7RHard'];var c1M18=data['WTH2-7LHard'];var c1L18=data['WTH2-7RThk'];var c1K18=data['WTH2-7LThk'];var c1J18=data['WTH2-7RWt'];var c1I18=data['WTH2-7LWt'];var c1G18=data['WTH1-7RHard'];var c1F18=data['WTH1-7LHard'];var c1E18=data['WTH1-7RThk'];var c1D18=data['WTH1-7LThk'];var c1C18=data['WTH1-7RWt'];var c1B18=data['WTH1-7LWt'];var c1N17=data['WTH2-6RHard'];var c1M17=data['WTH2-6LHard'];var c1L17=data['WTH2-6RThk'];var c1K17=data['WTH2-6LThk'];var c1J17=data['WTH2-6RWt'];var c1I17=data['WTH2-6LWt'];var c1G17=data['WTH1-6RHard'];var c1F17=data['WTH1-6LHard'];var c1E17=data['WTH1-6RThk'];var c1D17=data['WTH1-6LThk'];var c1C17=data['WTH1-6RWt'];var c1B17=data['WTH1-6LWt'];var c1N16=data['WTH2-5RHard'];var c1M16=data['WTH2-5LHard'];var c1L16=data['WTH2-5RThk'];var c1K16=data['WTH2-5LThk'];var c1J16=data['WTH2-5RWt'];var c1I16=data['WTH2-5LWt'];var c1G16=data['WTH1-5RHard'];var c1F16=data['WTH1-5LHard'];
+var c1E16=data['WTH1-5RThk'];var c1D16=data['WTH1-5LThk'];var c1C16=data['WTH1-5RWt'];var c1B16=data['WTH1-5LWt'];var c1N15=data['WTH2-4RHard'];var c1M15=data['WTH2-4LHard'];var c1L15=data['WTH2-4RThk'];var c1K15=data['WTH2-4LThk'];var c1J15=data['WTH2-4RWt'];var c1I15=data['WTH2-4LWt'];var c1G15=data['WTH1-4RHard'];var c1F15=data['WTH1-4LHard'];var c1E15=data['WTH1-4RThk'];var c1D15=data['WTH1-4LThk'];var c1C15=data['WTH1-4RWt'];var c1B15=data['WTH1-4LWt'];var c1N14=data['WTH2-3RHard'];var c1M14=data['WTH2-3LHard'];var c1L14=data['WTH2-3RThk'];var c1K14=data['WTH2-3LThk'];var c1J14=data['WTH2-3RWt'];var c1I14=data['WTH2-3LWt'];var c1G14=data['WTH1-3RHard'];var c1F14=data['WTH1-3LHard'];var c1E14=data['WTH1-3RThk'];var c1D14=data['WTH1-3LThk'];var c1C14=data['WTH1-3RWt'];var c1B14=data['WTH1-3LWt'];var c1N13=data['WTH2-2RHard'];var c1M13=data['WTH2-2LHard'];var c1L13=data['WTH2-12Thk'];var c1K13=data['WTH2-2LThk'];var c1J13=data['WTH2-2RWt'];var c1I13=data['WTH2-2LWt'];var c1G13=data['WTH1-2RHard'];var c1F13=data['WTH1-2LHard'];var c1E13=data['WTH1-2RThk'];var c1D13=data['WTH1-2LThk'];var c1C13=data['WTH1-2RWt'];var c1B13=data['WTH1-2LWt'];var c1N12=data['WTH2-1RHard'];var c1M12=data['WTH2-1LHard'];var c1L12=data['WTH2-1RThk'];var c1K12=data['WTH2-1LThk'];var c1J12=data['WTH2-1RWt'];var c1I12=data['WTH2-1LWt'];var c1G12=data['WTH1-1RHard'];var c1F12=data['WTH1-1LHard'];var c1E12=data['WTH1-1RThk'];
+var c1D12=data['WTH1-1LThk'];var c1C12=data['WTH1-1RWt'];var c1B12=data['WTH1-1LWt'];var c1M9=data['WTH2Bin'];var c1F9=data['WTH1Bin'];var c1M7=data['ThicknessID'];var c1H7=data['HardnessID'];var c1C7=data['BalanceID'];var c1K6=data['CompTabHardMax'];var c1I6=data['CompTabHardMin'];var c1G6=data['CompTabThkMax'];var c1F6=data['CompTabThkMin'];var c1D6=data['CompTabWtMax'];var c1C6=data['CompTabWtTarget'];var c1B6=data['CompTabWtMin'];};
+function postcode() {
+ document.getElementById('CompTabHardMin').value="6 kp (60 N)";
+ document.getElementById('CompTabHardMax').value="14 kp (140 N)";
+};
+function TriggerOnchange(hiddenId)
+{
+    var e = jQuery.Event('change');
+    $('#'+hiddenId).trigger(e);
+}
+var eeisus=1;var eetrue="TRUE";var eefalse="FALSE";var eedec=".";var eeth=",";var eedecreg=new RegExp("\\.","g");var eethreg=new RegExp(",","g");var eecurrencyreg=new RegExp("[$]","g");var eepercentreg=new RegExp("%","g");
+var jsonLocal='{"eeisus":1,"eetrue":"TRUE","eefalse":"FALSE","eedec":".","eeth":",","eedecreg":["\\\\.","g"],"eethreg":[",","g"],"eecurrencyreg":["[$]","g"],"eepercentreg":["%","g"]}';
+function myIsNaN(x){return(isNaN(x)||(typeof x=='number'&&!isFinite(x)));};
+
+function round(n,nd){if(isFinite(n)&&isFinite(nd)){var sign_n=(n<0)?-1:1;var abs_n=Math.abs(n);var factor=Math.pow(10,nd);return sign_n*Math.round(abs_n*factor)/factor;}else{return NaN;}};
+
+function eeparseFloat(str){str=String(str).replace(eedecreg,".");var res=parseFloat(str);if(isNaN(res)){return 0;}else{return res;}};
+
+var near0RegExp=new RegExp("[.](.*0000000|.*9999999)");function eedisplayFloat(x){if(myIsNaN(x)){return Number.NaN;}else{var str=String(x);if(near0RegExp.test(str)){x=round(x,8);str=String(x);}return str.replace(/\./g,eedec);}};
+
+function eedisplayFloatND(x,nd){if(myIsNaN(x)){return Number.NaN;}else{var res=round(x,nd);if(nd>0){var str=String(res);if(str.indexOf('e')!=-1)return str;if(str.indexOf('E')!=-1)return str;var parts=str.split('.');if(parts.length<2){var decimals=('00000000000000').substring(0,nd);return(parts[0]).toString()+eedec+decimals;}else{var decimals=((parts[1]).toString()+'00000000000000').substring(0,nd);return(parts[0]).toString()+eedec+decimals;}}else{return res;}}};
+function eequerystring(){
+    var variable,key,value,ii,querystring,variables;querystring=document.location.search;
+    if(querystring.length>0){
+        variables=querystring.substring(1).split('&');
+        for(ii=0;ii<variables.length;ii++){
+            variable=variables[ii].split('=');
+            key=unescape(variable[0])
+            value=unescape(variable[1]);
+            if(document.formc[key]!=null)
+                document.formc[key].value=value;
+        }
+    }
+}
+      function LoadFromQueryString(){
+    eequerystring();
+    recalc_onclick('');}
+function navigate(evt)
+{
+	var key = evt.keyCode | evt.which;
+	
+	/* handle only Enter (13), arrow down key(40) and arrow up key (38) */
+	if(key != 13 && key != 40 && key != 38) return; 
+	
+	/* IE 8 does not have target so will resolve with srcElement */
+	/* thought accessing target is faster than another jquery selector $(':focus'); */
+	var cur_elem = $(evt.target || evt.srcElement);
+
+	// implementing textarea logic
+	if(cur_elem.is("textarea")) return;
+	
+	////discarding slider navigation using arrow key.
+	//if((cur_elem.hasClass('ui-slider-handle')) && (key == 40 || key == 38)) {return;}
+	
+	/*{
+		
+		if(key == 13) return;
+		
+		var firstNewline = cur_elem.val().indexOf('\n');		
+		var lastNewline = cur_elem.val().lastIndexOf('\n');	
+		var cursorPos = cur_elem.prop("selectionStart");	
+				
+		if(firstNewline > -1)
+		{	
+			// if we are not in first or last line, don't navigate. 
+			if (cursorPos > firstNewline && cursorPos <= lastNewline) return;
+
+			// if we are in the first line, but up key was not pressed, don't navigate. 
+			if(cursorPos <= firstNewline && key != 38) return;
+			
+			// if we are in last line, but down key was not pressed, don't navigate. 
+			if(cursorPos > lastNewline && key != 40) return;		
+		}
+		
+	}*/
+	
+	/* getting current field location.. */
+	/* here 10 means we want to use decimal number system for parsing */
+	var cur_sheet = parseInt(cur_elem.attr('data-sheet'), 10);
+	var cur_row = parseInt(cur_elem.attr('data-row'), 10);		
+	var cur_col = parseInt(cur_elem.attr('data-col'), 10);
+	
+	var foundFocus = false;
+	
+	/* caching the sheet div selector */
+	var sheetSelector = $('#sheet-' + cur_sheet + '');
+	var inputSelector = 'input:not(":hidden,:button,[readonly=readonly],:disabled"),select,a.ui-slider-handle,textarea';
+	var next_row = cur_row + 1;	
+	var prev_row = cur_row - 1;	
+	
+	/* assuming next row is the last row */
+	var max_row = next_row; 
+	var min_row = prev_row;
+	
+	while((key == 40 && next_row <= max_row) || (key == 38 && prev_row >= min_row))	
+	{			
+		/* looking for next higher data-row with same data-sheet and data-col.. */
+		/* if found, it results in faster navigation */
+		var next_focus_elem = sheetSelector.find(inputSelector).filter('[data-sheet='+ cur_sheet +'][data-row='+ (key == 38 ? prev_row  : next_row) + '][data-col='+ cur_col + ']');
+		if(next_focus_elem.length > 0)
+		{
+			next_focus_elem[0].focus();
+			foundFocus = true;
+			break;
+		}			
+		else
+		{
+			var arrRows;
+			
+			/* if not saved eariler into jquery data store of sheet div  */
+			if(sheetSelector.data('col'+ cur_col) == undefined)
+			{	
+				/* create array of data-row for given data-sheet and data-col */
+				arrRows = sheetSelector.find(inputSelector).filter('[data-sheet=' + cur_sheet + '][data-col='+ cur_col + ']').map(					
+				function(){
+						return parseInt($(this).attr('data-row'), 10);
+					}).toArray();
+					
+				/* store into data-colx data store of sheet div where x is the cur_col */
+				sheetSelector.data('col' + cur_col, arrRows);
+			}
+			else
+			{
+				/* fetch from jquery data store of sheet div */
+				arrRows = sheetSelector.data('col' + cur_col);				
+			}
+			
+			/* assuming array is sorted.. */
+			max_row = arrRows[arrRows.length - 1];
+			min_row = arrRows[0];
+			/* IE 8 does not have indexOf so using jquery method inArray as alternative */
+			var rowIndex = ('indexOf' in Array.prototype) ? arrRows.indexOf(cur_row): $.inArray(cur_row, arrRows);
+						
+			if(key == 40 && cur_row < max_row)
+			{
+				next_row =  arrRows[rowIndex + 1];
+			}
+			else if(key == 38 && cur_row > min_row)
+			{
+				prev_row =  arrRows[rowIndex - 1];
+			}
+			else
+			{ 
+				break;				
+			}		
+		}
+	}
+	if(!foundFocus) /* navigate to next tab index if not found. */
+	{
+		var next_idx;
+		if(key == 38) next_idx = parseInt(cur_elem.attr('tabindex'), 10) - 1;
+		else next_idx = parseInt(cur_elem.attr('tabindex'), 10) + 1;
+		
+		/* look for next navigable field with higher tab index..*/
+		var next_input = sheetSelector.find(inputSelector).filter('[data-sheet][data-row][data-col][tabindex=' + next_idx + ']');
+		if(next_input.length > 0)
+		{
+			next_input.focus();
+		}
+		else
+		{	
+			/* move to first tab index as last resort. */
+			sheetSelector.find(inputSelector).filter('[data-sheet][data-row][data-col][tabindex]:first').focus(); 
+		}
+	}
+	/* IE lack preventDefault so */
+	evt.preventDefault ? evt.preventDefault() : evt.returnValue = false;
+}
+
+  </script>
+</html>

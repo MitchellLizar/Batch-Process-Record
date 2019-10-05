@@ -1,0 +1,767 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Coating In-process</title>
+<script type="text/javascript" src="../../../js/Forms_HTML/CoatInProcess.js"></script>
+<script type="text/javascript" src="CoatInProcess.js"></script>
+<link rel="stylesheet" href="../../../css/Forms_HTML/BatchProcess.css" />
+<link rel="stylesheet" href="BatchProcess.css" />
+<script type="text/javascript" src="../../../js/Forms_HTML/eBPR.js"></script>
+<script type="text/javascript" src="eBPR.js"></script>
+
+</head>
+    <body onload="LoadFromQueryString();">
+        <noscript style="color:#F15623;">
+    </noscript>
+        <div style="display:none">
+            <select id="mastercontrol.links.source" multiple  size="1" name="mastercontrol.links.source"
+                    title="Source Ref Links" style="display:none"></select>
+        </div>
+        <form id="formc" title="formc" target="_top">
+        
+		  <div id="tab">
+      	   <table width="700" align="left" style="margin-left:10px;border-spacing:0;">
+                          <tr align="center" valign="middle">
+                            <td height="60" colspan="2" class="nobdrRtMid"><div align="center">
+                                <img src="factorytalkLogo.jpg"
+                                     style="float: left;width:175px;height:37px;"></div></td>
+                            <td height="60" colspan="12" valign="middle" class="formTitle"><div align="left">
+                                <p>TABLET COATING IN-PROCESS CHECK RECORD<br>
+                              </p>
+                                </div></td>
+                          </tr>
+                          <tr>
+                            <td height="23" class="nobdrRtMid">Product Code:</td>
+                            <td class="nobdrLtMid">
+                              <input id="Product Code" type="text" title="Product Code" class="readonly" readonly="yes"
+                                     style="width:100%;"></td>
+                            <td class="nobdrRtMid">Product Description:</td>
+                            <td colspan="3" class="nobdrLtMid">
+                              <input id="Description" title="Product Description" class="readonly" style="width:100%;"
+                                     type="text" readonly="readonly"/>
+                              <span style="display:none">
+                              <input type="text" class="headerfield" id="mastercontrol.template.number"
+                                   name="mastercontrol.template.number" title="Template Number" readonly="readonly" value="" >
+                              <input type="text" class="headerfield" id="mastercontrol.template.revision" 
+                                   name="mastercontrol.template.revision" title="Template Revision" readonly="readonly" value="">
+                            </span> </td>
+                          </tr>
+                          <tr>
+                            <td class="nobdrRtMid"><label for="mastercontrol.form.number">Record #</label></td>
+                            <td class="nobdrLtTop">
+                              <input id="mastercontrol.form.number" name="mastercontrol.form.number"  type="text" class="readonly"
+                           readonly="readonly" style="width:100%;" title="Coat InProcess number" value=""/>
+                            </td>
+                            <td class="nobdrRtMid">Batch size:</td>
+                            <td class="nobdrLtMid">
+                              <input id="BatchSize" type="text" value="" class="readonly" title="BatchSize" style="width:100%;"/>
+                           </td>
+                            <td class="nobdrRtMid">Form Issued:</td>
+                            <td class="nobdrLtMid">
+                              <input id="mastercontrol.form.created" name="mastercontrol.form.created" title="InProcess Date"
+                           type="text" value="" class="readonly" readonly="readonly" style="width:100%;"/>
+                          </td>
+                          </tr>
+                          <tr>
+                            <td class="nobdrRtMid">MBR#</td>
+                            <td class="nobdrLtTop">
+                              <input id="MBRNo" type="text" class="readonly" readonly="yes" title="Batch number" value="" style="width:100%;"/>
+							</td>
+                            <td class="nobdrLtMid">
+                              <input name="mastercontrol.links.view.source" type="button" class="toolbarOrangebtn" id="mastercontrol.links.view.source"
+                           title="View Source" value="View Source" alt="View Source">
+                            </span></td>
+                            <td class="nobdrRtMid">&nbsp;</td>
+                            <td class="nobdrRtMid">Issued by:</td>
+                            <td class="nobdrLtMid">
+                              <input id="mastercontrol.form.creator" name="mastercontrol.form.creator" title="creator"
+                           type="text"
+                           value="" class="readonly" readonly="readonly" style="width:100%;"/>
+                           </td>
+                          </tr>
+                          <tr class="botcapCenTop">
+                            <td class="nobdrLtMid">&nbsp;</td>
+                            <td class="nobdrLtMid">&nbsp;</td>
+                            <td class="nobdrLtMid">&nbsp;</td>
+                            <td class="nobdrLtMid">&nbsp;</td>
+                            <td class="nobdrLtMid">&nbsp;</td>
+                            <td class="nobdrLtMid">&nbsp;</td>
+                          </tr>
+      </table>
+	   
+	       <div class="clearBoth"></div>
+          <table width= "700" cellpadding="0" cellspacing="0">
+            <col width="28"/>
+            <col width="100"/>
+            <col width="85"/>
+            <col width="85"/>
+            <col width="85"/>
+            <col width="85"/>
+            <col width="103"/>
+            <col width="75"/>
+            <col width="90"/>
+            <col width="82"/>
+            <col width="82"/>
+            <tr>
+              <td class="allbdrCenMid" colspan = "11"> TYPE OF COATING: Film</td>
+            </tr>
+            <tr>
+              <td class="allbdrRtMid" colspan = "3"><label for="CoatEqptName">Name of the equipment:</label></td>
+              <td class="allbdrLtMid" colspan = "4">
+                  <input id="CoatEqptName" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('CoatEqptName') " title="CoatEqptName"/>
+              </td>
+              <td class="allbdrRtMid" colspan = "2"><label for="CoatEqptNo">Equipment No.:</label></td>
+              <td class="allbdrLtMid" colspan = "2">
+                  <input id="CoatEqptNo" type="text" value="" class="enterdata" style="text-align:center;
+                            width:100%" onChange="recalc_onclick('CoatEqptNo') " title="CoatEqptNo"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrCenMid" colspan = "11"> COATING PARAMETERS (OBSERVED)</td>
+            </tr>
+            <tr>
+              <td class="allbdrLtMid" colspan = "3"><label for="CoatEqptNo">A. Spray gun model:</label></td>
+              <td class="allbdrCenMid" colspan = "2">
+                  <input id="CoatEqptModel" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('CoatEqptModel') " title="CoatEqptModel"/>
+              </td>
+              <td class="allbdrLtMid" colspan = "4"><label for="GunToTableDist">I. Distance between gun and tablet bed
+                  (cm):</label></td>
+              <td class="allbdrCenMid" colspan = "2">
+                  <input id="GunToTableDist" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="recalc_onclick('GunToTableDist') " title="GunToTableDist"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrLtMid" colspan = "3"><label for="PanLoadWt">B. Pan load (Kg):</label></td>
+              <td class="allbdrCenMid" colspan = "2">
+                  <input id="PanLoadWt" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('PanLoadWt') " title="PanLoadWt"/>
+              </td>
+              <td class="allbdrLtMid" colspan = "4"><label for="InletPressure">J. Main air inlet pressure
+                  (Kg/cm²):</label></td>
+              <td class="allbdrCenMid" colspan = "2">
+                  <input id="InletPressure" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('InletPressure') " title="InletPressure"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrLtMid" colspan = "3"><label for="PanSpeed">C. Pan speed(rpm):</label></td>
+              <td class="allbdrCenMid" colspan = "2">
+                  <input id="PanSpeed" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('PanSpeed') " title="PanSpeed"/>
+              </td>
+              <td class="allbdrLtMid" colspan = "4"><label for="AtomPressure">K. Atomisation pressure (Kg/cm²):</label></td>
+              <td class="allbdrCenMid" colspan = "2">
+                  <input id="AtomPressure" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('AtomPressure') " title="AtomPressure"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrLtMid" colspan = "3"><label for="SprayProcedure">D. Spray procedure:</label></td>
+              <td class="allbdrCenMid" colspan = "2">
+                  <input id="SprayProcedure" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('SprayProcedure') " title="SprayProcedure"/>
+              </td>
+              <td class="allbdrLtMid" colspan = "4"><label for="InletTemp">L. Inlet air temperature (°C):</label></td>
+              <td class="allbdrCenMid" colspan = "2">
+                  <input id="InletTemp" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="recalc_onclick('InletTemp') " title="InletTemp"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrLtMid" colspan = "2"><label for="ActualSprayRate">E. Spray rate</label></td>
+              <td class="allbdrRtMid"> ml/min g/min </td>
+              <td class="allbdrCenMid" colspan = "2">
+                  <input id="ActualSprayRate" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="recalc_onclick('ActualSprayRate') " title="ActualSprayRate"/>
+              </td>
+              <td class="allbdrLtMid" colspan = "4"><label for="BedTemp">M. Tablet bed prewarmed to (°C):</label></td>
+              <td class="allbdrCenMid" colspan = "2">
+                  <input id="BedTemp" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('BedTemp') " title="BedTemp"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrLtMid" colspan = "2" rowspan = "3"> F. Pump feed</td>
+              <td class="allbdrRtMid"> Frequency:</td>
+              <td class="allbdrCenMid" colspan = "2"><input id="Frequency" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="recalc_onclick('Frequency') " title="Frequency"/>
+              </td>
+              <td class="allbdrLtMid" colspan = "2" rowspan = "3"> N. Position of dampers </td>
+              <td class="allbdrRtMid" colspan = "2"> Inlet: </td>
+              <td class="allbdrCenMid" colspan = "2"><input id="InDampPos" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('InDampPos') " title="InDampPos"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrRtMid"> Stroke: </td>
+              <td class="allbdrCenMid" colspan = "2"><input id="Stroke" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('Stroke') " title="Stroke"/>
+              </td>
+              <td class="allbdrRtMid" colspan = "2"> Outlet: </td>
+              <td class="allbdrCenMid" colspan = "2"><input id="OutDampPos" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('OutDampPos') " title="OutDampPos"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrRtMid"> rpm: </td>
+              <td class="allbdrCenMid" colspan = "2"><input id="RPM" type="text" value="" class="enterdata" style="text-align:center; width:100%"
+                                   onChange="recalc_onclick('RPM') " title="RPM"/>
+              </td>
+              <td class="allbdrRtMid" colspan = "2"> % inlet / % outlet: </td>
+              <td class="allbdrCenMid" colspan = "2"><input id="PctInToOut" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="recalc_onclick('PctInToOut') " title="PctInToOut"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrLtMid" colspan = "3"> G. No. of guns: </td>
+              <td class="allbdrCenMid" colspan = "2"><input id="NoGuns" type="text" value="" class="enterdata" style="text-align:center; width:100%"
+                                   onChange="recalc_onclick('NoGuns') " title="NoGuns"/>
+              </td>
+              <td class="allbdrLtMid" colspan = "4"> O. Qty of coating suspension in vessel (Kg/Ltrs):</td>
+              <td class="allbdrCenMid" colspan = "2"><input id="QtyOfCoating" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('QtyOfCoating') " title="QtyOfCoating"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrLtMid" colspan = "3"> H. Distance between guns: </td>
+              <td class="allbdrCenMid" colspan = "2"><input id="DistBtwnGuns" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('DistBtwnGuns') " title="DistBtwnGuns"/>
+              </td>
+              <td class="allbdrLtMid" colspan = "4"> P. Average weight of prewarmed core (mg): </td>
+              <td class="allbdrCenMid" colspan = "2"><input id="AvgCoreWt" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloat(eeparseFloat(this.value));recalc_onclick('AvgCoreWt') " title="AvgCoreWt"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrRtMid" colspan = "2"> Balance I.D No.: </td>
+              <td class="allbdrLtMid" colspan = "2">
+                  <input id="BalanceID" type="text" value="" class="enterdata" style="text-align:center;width:100%"
+                         title="BalanceID"/></td>
+              <td class="allbdrRtMid" colspan = "3"> Desired % weight gain / tablet (± 0.05):</td>
+              <td class="allbdrLtMid"><input id="TargetPctWtAdd" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('TargetPctWtAdd') " title="TargetPctWtAdd"/>
+              </td>
+              <td class="allbdrRtMid"> Date: </td>
+              <td class="allbdrLtMid" colspan = "2"><input id="WtDate" title="Weighing Date" class="enterdata" type="text" size="10">
+                  <img src="../../../css/Forms_HTML/images/cal.gif" id="Wt" width="12" height="12" border="0"
+                                 alt="Pick a date" onClick="inDate(this.id)"> </td>
+            </tr>
+            <tr>
+              <td class="allbdrCenMid" colspan = "11"> Weighing record </td>
+            </tr>
+            <tr>
+              <td class="allbdrCenBot"> S. No. </td>
+              <td class="allbdrCenBot"> Time </td>
+              <td class="allbdrCenBot"> Spray period (min) </td>
+              <td class="allbdrCenBot"> (I) Sample 1 (50 tablets) (gm) </td>
+              <td class="allbdrCenBot"> (II) Sample 2 (50 tablets) (gm)</td>
+              <td class="allbdrCenBot"> (III) Sample 3 (50 tablets) (gm)</td>
+              <td class="allbdrCenBot"> ( IV ) Average weight of tablets [(I +II + III) x1000/150] (mg)</td>
+              <td class="allbdrCenBot"> (V) Weight build up per tablet (IV - P) (mg)</td>
+              <td class="allbdrCenBot"> Percentage weight build up per tablet [V/P]x100 (%)</td>
+              <td class="allbdrCenBot"> Done by</td>
+              <td class="allbdrCenBot"> Checked by</td>
+            </tr>
+            <tr>
+              <td class="allbdrCenMid"> 1 </td>
+              <td class="allbdrLtMid"><input id="Wt1Time" title="Wt 1 Time" class="enterdata" type="text"                                                       size="7">
+                  <img src="../../../css/Forms_HTML/images/clock.gif" id="Wt1" width="12" height="12" border="0" alt="Time" onClick="inserttime(this.id)"></td>
+              <td class="allbdrCenMid"><input id="Duration1" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_timeV(this.value));
+							recalc_onclick('Duration1') " title="Duration1"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp1_01" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp1_01') " title="TotWtSamp1_01"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp2_01" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp2_01') " title="TotWtSamp2_01"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp3_01" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp3_01') " title="TotWtSamp3_01"/>
+              </td>
+              <td class="allbdrCenMid"><input id="AvgWtSamp01" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="AvgWtSamp01" />
+              </td>
+              <td class="allbdrCenMid"><input id="WtAddedSamp01" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="WtAddedSamp01" />
+              </td>
+              <td class="allbdrCenMid"><input id="PctWtAddSamp01" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="PctWtAddSamp01" />
+              </td>
+              <td class="allbdrCenMid"><input id="DoneBySamp01" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('DoneBySamp01') " title="DoneBySamp01"/>
+              </td>
+              <td class="allbdrCenMid"><input id="CkBySamp01" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="recalc_onclick('CkBySamp01') " title="CkBySamp01"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrCenMid"> 2 </td>
+              <td class="allbdrLtMid"><input id="Wt2Time" title="Wt 2 Time" class="enterdata" type="text" size="7">
+                  <img src="../../../css/Forms_HTML/images/clock.gif" id="Wt2" width="12" height="12" border="0"
+                                 alt="Time" onClick="inserttime(this.id)"></td>
+              <td class="allbdrCenMid"><input id="Duration2" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_timeV(this.value));
+							recalc_onclick('Duration2') " title="Duration2"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp1_02" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp1_02') " title="TotWtSamp1_02"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp2_02" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp2_02') " title="TotWtSamp2_02"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp3_02" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp3_02') " title="TotWtSamp3_02"/>
+              </td>
+              <td class="allbdrCenMid"><input id="AvgWtSamp02" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="AvgWtSamp02" />
+              </td>
+              <td class="allbdrCenMid"><input id="WtAddedSamp02" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="WtAddedSamp02" />
+              </td>
+              <td class="allbdrCenMid"><input id="PctWtAddSamp02" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="PctWtAddSamp02" />
+              </td>
+              <td class="allbdrCenMid"><input id="DoneBySamp02" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('DoneBySamp02') " title="DoneBySamp02"/>
+              </td>
+              <td class="allbdrCenMid"><input id="CkBySamp02" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('CkBySamp02') " title="CkBySamp02"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrCenMid"> 3 </td>
+              <td class="allbdrLtMid"><input id="Wt3Time" title="Wt 3 Time" class="enterdata" type="text" size="7">
+                  <img src="../../../css/Forms_HTML/images/clock.gif" id="Wt3" width="12" height="12"
+                                 border="0" alt="Time" onClick="inserttime(this.id)"></td>
+              <td class="allbdrCenMid"><input id="Duration3" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_timeV(this.value));
+							recalc_onclick('Duration3') " title="Duration3"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp1_03" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp1_03') " title="TotWtSamp1_03"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp2_03" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp2_03') " title="TotWtSamp2_03"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp3_03" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							 recalc_onclick('TotWtSamp3_03') " title="TotWtSamp3_03"/>
+              </td>
+              <td class="allbdrCenMid"><input id="AvgWtSamp03" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="AvgWtSamp03" />
+              </td>
+              <td class="allbdrCenMid"><input id="WtAddedSamp03" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="WtAddedSamp03" />
+              </td>
+              <td class="allbdrCenMid"><input id="PctWtAddSamp03" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="PctWtAddSamp03" />
+              </td>
+              <td class="allbdrCenMid"><input id="DoneBySamp03" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('DoneBySamp03') " title="DoneBySamp03"/>
+              </td>
+              <td class="allbdrCenMid"><input id="CkBySamp03" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('CkBySamp03') " title="CkBySamp03"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrCenMid"> 4 </td>
+              <td class="allbdrLtMid"><input id="Wt4Time" title="Wt 4 Time" class="enterdata" type="text" size="7">
+                  <img src="../../../css/Forms_HTML/images/clock.gif" id="Wt4" width="12" height="12" border="0"
+                                 alt="Time" onClick="inserttime(this.id)"></td>
+              <td class="allbdrCenMid"><input id="Duration4" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_timeV(this.value));
+							 recalc_onclick('Duration4') " title="Duration4"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp1_04" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							 recalc_onclick('TotWtSamp1_04') " title="TotWtSamp1_04"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp2_04" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp2_04') " title="TotWtSamp2_04"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp3_04" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp3_04') " title="TotWtSamp3_04"/>
+              </td>
+              <td class="allbdrCenMid"><input id="AvgWtSamp04" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="AvgWtSamp04" />
+              </td>
+              <td class="allbdrCenMid"><input id="WtAddedSamp04" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="WtAddedSamp04" />
+              </td>
+              <td class="allbdrCenMid"><input id="PctWtAddSamp04" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="PctWtAddSamp04" />
+              </td>
+              <td class="allbdrCenMid"><input id="DoneBySamp04" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('DoneBySamp04') " title="DoneBySamp04"/>
+              </td>
+              <td class="allbdrCenMid"><input id="CkBySamp04" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('CkBySamp04') " title="CkBySamp04"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrCenMid"> 5 </td>
+              <td class="allbdrLtMid"><input id="Wt5Time" title="Wt 5 Time" class="enterdata" type="text" size="7">
+                  <img src="../../../css/Forms_HTML/images/clock.gif" id="Wt5" width="12" height="12" border="0"
+                                 alt="Time" onClick="inserttime(this.id)"></td>
+              <td class="allbdrCenMid"><input id="Duration5" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_timeV(this.value));
+							recalc_onclick('Duration5') " title="Duration5"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp1_05" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp1_05') " title="TotWtSamp1_05"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp2_05" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp2_05') " title="TotWtSamp2_05"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp3_05" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							 recalc_onclick('TotWtSamp3_05') " title="TotWtSamp3_05"/>
+              </td>
+              <td class="allbdrCenMid"><input id="AvgWtSamp05" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="AvgWtSamp05" />
+              </td>
+              <td class="allbdrCenMid"><input id="WtAddedSamp05" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="WtAddedSamp05" />
+              </td>
+              <td class="allbdrCenMid"><input id="PctWtAddSamp05" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="PctWtAddSamp05" />
+              </td>
+              <td class="allbdrCenMid"><input id="DoneBySamp05" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('DoneBySamp05') " title="DoneBySamp05"/>
+              </td>
+              <td class="allbdrCenMid"><input id="CkBySamp05" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('CkBySamp05') " title="CkBySamp05"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrCenMid"> 6 </td>
+              <td class="allbdrLtMid"><input id="Wt6Time" title="Wt 6 Time" class="enterdata" type="text" size="7">
+                  <img src="../../../css/Forms_HTML/images/clock.gif" id="Wt6" width="12" height="12" border="0"
+                                 alt="Time" onClick="inserttime(this.id)"></td>
+              <td class="allbdrCenMid"><input id="Duration6" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_timeV(this.value));
+							 recalc_onclick('Duration6') " title="Duration6"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp1_06" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp1_06') " title="TotWtSamp1_06"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp2_06" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp2_06') " title="TotWtSamp2_06"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp3_06" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp3_06') " title="TotWtSamp3_06"/>
+              </td>
+              <td class="allbdrCenMid"><input id="AvgWtSamp06" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="AvgWtSamp06" />
+              </td>
+              <td class="allbdrCenMid"><input id="WtAddedSamp06" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="WtAddedSamp06" />
+              </td>
+              <td class="allbdrCenMid"><input id="PctWtAddSamp06" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="PctWtAddSamp06" />
+              </td>
+              <td class="allbdrCenMid"><input id="DoneBySamp06" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('DoneBySamp06') " title="DoneBySamp06"/>
+              </td>
+              <td class="allbdrCenMid"><input id="CkBySamp06" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="recalc_onclick('CkBySamp06') " title="CkBySamp06"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrCenMid"> 7 </td>
+              <td class="allbdrLtMid"><input id="Wt7Time" title="Wt 7 Time" class="enterdata" type="text" size="7">
+                  <img src="../../../css/Forms_HTML/images/clock.gif" id="Wt7" width="12" height="12" border="0"
+                                 alt="Time" onClick="inserttime(this.id)"></td>
+              <td class="allbdrCenMid"><input id="Duration7" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_timeV(this.value));
+							recalc_onclick('Duration7') " title="Duration7"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp1_07" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp1_07') " title="TotWtSamp1_07"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp2_07" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp2_07') " title="TotWtSamp2_07"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp3_07" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp3_07') " title="TotWtSamp3_07"/>
+              </td>
+              <td class="allbdrCenMid"><input id="AvgWtSamp07" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="AvgWtSamp07" />
+              </td>
+              <td class="allbdrCenMid"><input id="WtAddedSamp07" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="WtAddedSamp07" />
+              </td>
+              <td class="allbdrCenMid"><input id="PctWtAddSamp07" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="PctWtAddSamp07" />
+              </td>
+              <td class="allbdrCenMid"><input id="DoneBySamp07" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('DoneBySamp07') " title="DoneBySamp07"/>
+              </td>
+              <td class="allbdrCenMid"><input id="CkBySamp07" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('CkBySamp07') " title="CkBySamp07"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrCenMid"> 8 </td>
+              <td class="allbdrLtMid"><input id="Wt8Time" title="Wt 8 Time" class="enterdata" type="text" size="7">
+                  <img src="../../../css/Forms_HTML/images/clock.gif" id="Wt8" width="12" height="12" border="0"
+                                 alt="Time" onClick="inserttime(this.id)"></td>
+              <td class="allbdrCenMid"><input id="Duration8" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_timeV(this.value));
+							recalc_onclick('Duration8') " title="Duration8"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp1_08" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp1_08') " title="TotWtSamp1_08"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp2_08" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp2_08') " title="TotWtSamp2_08"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp3_08" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp3_08') " title="TotWtSamp3_08"/>
+              </td>
+              <td class="allbdrCenMid"><input id="AvgWtSamp08" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="AvgWtSamp08" />
+              </td>
+              <td class="allbdrCenMid"><input id="WtAddedSamp08" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="WtAddedSamp08" />
+              </td>
+              <td class="allbdrCenMid"><input id="PctWtAddSamp08" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="PctWtAddSamp08" />
+              </td>
+              <td class="allbdrCenMid"><input id="DoneBySamp08" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('DoneBySamp08') " title="DoneBySamp08"/>
+              </td>
+              <td class="allbdrCenMid"><input id="CkBySamp08" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('CkBySamp08') " title="CkBySamp08"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrCenMid"> 9 </td>
+              <td class="allbdrLtMid"><input id="Wt9Time" title="Wt 9 Time" class="enterdata" type="text" size="7">
+                  <img src="../../../css/Forms_HTML/images/clock.gif" id="Wt9" width="12" height="12" border="0"
+                                 alt="Time" onClick="inserttime(this.id)"></td>
+              <td class="allbdrCenMid"><input id="Duration9" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_timeV(this.value));
+							recalc_onclick('Duration9') " title="Duration9"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp1_09" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp1_09') " title="TotWtSamp1_09"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp2_09" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp2_09') " title="TotWtSamp2_09"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp3_09" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp3_09') " title="TotWtSamp3_09"/>
+              </td>
+              <td class="allbdrCenMid"><input id="AvgWtSamp09" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="AvgWtSamp09" />
+              </td>
+              <td class="allbdrCenMid"><input id="WtAddedSamp09" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="WtAddedSamp09" />
+              </td>
+              <td class="allbdrCenMid"><input id="PctWtAddSamp09" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="PctWtAddSamp09" />
+              </td>
+              <td class="allbdrCenMid"><input id="DoneBySamp09" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="recalc_onclick('DoneBySamp09') " title="DoneBySamp09"/>
+              </td>
+              <td class="allbdrCenMid"><input id="CkBySamp09" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('CkBySamp09') " title="CkBySamp09"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrCenMid"> 10 </td>
+              <td class="allbdrLtMid"><input id="Wt10Time" title="Wt 10 Time" class="enterdata" type="text" size="7">
+                  <img src="../../../css/Forms_HTML/images/clock.gif" id="Wt10" width="12" height="12" border="0"
+                                 alt="Time" onClick="inserttime(this.id)"></td>
+              <td class="allbdrCenMid"><input id="Duration10" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_timeV(this.value));
+							 recalc_onclick('Duration10') " title="Duration10"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp1_10" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp1_10') " title="TotWtSamp1_10"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp2_10" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp2_10') " title="TotWtSamp2_10"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp3_10" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							 recalc_onclick('TotWtSamp3_10') " title="TotWtSamp3_10"/>
+              </td>
+              <td class="allbdrCenMid"><input id="AvgWtSamp10" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="AvgWtSamp10" />
+              </td>
+              <td class="allbdrCenMid"><input id="WtAddedSamp10" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="WtAddedSamp10" />
+              </td>
+              <td class="allbdrCenMid"><input id="PctWtAddSamp10" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="PctWtAddSamp10" />
+              </td>
+              <td class="allbdrCenMid"><input id="DoneBySamp10" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('DoneBySamp10') " title="DoneBySamp10"/>
+              </td>
+              <td class="allbdrCenMid"><input id="CkBySamp10" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="recalc_onclick('CkBySamp10') " title="CkBySamp10"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrCenMid"> 11 </td>
+              <td class="allbdrLtMid"><input id="Wt11Time" title="Wt 11 Time" class="enterdata" type="text" size="7">
+                  <img src="../../../css/Forms_HTML/images/clock.gif" id="Wt11" width="12" height="12" border="0"
+                                 alt="Time" onClick="inserttime(this.id)"></td>
+              <td class="allbdrCenMid"><input id="Duration11" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_timeV(this.value));
+							recalc_onclick('Duration11') " title="Duration11"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp1_11" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp1_11') " title="TotWtSamp1_11"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp2_11" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp2_11') " title="TotWtSamp2_11"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp3_11" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp3_11') " title="TotWtSamp3_11"/>
+              </td>
+              <td class="allbdrCenMid"><input id="AvgWtSamp11" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="AvgWtSamp11" />
+              </td>
+              <td class="allbdrCenMid"><input id="WtAddedSamp11" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="WtAddedSamp11" />
+              </td>
+              <td class="allbdrCenMid"><input id="PctWtAddSamp11" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="PctWtAddSamp11" />
+              </td>
+              <td class="allbdrCenMid"><input id="DoneBySamp11" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="recalc_onclick('DoneBySamp11') " title="DoneBySamp11"/>
+              </td>
+              <td class="allbdrCenMid"><input id="CkBySamp11" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('CkBySamp11') " title="CkBySamp11"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrCenMid"> 12 </td>
+              <td class="allbdrLtMid"><input id="Wt12Time" title="Wt 12 Time" class="enterdata" type="text" size="7">
+                  <img src="../../../css/Forms_HTML/images/clock.gif" id="Wt12" width="12" height="12"
+                                 border="0" alt="Time" onClick="inserttime(this.id)"></td>
+              <td class="allbdrCenMid"><input id="Duration12" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_timeV(this.value));
+							recalc_onclick('Duration12') " title="Duration12"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp1_12" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp1_12') " title="TotWtSamp1_12"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp2_12" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp2_12') " title="TotWtSamp2_12"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp3_12" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							 recalc_onclick('TotWtSamp3_12') " title="TotWtSamp3_12"/>
+              </td>
+              <td class="allbdrCenMid"><input id="AvgWtSamp12" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="AvgWtSamp12" />
+              </td>
+              <td class="allbdrCenMid"><input id="WtAddedSamp12" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="WtAddedSamp12" />
+              </td>
+              <td class="allbdrCenMid"><input id="PctWtAddSamp12" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="PctWtAddSamp12" />
+              </td>
+              <td class="allbdrCenMid"><input id="DoneBySamp12" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('DoneBySamp12') " title="DoneBySamp12"/>
+              </td>
+              <td class="allbdrCenMid"><input id="CkBySamp12" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('CkBySamp12') " title="CkBySamp12"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrCenMid"> 13 </td>
+              <td class="allbdrLtMid"><input id="Wt13Time" title="Wt 13 Time" class="enterdata" type="text" size="7">
+                  <img src="../../../css/Forms_HTML/images/clock.gif" id="Wt13" width="12" height="12"
+                                 border="0" alt="Time" onClick="inserttime(this.id)"></td>
+              <td class="allbdrCenMid"><input id="Duration13" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_timeV(this.value));
+							 recalc_onclick('Duration13') " title="Duration13"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp1_13" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp1_13') " title="TotWtSamp1_13"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp2_13" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							recalc_onclick('TotWtSamp2_13') " title="TotWtSamp2_13"/>
+              </td>
+              <td class="allbdrCenMid"><input id="TotWtSamp3_13" type="text" value="" class="enterdata" style="text-align:center;
+							 width:100%" onChange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);
+							 recalc_onclick('TotWtSamp3_13') " title="TotWtSamp3_13"/>
+              </td>
+              <td class="allbdrCenMid"><input id="AvgWtSamp13" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="AvgWtSamp13" />
+              </td>
+              <td class="allbdrCenMid"><input id="WtAddedSamp13" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="WtAddedSamp13" />
+              </td>
+              <td class="allbdrCenMid"><input id="PctWtAddSamp13" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="PctWtAddSamp13" />
+              </td>
+              <td class="allbdrCenMid"><input id="DoneBySamp13" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('DoneBySamp13') " title="DoneBySamp13"/>
+              </td>
+              <td class="allbdrCenMid"><input id="CkBySamp13" type="text" value="" class="enterdata" style="text-align:center;
+							width:100%" onChange="recalc_onclick('CkBySamp13') " title="CkBySamp13"/>
+              </td>
+            </tr>
+            <tr>
+              <td class="allbdrRtMid" colspan = "6"> Average Coated Weight: </td>
+              <td class="allbdrCenMid"><input id="AvgCoatedWt" type="text" readonly="readonly" value="" class="readonly"
+                               style="text-align:center; width:100% " title="AvgCoatedWt" />
+              </td>
+              <td class="allbdrCenMid" colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="allbdrRtTop" colspan = "2" rowspan = "2"> Remarks: </td>
+              <td class="allbdrLtTop" colspan = "9" rowspan = "2"><textarea id="Remarks" class="enterdata" style=" width:100% "
+                                      onChange="recalc_onclick('Remarks') " onKeyDown="" title="Remarks" rows="3"></textarea>
+              </td>
+            </tr>
+            <tr> </tr>
+          </table>
+		  </div>
+				</div>
+        </form>
+    </body>
+</html>

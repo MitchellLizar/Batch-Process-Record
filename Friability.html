@@ -1,0 +1,546 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+
+<title>Friability</title>
+<link rel="stylesheet" href="../../../css/Forms_HTML/BatchProcess.css" />
+<script type="text/javascript" src="../../../js/Forms_HTML/eBPR.js"></script>
+
+<link rel="stylesheet" href="BatchProcess.css" />
+<script type="text/javascript" src="eBPR.js"></script>
+</head>
+<body>
+    <div style="display:none">
+        <select id="mastercontrol.links.source" multiple  size="1" name="mastercontrol.links.source"
+                title="Source Ref Links" style="display:none"></select>
+    </div>
+    <form id="formc" title="formc" method="post" action="" target="_top">
+	<table width="700" align="left" style="margin-left:10px;border-spacing:0;">
+		<tr align="center" valign="middle">
+			<td height="60" colspan="2" class="nobdrLtMid">
+			<img src="../../../css/Forms_HTML/images/factorytalkLogo.jpg" 
+			style="float: left;width:175px;height:37px;"></td>
+			<td height="60" colspan="12" valign="middle" class="formTitle"><div align="left">
+			TABLET IN-PROCESS CHECK RECORD</div></td>
+		</tr>
+		<tr>
+			<td height="23" class="nobdrRtMid">Product Code:</td>
+			<td class="nobdrLtMid">
+			  <input id="Product Code" type="text" title="Product Code" class="readonly" readonly="yes" style="width:100%;">
+			</td>
+			<td class="nobdrRtMid">Product Description:</td>
+			<td colspan="3" class="nobdrLtMid">
+			  <input id="Description" title="Product Description" class="readonly" style="width:100%;" type="text"
+                     readonly="readonly"/>
+			  <span style="display:none">
+			  <input type="text" class="headerfield" id="mastercontrol.template.number" 
+				   name="mastercontrol.template.number" title="Template Number" readonly="readonly" value="" >
+			  <input type="text" class="headerfield" id="mastercontrol.template.revision" 
+				   name="mastercontrol.template.revision" title="Template Revision" readonly="readonly" value="">
+			</span> </td>
+		</tr>
+		<tr>
+			<td class="nobdrRtMid"><label for="mastercontrol.form.number">Record #</label></td>
+			<td class="nobdrLtTop">
+			  <input id="mastercontrol.form.number" name="mastercontrol.form.number" type="text" class="readonly"
+			readonly="readonly" style="width:100%;" title="Coat InProcess" value=""/>
+			</td>
+			<td class="nobdrRtMid">Batch size:</td>
+			<td class="nobdrLtMid">
+			  <input id="BatchSize" type="text" value="" class="readonly" title="BatchSize" style="width:100%;"/>
+			</td>
+			<td class="nobdrRtMid">Form Issued:</td>
+			<td class="nobdrLtMid">
+			  <input id="mastercontrol.form.created" name="mastercontrol.form.created" title="InProcess Date"
+			type="text" value="" class="readonly" readonly="readonly" style="width:100%;"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="nobdrRtMid">MBR#</td>
+			<td class="nobdrLtTop">
+			  <input id="MBRNo" type="text" class="readonly" readonly="yes" title="Batch number" value="" style="width:100%;"/>
+			</td>
+			<td class="nobdrLtMid">
+			  <input name="mastercontrol.links.view.source" type="button" class="toolbarOrangebtn" id="mastercontrol.links.view.source"
+			title="View Source" value="View Source" alt="View Source">
+			</span></td>
+			<td class="nobdrRtMid">&nbsp;</td>
+			<td class="nobdrRtMid">Issued by:</td>
+			<td class="nobdrLtMid">
+			  <input id="mastercontrol.form.creator" name="mastercontrol.form.creator" title="creator"
+			type="text"
+			value="" class="readonly" readonly="readonly" style="width:100%;"/>
+			</td>
+		</tr>
+		<tr class="botcapCenTop">
+			<td class="nobdrLtMid">&nbsp;</td>
+			<td class="nobdrLtMid">&nbsp;</td>
+			<td class="nobdrLtMid">&nbsp;</td>
+			<td class="nobdrLtMid">&nbsp;</td>
+			<td class="nobdrLtMid">&nbsp;</td>
+			<td class="nobdrLtMid">&nbsp;</td>
+		</tr>
+      </table>
+    <div class="clearBoth"></div>
+		<div id="tab">
+			 <div id="sheet-1" style="padding: 1em 1.4em;">
+				<table width= "700" cellspacing="0" cellpadding="0" style="border-spacing:0;">
+				<col width="89"/>
+				<col width="33"/>
+				<col width="75"/>
+				<col width="75"/>
+				<col width="75"/>
+				<col width="75"/>
+				<col width="75"/>
+				<col width="75"/>
+				<col width="75"/>
+				<col width="75"/>
+				<col width="75"/>
+				<col width="75"/>
+				<tr><td class="allbdrCenMid" colspan = "9"> (FOR WEIGHT OF 10 TABLETS, FRIABILITY &amp; DISINTEGRATION TIME)</td><td class="allbdrRtMid"> Date:</td><td class="allbdrLtMid" colspan = "2"><input id="FriDate" title="Date" class="enterdata" type="text" size="10"><img src="../../../css/Forms_HTML/images/cal.gif" id="Fri" width="12" height="12" border="0" alt="Pick a date" onclick="inDate(this.id)"></td>
+				</tr>
+				<tr><td class="allbdrRtMid" colspan = "2">	Done by:</td><td class="allbdrLtMid" colspan = "2">	<input id="DoneBy" type="text" value="" class="enterdata" style="width:100%" title="DoneBy"/></td><td class="allbdrCenMid" colspan = "3">	LIMITS</td><td class="allbdrRtMid" colspan = "3">	Checked by:</td><td class="allbdrLtMid" colspan = "2">	<input id="CkBy" type="text" value="" class="enterdata" style="width:100%" title="CkBy"/></td>
+				</tr>
+				<tr><td class="allbdrRtMid" colspan = "4" rowspan = "2"> WEIGHT OF 10 TABLETS (g)</td><td class="allbdrCenBot">	MIN</td><td class="allbdrCenBot">	<span> </span>TARGET</td><td class="allbdrCenBot">	MAX</td><td class="allbdrRtMid" colspan = "4">	FRIABILITY (%)<span>   </span></td><td class="allbdrLtMid">	<input id="LimitFriPct" type="text" value="0.80%" class="enterdata" style="width:100%;text-align:center;" onchange="this.value=eedisplayPercentND(eeparsePercent(this.value),2); " title="LimitFriPct"/></td>
+				</tr>
+				<tr><td class="allbdrCenMid">	<input id="LimitWt10TabMin" type="text" value="2.94" class="enterdata" style="width:100%;text-align:center;" onchange="this.value=eedisplayFloat(eeparseFloat(this.value)); " title="LimitWt10TabMin"/></td><td class="allbdrLtMid">	<input id="LimitWt10TabTarget" type="text" value="3.00" class="enterdata" style="width:100%;text-align:center;" title="LimitWt10TabTarget"/></td><td class="allbdrLtMid">	<input id="LimitWt10TabMax" type="text" value="3.06" class="enterdata" style="width:100%;text-align:center;" onchange="this.value=eedisplayFloat(eeparseFloat(this.value)); " title="LimitWt10TabMax"/></td><td class="allbdrRtMid" colspan = "4">	DISINTEGRATION TIME (min)</td><td class="allbdrLtMid">	<input id="LimitDisIntTime" type="text" value="15 min." class="enterdata" style="width:100%;text-align:center;" title="LimitDisIntTime"/></td>
+				</tr>
+				<tr><td class="allbdrRtMid" colspan = "2"> Balance No.:<span> </span></td>
+                    <td class="allbdrLtMid" colspan = "2">
+                        <input id="XLEW_1_7_3" type="text" value="" class="enterdata" style="width:100%" title="XLEW_1_7_3"/></td>
+                    <td class="allbdrRtMid" colspan = "3"> Friability Test Apparatus No.:</td><td class="allbdrLtMid" colspan = "2">
+                        <input id="XLEW_1_7_8" type="text" value="" class="enterdata" style="width:100%" title="XLEW_1_7_8"/></td>
+                    <td class="allbdrRtMid" colspan = "2">	DT Apparatus No.:</td>
+					<td class="allbdrLtMid">
+                        <input id="XLEW_1_7_12" type="text" value="" class="enterdata" style="width:100%" title="XLEW_1_7_12"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="allbdrRtMid">&nbsp;</td>
+					<td class="allbdrCenMid">&nbsp;</td>
+					<td class="allbdrCenMid">1
+					</td>
+					<td class="allbdrCenMid">2
+					</td>
+					<td class="allbdrCenMid">3
+					</td>
+					<td class="allbdrCenMid">4
+					</td>
+					<td class="allbdrCenMid">5
+					</td>
+					<td class="allbdrCenMid">6
+					</td>
+					<td class="allbdrCenMid">7
+					</td>
+					<td class="allbdrCenMid">8
+					</td>
+					<td class="allbdrCenMid">9
+					</td>
+					<td class="allbdrCenMid">10
+					</td>
+				</tr>
+				<tr>
+					<td class="allbdrRtMid" rowspan = "2">Weight of 10 Tablets (g)
+					</td>
+					<td class="allbdrCenMid">L
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10L1" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10L1"/>
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10L2" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10L2"/>
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10L3" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10L3"/>
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10L4" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10L4"/>
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10L5" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10L5"/>
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10L6" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10L6"/>
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10L7" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10L7"/>
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10L8" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10L8"/>
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10L9" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10L9"/>
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10L10" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10L10"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="allbdrCenMid">R
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10R1" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10R1"/>
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10R2" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10R2"/>
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10R3" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10R3"/>
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10R4" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10R4"/>
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10R5" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10R5"/>
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10R6" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10R6"/>
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10R7" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10R7"/>
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10R8" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10R8"/>
+					</td>
+					<td class="allbdrCenMid"><input id="Wt10R9" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10R9"/>
+					</td>
+					<td class="allbdrLtMid"><input id="Wt10R10" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayFloatNDV(eeparseFloatV(this.value),2); " title="Wt10R10"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="allbdrRtMid" rowspan = "2">Fraibility in %
+					</td>
+					<td class="allbdrCenMid">L
+					</td>
+					<td class="allbdrCenMid"><input id="FriL1" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriL1"/>
+					</td>
+					<td class="allbdrCenMid"><input id="FriL2" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriL2"/>
+					</td>
+					<td class="allbdrCenMid"><input id="FriL3" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriL3"/>
+					</td>
+					<td class="allbdrCenMid"><input id="FriL4" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriL4"/>
+					</td>
+					<td class="allbdrCenMid"><input id="FriL5" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriL5"/>
+					</td>
+					<td class="allbdrCenMid"><input id="FriL6" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriL6"/>
+					</td>
+					<td class="allbdrCenMid"><input id="FriL7" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriL7"/>
+					</td>
+					<td class="allbdrCenMid"><input id="FriL8" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriL8"/>
+					</td>
+					<td class="allbdrCenMid"><input id="FriL9" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriL9"/>
+					</td>
+					<td class="allbdrLtMid"><input id="FriL10" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriL10"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="allbdrCenMid">R
+					</td>
+					<td class="allbdrCenMid"><input id="FriR1" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriR1"/>
+					</td>
+					<td class="allbdrCenMid"><input id="FriR2" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriR2"/>
+					</td>
+					<td class="allbdrCenMid"><input id="FriR3" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriR3"/>
+					</td>
+					<td class="allbdrCenMid"><input id="FriR4" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriR4"/>
+					</td>
+					<td class="allbdrCenMid"><input id="FriR5" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriR5"/>
+					</td>
+					<td class="allbdrCenMid"><input id="FriR6" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriR6"/>
+					</td>
+					<td class="allbdrCenMid"><input id="FriR7" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriR7"/>
+					</td>
+					<td class="allbdrCenMid"><input id="FriR8" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriR8"/>
+					</td>
+					<td class="allbdrCenMid"><input id="FriR9" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriR9"/>
+					</td>
+					<td class="allbdrLtMid"><input id="FriR10" type="text" value="" class="enterdata" style="width:100%" onchange="this.value=eedisplayPercentNDV(eeparsePercentV(this.value),2); " title="FriR10"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="allbdrRtMid" rowspan = "2"> Disintegration time (min)</td>
+					<td class="allbdrCenMid">L
+					</td>
+					<td class="allbdrCenMid"><input id="DisTimeL1" type="text" value="" class="enterdata" style="width:100%" title="DisTimeL1"/>
+					</td>
+					<td class="allbdrCenMid"><input id="DisTimeL2" type="text" value="" class="enterdata" style="width:100%" title="DisTimeL2"/>
+					</td>
+					<td class="allbdrCenMid"><input id="DisTimeL3" type="text" value="" class="enterdata" style="width:100%" title="DisTimeL3"/>
+					</td>
+					<td class="allbdrCenMid"><input id="DisTimeL4" type="text" value="" class="enterdata" style="width:100%" title="DisTimeL4"/>
+					</td>
+					<td class="allbdrCenMid"><input id="DisTimeL5" type="text" value="" class="enterdata" style="width:100%" title="DisTimeL5"/>
+					</td>
+					<td class="allbdrCenMid"><input id="DisTimeL6" type="text" value="" class="enterdata" style="width:100%" title="DisTimeL6"/>
+					</td>
+					<td class="allbdrCenMid"><input id="DisTimeL7" type="text" value="" class="enterdata" style="width:100%" title="DisTimeL7"/>
+					</td>
+					<td class="allbdrCenMid"><input id="DisTimeL8" type="text" value="" class="enterdata" style="width:100%" title="DisTimeL8"/>
+					</td>
+					<td class="allbdrCenMid"><input id="DisTimeL9" type="text" value="" class="enterdata" style="width:100%" title="DisTimeL9"/>
+					</td>
+					<td class="allbdrLtMid"><input id="DisTimeL10" type="text" value="" class="enterdata" style="width:100%" title="DisTimeL10"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="allbdrCenMid"> R</td>
+					<td class="allbdrCenMid"><input id="DisTimeR1" type="text" value="" class="enterdata" style="width:100%" title="DisTimeR1"/>
+					</td>
+					<td class="allbdrCenMid"><input id="DisTimeR2" type="text" value="" class="enterdata" style="width:100%" title="DisTimeR2"/>
+					</td>
+					<td class="allbdrCenMid"><input id="DisTimeR3" type="text" value="" class="enterdata" style="width:100%" title="DisTimeR3"/>
+					</td>
+					<td class="allbdrCenMid"><input id="DisTimeR4" type="text" value="" class="enterdata" style="width:100%" title="DisTimeR4"/>
+					</td>
+					<td class="allbdrCenMid"><input id="DisTimeR5" type="text" value="" class="enterdata" style="width:100%" title="DisTimeR5"/>
+					</td>
+					<td class="allbdrCenMid"><input id="DisTimeR6" type="text" value="" class="enterdata" style="width:100%" title="DisTimeR6"/>
+					</td>
+					<td class="allbdrCenMid"><input id="DisTimeR7" type="text" value="" class="enterdata" style="width:100%" title="DisTimeR7"/>
+					</td>
+					<td class="allbdrCenMid"><input id="DisTimeR8" type="text" value="" class="enterdata" style="width:100%" title="DisTimeR8"/>
+					</td>
+					<td class="allbdrCenMid"><input id="DisTimeR9" type="text" value="" class="enterdata" style="width:100%" title="DisTimeR9"/>
+					</td>
+					<td class="allbdrLtMid"><input id="DisTimeR10" type="text" value="" class="enterdata" style="width:100%" title="DisTimeR10"/>
+					</td>
+				</tr>
+				<tr style="height:30pt">
+					<td class="allbdrRtTop" style="height:30pt;">Remarks:</td>
+					<td class="allbdrLtTop" style="height:30pt;" colspan = "12">
+                        <textarea id="Remarks" class="allbdrLtTop enterdata" style="width:100%;overflow-y:
+                        scroll;text-align: left;height:30pt;" title="Remarks"></textarea>
+					</td>
+				</tr>
+			</table>
+			</div>
+			 <div class="sectionHeading" style="margin-left:20px;">
+				 <input type="text" id="mastercontrol.route.stepnameat.step1" name="mastercontrol.route.stepnameat.step1"
+                        title="Step1 Esig Meaning" value="Inspection" size="100" class="sigmeaning" readonly="yes"/>
+			 </div>
+			 <div class="subSection">
+				 <div class="signatureData">
+					 <table class="signatureTable" cellpadding="0" cellspacing="0">
+                         <thead>
+                         <tr>
+                             <th scope="col" class="signatureName">
+                                 <label for="mastercontrol.route.esig.users.step1">Name</label></th>
+                             <th scope="col" class="signatureDate">
+                                 <label for="mastercontrol.route.esig.timestamps.step1">Date</label></th>
+                             <th scope="col" class="signatureStatus">
+                                 <label for="mastercontrol.route.esig.sigstatus.step1">Signoff Status</label></th>
+                         </tr> </thead>
+                         <tbody>
+                         <tr>
+                             <td><textarea id="mastercontrol.route.esig.users.step1"
+                                           name="mastercontrol.route.esig.users.step1" class="signatureField"
+                                           title="Step1 Name" readonly="readonly"></textarea></td>
+                         <td><textarea id="mastercontrol.route.esig.timestamps.step1"
+                                       name="mastercontrol.route.esig.timestamps.step1" class="signatureField"
+                                       title="Step1 Date" readonly="readonly"></textarea></td>
+                             <td><textarea id="mastercontrol.route.esig.sigstatus.step1"
+                                           name="mastercontrol.route.esig.sigstatus.step1" class="signatureField"
+                                           title="Step1 Signoff Status" readonly="readonly"></textarea></td>
+                         </tr>
+                         </tbody>
+					 </table>
+				 </div>
+			 </div>
+			 <!-- Signature Section Ends -->
+			 <!-- Signature Section Starts -->
+			 <div class="sectionHeading" style="margin-left:20px;">
+				 <input type="text" id="mastercontrol.route.stepnameat.step2" name="mastercontrol.route.stepnameat.step2"
+                        title="Step2 Esig Meaning" value="Verification" size="100" class="sigmeaning" readonly="yes"/>
+			 </div>
+			 <div class="subSection">
+				 <div class="signatureData">
+					 <table class="signatureTable" cellpadding="0" cellspacing="0"> <thead>
+                     <tr>
+                         <th scope="col" class="signatureName">
+                             <label for="mastercontrol.route.esig.users.step2">Name</label></th>
+                         <th scope="col" class="signatureDate"><label for="mastercontrol.route.esig.timestamps.step2">Date</label></th>
+                         <th scope="col" class="signatureStatus"><label for="mastercontrol.route.esig.sigstatus.step2">Signoff Status</label></th>
+                     </tr> </thead>
+                         <tbody>
+                         <tr>
+                             <td><textarea id="mastercontrol.route.esig.users.step2" name="mastercontrol.route.esig.users.step2" class="signatureField"
+                                           title="Step2 Name" readonly="readonly"></textarea></td>
+                             <td><textarea id="mastercontrol.route.esig.timestamps.step2"
+                                           name="mastercontrol.route.esig.timestamps.step2" class="signatureField"
+                                           title="Step2 Date" readonly="readonly"></textarea></td>
+                             <td><textarea id="mastercontrol.route.esig.sigstatus.step2"
+                                           name="mastercontrol.route.esig.sigstatus.step2" class="signatureField"
+                                           title="Step2 Signoff Status" readonly="readonly"></textarea></td> </tr> </tbody>
+					 </table>
+				 </div>
+			 </div>
+		</div>
+</form>
+</body>
+<script type="text/javascript">
+function recalc_onclick(ctl){if (true) { }}
+function calc(data){var c1L14=data['DisTimeR10'];var c1K14=data['DisTimeR9'];var c1J14=data['DisTimeR8'];var c1I14=data['DisTimeR7'];var c1H14=data['DisTimeR6'];var c1G14=data['DisTimeR5'];var c1F14=data['DisTimeR4'];var c1E14=data['DisTimeR3'];var c1D14=data['DisTimeR2'];var c1C14=data['DisTimeR1'];var c1L13=data['DisTimeL10'];var c1K13=data['DisTimeL9'];var c1J13=data['DisTimeL8'];var c1I13=data['DisTimeL7'];var c1H13=data['DisTimeL6'];var c1G13=data['DisTimeL5'];var c1F13=data['DisTimeL4'];var c1E13=data['DisTimeL3'];var c1D13=data['DisTimeL2'];var c1C13=data['DisTimeL1'];var c1L12=data['FriR10'];var c1K12=data['FriR9'];var c1J12=data['FriR8'];var c1I12=data['FriR7'];var c1H12=data['FriR6'];var c1G12=data['FriR5'];var c1F12=data['FriR4'];var c1E12=data['FriR3'];var c1D12=data['FriR2'];var c1C12=data['FriR1'];var c1L11=data['FriL10'];var c1K11=data['FriL9'];var c1J11=data['FriL8'];var c1I11=data['FriL7'];var c1H11=data['FriL6'];var c1G11=data['FriL5'];var c1F11=data['FriL4'];var c1E11=data['FriL3'];var c1D11=data['FriL2'];var c1C11=data['FriL1'];var c1L10=data['Wt10R10'];var c1K10=data['Wt10R9'];var c1J10=data['Wt10R8'];var c1I10=data['Wt10R7'];var c1H10=data['Wt10R6'];var c1G10=data['Wt10R5'];var c1F10=data['Wt10R4'];var c1E10=data['Wt10R3'];var c1D10=data['Wt10R2'];var c1C10=data['Wt10R1'];var c1L9=data['Wt10L10'];var c1K9=data['Wt10L9'];var c1J9=data['Wt10L8'];var c1I9=data['Wt10L7'];
+var c1H9=data['Wt10L6'];var c1G9=data['Wt10L5'];var c1F9=data['Wt10L4'];var c1E9=data['Wt10L3'];var c1D9=data['Wt10L2'];var c1C9=data['Wt10L1'];var c1L7=data['XLEW_1_7_12'];var c1H7=data['XLEW_1_7_8'];var c1C7=data['XLEW_1_7_3'];var c1L6=data['LimitDisIntTime'];var c1G6=data['LimitWt10TabMax'];var c1F6=data['LimitWt10TabTarget'];var c1E6=data['LimitWt10TabMin'];var c1L5=data['LimitFriPct'];var c1J4=data['CkBy'];var c1B4=data['DoneBy'];var c1C3=data['TabDesc'];};
+function postcode() {
+ document.getElementById('TabDesc').value="White to off-white, round biconvex Tablets debossed \"CD\' on one side and \"75\" on other side.";
+};
+function TriggerOnchange(hiddenId)
+{
+    var e = jQuery.Event('change');
+    $('#'+hiddenId).trigger(e);
+}
+var eeisus=1;var eetrue="TRUE";var eefalse="FALSE";var eedec=".";var eeth=",";var eedecreg=new RegExp("\\.","g");var eethreg=new RegExp(",","g");var eecurrencyreg=new RegExp("[$]","g");var eepercentreg=new RegExp("%","g");
+var jsonLocal='{"eeisus":1,"eetrue":"TRUE","eefalse":"FALSE","eedec":".","eeth":",","eedecreg":["\\\\.","g"],"eethreg":[",","g"],"eecurrencyreg":["[$]","g"],"eepercentreg":["%","g"]}';
+function myIsNaN(x){return(isNaN(x)||(typeof x=='number'&&!isFinite(x)));};
+
+function round(n,nd){if(isFinite(n)&&isFinite(nd)){var sign_n=(n<0)?-1:1;var abs_n=Math.abs(n);var factor=Math.pow(10,nd);return sign_n*Math.round(abs_n*factor)/factor;}else{return NaN;}};
+
+function b2s(b){return b?eetrue:eefalse;};
+
+function eeparseFloat(str){str=String(str).replace(eedecreg,".");var res=parseFloat(str);if(isNaN(res)){return 0;}else{return res;}};
+
+function eeparsePercent(str){var parts=String(str).split('%');var tmp=String(parts[0]).replace(eedecreg,".");var res=parseFloat(tmp)/100;if(isNaN(res)){return 0;}else{return res;}};
+
+var near0RegExp=new RegExp("[.](.*0000000|.*9999999)");function eedisplayFloat(x){if(myIsNaN(x)){return Number.NaN;}else{var str=String(x);if(near0RegExp.test(str)){x=round(x,8);str=String(x);}return str.replace(/\./g,eedec);}};
+
+function eedisplayFloatND(x,nd){if(myIsNaN(x)){return Number.NaN;}else{var res=round(x,nd);if(nd>0){var str=String(res);if(str.indexOf('e')!=-1)return str;if(str.indexOf('E')!=-1)return str;var parts=str.split('.');if(parts.length<2){var decimals=('00000000000000').substring(0,nd);return(parts[0]).toString()+eedec+decimals;}else{var decimals=((parts[1]).toString()+'00000000000000').substring(0,nd);return(parts[0]).toString()+eedec+decimals;}}else{return res;}}};
+
+function eedisplayPercentND(x,nd){if(myIsNaN(x)){return Number.NaN;}else{return eedisplayFloatND(x*100,nd)+'%';}}
+
+var eeparseFloatVreg=new RegExp("^ *-?[0-9.]+ *$");function eeparseFloatV(str){if(str=="")return str;str=String(str).replace(eedecreg,".");if(!eeparseFloatVreg.test(str)){return str;};var res=parseFloat(str);if(isNaN(res)){return str;}else{return res;}};
+
+var eeparsePercentVreg=new RegExp("^ *-?[0-9.]+$");function eeparsePercentV(str){if(str=="")return str;var parts=String(str).split('%');var tmp=String(parts[0]).replace(eedecreg,".");if(!eeparsePercentVreg.test(tmp)){return str;};var res=parseFloat(tmp)/100;if(isNaN(res)){return str;}else{return res;}};
+
+function eedisplayPercentNDV(x,nd){if(x=="")return x;if(isFinite(x)){return eedisplayPercentND(x,nd)}else{return x}}
+
+function eedisplayFloatNDV(x,nd){if(x=="")return x;if(isFinite(x)){return eedisplayFloatND(x,nd)}else{return x}};
+function eequerystring(){
+    var variable,key,value,ii,querystring,variables;querystring=document.location.search;
+    if(querystring.length>0){
+        variables=querystring.substring(1).split('&');
+        for(ii=0;ii<variables.length;ii++){
+            variable=variables[ii].split('=');
+            key=unescape(variable[0])
+            value=unescape(variable[1]);
+            if(document.formc[key]!=null)
+                document.formc[key].value=value;
+        }
+    }
+}
+      function LoadFromQueryString(){
+    eequerystring();
+    recalc_onclick('');}
+function navigate(evt)
+{
+	var key = evt.keyCode | evt.which;
+	
+	/* handle only Enter (13), arrow down key(40) and arrow up key (38) */
+	if(key != 13 && key != 40 && key != 38) return; 
+	
+	/* IE 8 does not have target so will resolve with srcElement */
+	/* thought accessing target is faster than another jquery selector $(':focus'); */
+	var cur_elem = $(evt.target || evt.srcElement);
+
+	// implementing textarea logic
+	if(cur_elem.is("textarea")) return;
+	
+	////discarding slider navigation using arrow key.
+	//if((cur_elem.hasClass('ui-slider-handle')) && (key == 40 || key == 38)) {return;}
+	
+	/*{
+		
+		if(key == 13) return;
+		
+		var firstNewline = cur_elem.val().indexOf('\n');		
+		var lastNewline = cur_elem.val().lastIndexOf('\n');	
+		var cursorPos = cur_elem.prop("selectionStart");	
+				
+		if(firstNewline > -1)
+		{	
+			// if we are not in first or last line, don't navigate. 
+			if (cursorPos > firstNewline && cursorPos <= lastNewline) return;
+
+			// if we are in the first line, but up key was not pressed, don't navigate. 
+			if(cursorPos <= firstNewline && key != 38) return;
+			
+			// if we are in last line, but down key was not pressed, don't navigate. 
+			if(cursorPos > lastNewline && key != 40) return;		
+		}
+		
+	}*/
+	
+	/* getting current field location.. */
+	/* here 10 means we want to use decimal number system for parsing */
+	var cur_sheet = parseInt(cur_elem.attr('data-sheet'), 10);
+	var cur_row = parseInt(cur_elem.attr('data-row'), 10);		
+	var cur_col = parseInt(cur_elem.attr('data-col'), 10);
+	
+	var foundFocus = false;
+	
+	/* caching the sheet div selector */
+	var sheetSelector = $('#sheet-' + cur_sheet + '');
+	var inputSelector = 'input:not(":hidden,:button,[readonly=readonly],:disabled"),select,a.ui-slider-handle,textarea';
+	var next_row = cur_row + 1;	
+	var prev_row = cur_row - 1;	
+	
+	/* assuming next row is the last row */
+	var max_row = next_row; 
+	var min_row = prev_row;
+	
+	while((key == 40 && next_row <= max_row) || (key == 38 && prev_row >= min_row))	
+	{			
+		/* looking for next higher data-row with same data-sheet and data-col.. */
+		/* if found, it results in faster navigation */
+		var next_focus_elem = sheetSelector.find(inputSelector).filter('[data-sheet='+ cur_sheet +'][data-row='+ (key == 38 ? prev_row  : next_row) + '][data-col='+ cur_col + ']');
+		if(next_focus_elem.length > 0)
+		{
+			next_focus_elem[0].focus();
+			foundFocus = true;
+			break;
+		}			
+		else
+		{
+			var arrRows;
+			
+			/* if not saved eariler into jquery data store of sheet div  */
+			if(sheetSelector.data('col'+ cur_col) == undefined)
+			{	
+				/* create array of data-row for given data-sheet and data-col */
+				arrRows = sheetSelector.find(inputSelector).filter('[data-sheet=' + cur_sheet + '][data-col='+ cur_col + ']').map(					
+				function(){return parseInt($(this).attr('data-row'), 10);
+					}).toArray();
+					
+				/* store into data-colx data store of sheet div where x is the cur_col */
+				sheetSelector.data('col' + cur_col, arrRows);
+			}
+			else
+			{
+				/* fetch from jquery data store of sheet div */
+				arrRows = sheetSelector.data('col' + cur_col);				
+			}
+			
+			/* assuming array is sorted.. */
+			max_row = arrRows[arrRows.length - 1];
+			min_row = arrRows[0];
+			/* IE 8 does not have indexOf so using jquery method inArray as alternative */
+			var rowIndex = ('indexOf' in Array.prototype) ? arrRows.indexOf(cur_row): $.inArray(cur_row, arrRows);
+			if(key == 40 && cur_row < max_row)
+			{
+				next_row =  arrRows[rowIndex + 1];
+			}
+			else if(key == 38 && cur_row > min_row)
+			{
+				prev_row =  arrRows[rowIndex - 1];
+			}
+			else
+			{ 
+				break;				
+			}		
+		}
+	}
+	if(!foundFocus) /* navigate to next tab index if not found. */
+	{
+		var next_idx;
+		if(key == 38) next_idx = parseInt(cur_elem.attr('tabindex'), 10) - 1;
+		else next_idx = parseInt(cur_elem.attr('tabindex'), 10) + 1;
+		
+		/* look for next navigable field with higher tab index..*/
+		var next_input = sheetSelector.find(inputSelector).filter('[data-sheet][data-row][data-col][tabindex=' + next_idx + ']');
+		if(next_input.length > 0)
+		{
+			next_input.focus();
+		}
+		else
+		{	
+			/* move to first tab index as last resort. */
+			sheetSelector.find(inputSelector).filter('[data-sheet][data-row][data-col][tabindex]:first').focus(); 
+		}
+	}
+	/* IE lack preventDefault so */
+	evt.preventDefault ? evt.preventDefault() : evt.returnValue = false;
+}
+
+  </script>
+</html>

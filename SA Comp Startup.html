@@ -1,0 +1,2076 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Comp Startup</title>
+<link type="text/css" rel="stylesheet" href="../../../css/Forms_HTML/BatchProcess.css">
+<link type="text/css" rel="stylesheet" href="BatchProcess.css">
+<script type="text/javascript" src="../../../js/Forms_HTML/eBPR.js"></script>
+<script type="text/javascript" src="eBPR.js"></script>
+<script type="text/javascript">
+function resetClick(){
+    document.formc.reset();
+    postcode();
+    recalc_onclick('');
+    LoadFromQueryString();
+}
+
+function recalc_onclick(ctl){if (true) { }}
+function calc(data){var c1R38=data['Samp90ThkR'];var c1Q38=data['Samp90WtR'];var c1O38=data['Samp60ThkR'];var c1N38=data['Samp60WtR'];var c1L38=data['Samp30ThkR'];var c1K38=data['Samp30WtR'];var c1I38=data['Samp90ThkL'];var c1H38=data['Samp90WtL'];var c1F38=data['Samp60ThkL'];var c1E38=data['Samp60WtL'];var c1C38=data['Samp30ThkL'];var c1B38=data['Samp30WtL'];var c1R37=data['Samp89ThkR'];var c1Q37=data['Samp89'];var c1O37=data['Samp59ThkR'];var c1N37=data['Samp59WtR'];var c1L37=data['Samp29ThkR'];var c1K37=data['Samp29WtR'];var c1I37=data['Samp89ThkL'];var c1H37=data['Samp89WtL'];var c1F37=data['Samp59ThkL'];var c1E37=data['Samp59WtL'];var c1C37=data['Samp29ThkL'];var c1B37=data['Samp29WtL'];var c1R36=data['Samp88ThkR'];var c1Q36=data['Samp88WtR'];var c1O36=data['Samp58ThkR'];var c1N36=data['Samp58WtR'];var c1L36=data['Samp28ThkR'];var c1K36=data['Samp28WtR'];var c1I36=data['Samp88ThkL'];var c1H36=data['Samp88WtL'];var c1F36=data['Samp58ThkL'];var c1E36=data['Samp58WtL'];var c1C36=data['Samp28ThkL'];var c1B36=data['Samp28WtL'];var c1R35=data['Samp87ThkR'];var c1Q35=data['Samp87WtR'];var c1O35=data['Samp57ThkR'];var c1N35=data['Samp57WtR'];var c1L35=data['Samp27ThkR'];var c1K35=data['Samp27WtR'];var c1I35=data['Samp87ThkL'];var c1H35=data['Samp87WtL'];var c1F35=data['Samp57ThkL'];var c1E35=data['Samp57WtL'];var c1C35=data['Samp27ThkL'];var c1B35=data['Samp27WtL'];var c1R34=data['Samp86ThkR'];
+    var c1Q34=data['Samp86WtR'];var c1O34=data['Samp56ThkR'];var c1N34=data['Samp56WtR'];var c1L34=data['Samp26ThkR'];var c1K34=data['Samp26WtR'];var c1I34=data['Samp86ThkL'];var c1H34=data['Samp86WtL'];var c1F34=data['Samp56ThkL'];var c1E34=data['Samp56WtL'];var c1C34=data['Samp26ThkL'];var c1B34=data['Samp26WtL'];var c1R33=data['Samp85ThkR'];var c1Q33=data['Samp85WtR'];var c1O33=data['Samp55ThkR'];var c1N33=data['Samp55WtR'];var c1L33=data['Samp25ThkR'];var c1K33=data['Samp25WtR'];var c1I33=data['Samp85ThkL'];var c1H33=data['Samp85WtL'];var c1F33=data['Samp55ThkL'];var c1E33=data['Samp55WtL'];var c1C33=data['Samp25ThkL'];var c1B33=data['Samp25WtL'];var c1R32=data['Samp84ThkR'];var c1Q32=data['Samp84WtR'];var c1O32=data['Samp54ThkR'];var c1N32=data['Samp54WtR'];var c1L32=data['Samp24ThkR'];var c1K32=data['Samp24WtR'];var c1I32=data['Samp84ThkL'];var c1H32=data['Samp84WtL'];var c1F32=data['Samp54ThkL'];var c1E32=data['Samp54WtL'];var c1C32=data['Samp24ThkL'];var c1B32=data['Samp24WtL'];var c1R31=data['Samp83ThkR'];var c1Q31=data['Samp83WtR'];var c1O31=data['Samp53ThkR'];var c1N31=data['Samp53WtR'];var c1L31=data['Samp23ThkR'];var c1K31=data['Samp23WtR'];var c1I31=data['Samp83ThkL'];var c1H31=data['Samp83WtL'];var c1F31=data['Samp53ThkL'];var c1E31=data['Samp53WtL'];var c1C31=data['Samp23ThkL'];var c1B31=data['Samp23WtL'];var c1R30=data['Samp82ThkR'];var c1Q30=data['Samp82WtR'];var c1O30=data['Samp52ThkR'];
+    var c1N30=data['Samp52WtR'];var c1L30=data['Samp22ThkR'];var c1K30=data['Samp22WtR'];var c1I30=data['Samp82ThkL'];var c1H30=data['Samp82WtL'];var c1F30=data['Samp52ThkL'];var c1E30=data['Samp52WtL'];var c1C30=data['Samp22ThkL'];var c1B30=data['Samp22WtL'];var c1R29=data['Samp81ThkR'];var c1Q29=data['Samp81WtR'];var c1O29=data['Samp51ThkR'];var c1N29=data['Samp51WtR'];var c1L29=data['Samp21ThkR'];var c1K29=data['Samp21WtR'];var c1I29=data['Samp81ThkL'];var c1H29=data['Samp81WtL'];var c1F29=data['Samp51ThkL'];var c1E29=data['Samp51WtL'];var c1C29=data['Samp21ThkL'];var c1B29=data['Samp21WtL'];var c1R28=data['Samp80ThkR'];var c1Q28=data['Samp80WtR'];var c1O28=data['Samp50ThkR'];var c1N28=data['Samp50WtR'];var c1L28=data['Samp20ThkR'];var c1K28=data['Samp20WtR'];var c1I28=data['Samp80ThkL'];var c1H28=data['Samp80WtL'];var c1F28=data['Samp50ThkL'];var c1E28=data['Samp50WtL'];var c1C28=data['Samp20ThkL'];var c1B28=data['Samp20WtL'];var c1R27=data['Samp79ThkR'];var c1Q27=data['Samp79WtR'];var c1O27=data['Samp49ThkR'];var c1N27=data['Samp49WtR'];var c1L27=data['Samp19ThkR'];var c1K27=data['Samp19WtR'];var c1I27=data['Samp79ThkL'];var c1H27=data['Samp79WtL'];var c1F27=data['Samp49ThkL'];var c1E27=data['Samp49WtL'];var c1C27=data['Samp19ThkL'];var c1B27=data['Samp19WtL'];var c1R26=data['Samp78ThkR'];var c1Q26=data['Samp78WtR'];var c1O26=data['Samp48ThkR'];var c1N26=data['Samp48WtR'];var c1L26=data['Samp18ThkR'];
+    var c1K26=data['Samp18WtR'];var c1I26=data['Samp78ThkL'];var c1H26=data['Samp78WtL'];var c1F26=data['Samp48ThkL'];var c1E26=data['Samp48WtL'];var c1C26=data['Samp18ThkL'];var c1B26=data['Samp18WtL'];var c1R25=data['Samp77ThkR'];var c1Q25=data['Samp77WtR'];var c1O25=data['Samp47ThkR'];var c1N25=data['Samp47WtR'];var c1L25=data['Samp17ThkR'];var c1K25=data['Samp17WtR'];var c1I25=data['Samp77ThkL'];var c1H25=data['Samp77WtL'];var c1F25=data['Samp47ThkL'];var c1E25=data['Samp47WtL'];var c1C25=data['Samp17ThkL'];var c1B25=data['Samp17WtL'];var c1R24=data['Samp76ThkR'];var c1Q24=data['Samp76WtR'];var c1O24=data['Samp46ThkR'];var c1N24=data['Samp46WtR'];var c1L24=data['Samp16ThkR'];var c1K24=data['Samp16WtR'];var c1I24=data['Samp76ThkL'];var c1H24=data['Samp76WtL'];var c1F24=data['Samp46ThkL'];var c1E24=data['Samp46WtL'];var c1C24=data['Samp16ThkL'];var c1B24=data['Samp16WtL'];var c1R23=data['Samp75ThkR'];var c1Q23=data['Samp75WtR'];var c1O23=data['Samp45ThkR'];var c1N23=data['Samp45WtR'];var c1L23=data['Samp15ThkR'];var c1K23=data['Samp15WtR'];var c1I23=data['Samp75ThkL'];var c1H23=data['Samp75WtL'];var c1F23=data['Samp45ThkL'];var c1E23=data['Samp45WtL'];var c1C23=data['Samp15ThkL'];var c1B23=data['Samp15WtL'];var c1R22=data['Samp74ThkR'];var c1Q22=data['Samp74WtR'];var c1O22=data['Samp44ThkR'];var c1N22=data['Samp44WtR'];var c1L22=data['Samp14ThkR'];var c1K22=data['Samp14WtR'];var c1I22=data['Samp74ThkL'];
+    var c1H22=data['Samp74WtL'];var c1F22=data['Samp44ThkL'];var c1E22=data['Samp44WtL'];var c1C22=data['Samp14ThkL'];var c1B22=data['Samp14WtL'];var c1R21=data['Samp73ThkR'];var c1Q21=data['Samp73WtR'];var c1O21=data['Samp43ThkR'];var c1N21=data['Samp43WtR'];var c1L21=data['Samp13ThkR'];var c1K21=data['Samp13WtR'];var c1I21=data['Samp73ThkL'];var c1H21=data['Samp73WtL'];var c1F21=data['Samp43ThkL'];var c1E21=data['Samp43WtL'];var c1C21=data['Samp13ThkL'];var c1B21=data['Samp13WtL'];var c1R20=data['Samp72ThkR'];var c1Q20=data['Samp72WtR'];var c1O20=data['Samp42ThkR'];var c1N20=data['Samp42WtR'];var c1L20=data['Samp12ThkR'];var c1K20=data['Samp12WtR'];var c1I20=data['Samp72ThkL'];var c1H20=data['Samp72WtL'];var c1F20=data['Samp42ThkL'];var c1E20=data['Samp42WtL'];var c1C20=data['Samp12ThkL'];var c1B20=data['Samp12WtL'];var c1R19=data['Samp71ThkR'];var c1Q19=data['Samp71WtR'];var c1O19=data['Samp41ThkR'];var c1N19=data['Samp41WtR'];var c1L19=data['Samp11ThkR'];var c1K19=data['Samp11WtR'];var c1I19=data['Samp71ThkL'];var c1H19=data['Samp71WtL'];var c1F19=data['Samp41ThkL'];var c1E19=data['Samp41WtL'];var c1C19=data['Samp11ThkL'];var c1B19=data['Samp11WtL'];var c1R18=data['Samp70ThkR'];var c1Q18=data['Samp70WtR'];var c1O18=data['Samp40ThkR'];var c1N18=data['Samp40WtR'];var c1L18=data['Samp10ThkR'];var c1K18=data['Samp10WtR'];var c1I18=data['Samp70ThkL'];var c1H18=data['Samp70WtL'];var c1F18=data['Samp40ThkL'];
+    var c1E18=data['Samp40WtL'];var c1C18=data['Samp10ThkL'];var c1B18=data['Samp10WtL'];var c1R17=data['Samp69ThkR'];var c1Q17=data['Samp69WtR'];var c1O17=data['Samp39ThkR'];var c1N17=data['Samp39WtR'];var c1L17=data['Samp09ThkR'];var c1K17=data['Samp09WtR'];var c1I17=data['Samp69ThkL'];var c1H17=data['Samp69WtL'];var c1F17=data['Samp39ThkL'];var c1E17=data['Samp39WtL'];var c1C17=data['Samp09ThkL'];var c1B17=data['Samp09WtL'];var c1R16=data['Samp68ThkR'];var c1Q16=data['Samp68WtR'];var c1O16=data['Samp38ThkR'];var c1N16=data['Samp38WtR'];var c1L16=data['Samp08ThkR'];var c1K16=data['Samp08WtR'];var c1I16=data['Samp68ThkL'];var c1H16=data['Samp68WtL'];var c1F16=data['Samp38ThkL'];var c1E16=data['Samp38WtL'];var c1C16=data['Samp08ThkL'];var c1B16=data['Samp08WtL'];var c1R15=data['Samp67ThkR'];var c1Q15=data['Samp67WtR'];var c1O15=data['Samp37ThkR'];var c1N15=data['Samp37WtR'];var c1L15=data['Samp07ThkR'];var c1K15=data['Samp07WtR'];var c1I15=data['Samp67ThkL'];var c1H15=data['Samp67WtL'];var c1F15=data['Samp37ThkL'];var c1E15=data['Samp37WtL'];var c1C15=data['Samp07ThkL'];var c1B15=data['Samp07WtL'];var c1R14=data['Samp66ThkR'];var c1Q14=data['Samp66WtR'];var c1O14=data['Samp36ThkR'];var c1N14=data['Samp36WtR'];var c1L14=data['Samp06ThkR'];var c1K14=data['Samp06WtR'];var c1I14=data['Samp66ThkL'];var c1H14=data['Samp66WtL'];var c1F14=data['Samp36ThkL'];var c1E14=data['Samp36WtL'];var c1C14=data['Samp06ThkL'];
+    var c1B14=data['Samp06WtL'];var c1R13=data['Samp65ThkR'];var c1Q13=data['Samp65WtR'];var c1O13=data['Samp35ThkR'];var c1N13=data['Samp35WtR'];var c1L13=data['Samp05ThkR'];var c1K13=data['Samp05WtR'];var c1I13=data['Samp65ThkL'];var c1H13=data['Samp65WtL'];var c1F13=data['Samp35ThkL'];var c1E13=data['Samp35WtL'];var c1C13=data['Samp05ThkL'];var c1B13=data['Samp05WtL'];var c1R12=data['Samp64ThkR'];var c1Q12=data['Samp64WtR'];var c1O12=data['Samp34ThkR'];var c1N12=data['Samp34WtR'];var c1L12=data['Samp04ThkR'];var c1K12=data['Samp04WtR'];var c1I12=data['Samp64ThkL'];var c1H12=data['Samp64WtL'];var c1F12=data['Samp34ThkL'];var c1E12=data['Samp34WtL'];var c1C12=data['Samp04ThkL'];var c1B12=data['Samp04WtL'];var c1R11=data['Samp63ThkR'];var c1Q11=data['Samp63WtR'];var c1O11=data['Samp33ThkR'];var c1N11=data['Samp33WtR'];var c1L11=data['Samp03ThkR'];var c1K11=data['Samp03WtR'];var c1I11=data['Samp63ThkL'];var c1H11=data['Samp63WtL'];var c1F11=data['Samp33ThkL'];var c1E11=data['Samp33WtL'];var c1C11=data['Samp03ThkL'];var c1B11=data['Samp03WtL'];var c1R10=data['Samp62ThkR'];var c1Q10=data['Samp62WtR'];var c1O10=data['Samp32ThkR'];var c1N10=data['Samp32WtR'];var c1L10=data['Samp02ThkR'];var c1K10=data['Samp02WtR'];var c1I10=data['Samp62ThkL'];var c1H10=data['Samp62WtL'];var c1F10=data['Samp32ThkL'];var c1E10=data['Samp32WtL'];var c1C10=data['Samp02ThkL'];var c1B10=data['Samp02WtL'];var c1R9=data['Samp61ThkR'];
+    var c1Q9=data['Samp61WtR'];var c1O9=data['Samp31ThkR'];var c1N9=data['Samp31WtR'];var c1L9=data['Samp01ThkR'];var c1K9=data['Samp01WtR'];var c1I9=data['Samp61ThkL'];var c1H9=data['Samp61WtL'];var c1F9=data['Samp31ThkL'];var c1E9=data['Samp31WtL'];var c1C9=data['Samp01ThkL'];var c1B9=data['Samp01WtL'];var c1L5=data['CompTabThkMax'];var c1J5=data['CompTabThkMin'];var c1H5=data['CompTabWtMax'];var c1F5=data['CompTabWtTarget'];var c1D5=data['CompTabWtMin'];var c1Q4=data['DateAndTime'];var c1Q3=data['ThicknessID'];var c1Q2=data['BalanceID'];};
+function postcode() {
+}
+function TriggerOnchange(hiddenId)
+{
+    var e = jQuery.Event('change');
+    $('#'+hiddenId).trigger(e);
+}
+var eeisus=1;var eetrue="TRUE";var eefalse="FALSE";var eedec=".";var eeth=",";var eedecreg=new RegExp("\\.","g");var eethreg=new RegExp(",","g");var eecurrencyreg=new RegExp("[$]","g");var eepercentreg=new RegExp("%","g");
+var jsonLocal='{"eeisus":1,"eetrue":"TRUE","eefalse":"FALSE","eedec":".","eeth":",","eedecreg":["\\\\.","g"],"eethreg":[",","g"],"eecurrencyreg":["[$]","g"],"eepercentreg":["%","g"]}';
+function myIsNaN(x){return(isNaN(x)||(typeof x=='number'&&!isFinite(x)));}
+
+function round(n,nd){if(isFinite(n)&&isFinite(nd)){var sign_n=(n<0)?-1:1;var abs_n=Math.abs(n);var factor=Math.pow(10,nd);return sign_n*Math.round(abs_n*factor)/factor;}else{return NaN;}}
+
+function eeparseFloat(str){str=String(str).replace(eedecreg,".");var res=parseFloat(str);if(isNaN(res)){return 0;}else{return res;}}
+
+var near0RegExp=new RegExp("[.](.*0000000|.*9999999)");function eedisplayFloat(x){if(myIsNaN(x)){return Number.NaN;}else{var str=String(x);if(near0RegExp.test(str)){x=round(x,8);str=String(x);}return str.replace(/\./g,eedec);}}
+
+function eedisplayFloatND(x,nd){if(myIsNaN(x)){return Number.NaN;}else{var res=round(x,nd);if(nd>0){var str=String(res);if(str.indexOf('e')!=-1)return str;if(str.indexOf('E')!=-1)return str;var parts=str.split('.');if(parts.length<2){var decimals=('00000000000000').substring(0,nd);return(parts[0]).toString()+eedec+decimals;}else{var decimals=((parts[1]).toString()+'00000000000000').substring(0,nd);return(parts[0]).toString()+eedec+decimals;}}else{return res;}}}
+
+</script>
+</head>
+    <body>
+    <div style="display:none">
+    <select id="mastercontrol.links.source" multiple  size="1" name="mastercontrol.links.source"
+            title="Source Ref Links" style="display:none"></select>
+    </div>
+    <div id="FormTitle" class="formTitle"  style="text-align:center;width:820px;margin-left:15px;">
+    </div>
+        <form id="formc" title="formc" method="post" action="" target="_top">
+		<table width="700" align="left" style="margin-left:10px;border-spacing:0;">
+          <tr align="center" valign="middle">
+            <td height="60" colspan="2" class="nobdrRtMid"><div align="center">
+                <img src="factorytalkLogo.jpg"
+                     style="float: left;width:175px;height:37px;"></div></td>
+            <td height="60" colspan="12" valign="middle" class="formTitle"><div align="left">
+                <p>TABLET COMPRESSION START UP RECORD<br>
+              </p>
+                </div></td>
+          </tr>
+          <tr>
+            <td height="23" class="nobdrRtMid">Product Code:</td>
+            <td class="nobdrLtMid">
+              <input id="Product Code" type="text" title="Product Code" class="readonly" readonly="yes" style="width:100%;">
+           </td>
+            <td class="nobdrRtMid">Product Description:</td>
+            <td colspan="3" class="nobdrLtMid">
+              <input id="Description" title="Product Description" class="readonly" style="width:100%;"
+                     type="text" readonly="readonly"/>
+              <span style="display:none">
+              <input type="text" class="headerfield" id="mastercontrol.template.number"
+                   name="mastercontrol.template.number" title="Template Number" readonly="readonly" value="" >
+              <input type="text" class="headerfield" id="mastercontrol.template.revision"
+                   name="mastercontrol.template.revision" title="Template Revision" readonly="readonly" value="">
+            </span> </td>
+          </tr>
+          <tr>
+            <td class="nobdrRtMid"><label for="mastercontrol.form.number">Record #</label></td>
+            <td class="nobdrLtTop">
+              <input id="mastercontrol.form.number" name="mastercontrol.form.number" type="text" class="readonly"
+           readonly="readonly" style="width:100%;" title="CCoat InProcess number" value=""/>
+            </td>
+            <td class="nobdrRtMid">Batch size:</td>
+            <td class="nobdrLtMid">
+              <input id="BatchSize" type="text" value="" class="readonly" title="BatchSize" style="width:100%;"/>
+           </td>
+            <td class="nobdrRtMid">Form Issued:</td>
+            <td class="nobdrLtMid">
+              <input id="mastercontrol.form.created" name="mastercontrol.form.created" title="InProcess Date"
+           type="text" value="" class="readonly" readonly="readonly" style="width:100%;"/>
+          </td>
+          </tr>
+          <tr>
+            <td class="nobdrRtMid">MBR#</td>
+            <td class="nobdrLtTop">
+              <input id="MBRNo" type="text" class="readonly" readonly="yes" title="Batch number" value="" style="width:100%;"/>
+            </td>
+            <td class="nobdrLtMid">
+              <input name="mastercontrol.links.view.source" type="button" class="toolbarOrangebtn" id="mastercontrol.links.view.source"
+           title="View Source" value="View Source" alt="View Source">
+            </span></td>
+            <td class="nobdrRtMid">&nbsp;</td>
+            <td class="nobdrRtMid">Issued by:</td>
+            <td class="nobdrLtMid">
+              <input id="mastercontrol.form.creator" name="mastercontrol.form.creator" title="creator"
+           type="text"
+           value="" class="readonly" readonly="readonly" style="width:100%;"/>
+           </td>
+          </tr>
+          <tr class="botcapCenTop">
+            <td class="nobdrLtMid">&nbsp;</td>
+            <td class="nobdrLtMid">&nbsp;</td>
+            <td class="nobdrLtMid">&nbsp;</td>
+            <td class="nobdrLtMid">&nbsp;</td>
+            <td class="nobdrLtMid">&nbsp;</td>
+            <td class="nobdrLtMid">&nbsp;</td>
+          </tr>
+      </table>
+        <div class="clearBoth"></div>
+			<div id="tab">
+                    <table width= "700" cellspacing="0" cellpadding="0" style="border-spacing:0;">
+					<col width="35"/>
+					<col width="61"/>
+					<col width="61"/>
+					<col width="35"/>
+					<col width="61"/>
+					<col width="61"/>
+					<col width="35"/>
+					<col width="61"/>
+					<col width="61"/>
+					<col width="35"/>
+					<col width="61"/>
+					<col width="66"/>
+					<col width="35"/>
+					<col width="57"/>
+					<col width="61"/>
+					<col width="40"/>
+					<col width="60"/>
+					<col width="63"/>
+                    <tr>
+						<td class="allbdrCenMid" colspan = "3" rowspan = "4">&nbsp;</td>
+						<td class="allbdrCenMid" colspan = "10">
+							LIMITS
+						</td>
+						<td class="allbdrCenMid" rowspan = "4">&nbsp;</td>
+						<td class="allbdrRtMid" colspan = "2">
+							Balance No.:
+						</td>
+						<td class="allbdrLtMid" colspan = "2">
+							<input id="BalanceID" type="text" value="" class="enterdata" style="width:100%" title="BalanceID"/>
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrCenBot" colspan = "6"> Tablet weight (mg)</td>
+						<td class="allbdrCenBot" colspan = "4">
+							Thickness(mm)
+						</td>
+						<td class="allbdrRtMid" colspan = "2">
+							Thickness tester No:
+						</td>
+						<td class="allbdrLtMid" colspan = "2">
+							<input id="ThicknessID" type="text" value="" class="enterdata" style="width:100%" title="ThicknessID"/>
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" colspan = "2">
+							Minimum
+						</td>
+						<td class="allbdrCenMid" colspan = "2">
+							Target
+						</td>
+						<td class="allbdrCenMid" colspan = "2">
+							Maximum
+						</td>
+						<td class="allbdrCenMid" colspan = "2">
+							Minimum
+						</td>
+						<td class="allbdrCenMid" colspan = "2">
+							Maximum
+						</td>
+						<td class="allbdrRtMid" colspan = "2">
+							Date &amp; Time :
+						</td>
+						<td class="allbdrLtMid" colspan = "2">
+                            <input id="txtDT1" title="Date and Time" type="text" class="enterdata" size="18">
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" colspan = "2">
+							<input id="CompTabWtMin" type="text" value="285" class="enterdata" style="width:100%"
+                                   onchange="this.value=eedisplayFloat(eeparseFloat(this.value)); " title="CompTabWtMin"/>
+						</td>
+						<td class="allbdrCenMid" colspan = "2">
+							<input id="CompTabWtTarget" type="text" value="300" class="enterdata" style="width:100%"
+                                   onchange="this.value=eedisplayFloat(eeparseFloat(this.value)); " title="CompTabWtTarget"/>
+						</td>
+						<td class="allbdrCenMid" colspan = "2">
+							<input id="CompTabWtMax" type="text" value="315" class="enterdata" style="width:100%"
+                                   onchange="this.value=eedisplayFloat(eeparseFloat(this.value)); " title="CompTabWtMax"/>
+						</td>
+						<td class="allbdrCenMid" colspan = "2">
+							<input id="CompTabThkMin" type="text" value="4.0" class="enterdata" style="width:100%"
+                                   onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),1); " title="CompTabThkMin"/>
+						</td>
+						<td class="allbdrCenMid" colspan = "2">
+							<input id="CompTabThkMax" type="text" value="4.6" class="enterdata" style="width:100%"
+                                   onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),1); " title="CompTabThkMax"/>
+						</td>
+                        <td class="allbdrCenMid" colspan = "2">&nbsp;</td>
+                        <td class="allbdrCenMid" colspan = "2">
+                            <img src="../../../css/Forms_HTML/images/cal.gif" id="DT1" width="16" height="16" border="0"
+                                 alt="Pick a date" onclick="insertDT(this.id)"></td>
+                    </tr>
+                    <tr>
+						<td class="allbdrCenMid" colspan = "9">
+							LEFT SIDE
+						</td>
+						<td class="allbdrCenMid" colspan = "9">
+							RIGHT SIDE
+						</td>
+                    </tr>
+                    <tr>
+						<td class="allbdrCenBot" rowspan="2"> S.No.</td>
+                        <td class="allbdrCenBot">
+							Weight
+						</td>
+						<td class="allbdrCenBot">
+							Thickness
+						</td>
+						<td class="allbdrCenBot" rowspan="2"> S.No.</td>
+                        <td class="allbdrCenBot">
+							Weight
+						</td>
+						<td class="allbdrCenBot">
+							Thickness
+						</td>
+						<td class="allbdrCenBot" rowspan="2"> S.No.</td>
+                        <td class="allbdrCenBot">
+							Weight
+						</td>
+						<td class="allbdrCenBot">
+							Thickness
+						</td>
+						<td class="allbdrCenBot" rowspan="2"> S.No.</td>
+                        <td class="allbdrCenBot">
+							Weight
+						</td>
+						<td class="allbdrCenBot">
+							Thickness
+						</td>
+						<td class="allbdrCenBot" rowspan="2"> S.No.</td>
+                        <td class="allbdrCenBot">
+							Weight
+						</td>
+						<td class="allbdrCenBot">
+							Thickness
+						</td>
+						<td class="allbdrCenBot" rowspan="2"> S.No.</td>
+                        <td class="allbdrCenBot">
+							Weight
+						</td>
+						<td class="allbdrCenBot">
+							Thickness
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+
+						<td class="allbdrCenMid">
+							(mg)
+						</td>
+						<td class="allbdrCenMid">
+							(mm)
+						</td>
+
+						<td class="allbdrCenMid">
+							(mg)
+						</td>
+						<td class="allbdrCenMid">
+							(mm)
+						</td>
+
+						<td class="allbdrCenMid">
+							(mg)
+						</td>
+						<td class="allbdrCenMid">
+							(mm)
+						</td>
+
+						<td class="allbdrCenMid">
+							(mg)
+						</td>
+						<td class="allbdrCenMid">
+							(mm)
+						</td>
+						<td class="allbdrCenMid">
+							(mg)
+						</td>
+						<td class="allbdrCenMid">
+							(mm)
+						</td>
+						<td class="allbdrCenMid">
+							(mg)
+						</td>
+						<td class="allbdrCenMid">
+							(mm)
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							1
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp01WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp01WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp01ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp01ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							31
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp31WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp31WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp31ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp31ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							61
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp61WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp61WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp61ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp61ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							1
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp01WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp01WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp01ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp01ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							31
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp31WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp31WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp31ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp31ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							61
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp61WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp61WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp61ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp61ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							2
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp02WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp02WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp02ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp02ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							32
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp32WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp32WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp32ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp32ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							62
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp62WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp62WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp62ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp62ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							2
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp02WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp02WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp02ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp02ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							32
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp32WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp32WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp32ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp32ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							62
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp62WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp62WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp62ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp62ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							3
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp03WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp03WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp03ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp03ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							33
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp33WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp33WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp33ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp33ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							63
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp63WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp63WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp63ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp63ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							3
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp03WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp03WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp03ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp03ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							33
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp33WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp33WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp33ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp33ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							63
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp63WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp63WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp63ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp63ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							4
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp04WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp04WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp04ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp04ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							34
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp34WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp34WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp34ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp34ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							64
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp64WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp64WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp64ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp64ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							4
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp04WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp04WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp04ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp04ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							34
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp34WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp34WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp34ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp34ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							64
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp64WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp64WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp64ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp64ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							5
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp05WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp05WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp05ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp05ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							35
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp35WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp35WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp35ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp35ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							65
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp65WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp65WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp65ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp65ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							5
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp05WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp05WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp05ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp05ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							35
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp35WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp35WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp35ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp35ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							65
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp65WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp65WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp65ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp65ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							6
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp06WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp06WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp06ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp06ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							36
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp36WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp36WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp36ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp36ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							66
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp66WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp66WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp66ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp66ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							6
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp06WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp06WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp06ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp06ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							36
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp36WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp36WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp36ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp36ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							66
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp66WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp66WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp66ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp66ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							7
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp07WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp07WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp07ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp07ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							37
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp37WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp37WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp37ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp37ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							67
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp67WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp67WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp67ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp67ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							7
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp07WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp07WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp07ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp07ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							37
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp37WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp37WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp37ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp37ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							67
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp67WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp67WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp67ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp67ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							8
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp08WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp08WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp08ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp08ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							38
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp38WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp38WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp38ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp38ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							68
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp68WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp68WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp68ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp68ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							8
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp08WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp08WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp08ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp08ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							38
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp38WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp38WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp38ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp38ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							68
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp68WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp68WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp68ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp68ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							9
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp09WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp09WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp09ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp09ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							39
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp39WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp39WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp39ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp39ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							69
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp69WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp69WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp69ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp69ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							9
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp09WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp09WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp09ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp09ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							39
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp39WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp39WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp39ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp39ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							69
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp69WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp69WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp69ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp69ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							10
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp10WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp10WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp10ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp10ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							40
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp40WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp40WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp40ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp40ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							70
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp70WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp70WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp70ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp70ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							10
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp10WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp10WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp10ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp10ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							40
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp40WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp40WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp40ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp40ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							70
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp70WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp70WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp70ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp70ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							11
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp11WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp11WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp11ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp11ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							41
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp41WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp41WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp41ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp41ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							71
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp71WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp71WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp71ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp71ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							11
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp11WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp11WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp11ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp11ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							41
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp41WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp41WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp41ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp41ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							71
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp71WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp71WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp71ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp71ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							12
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp12WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp12WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp12ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp12ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							42
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp42WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp42WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp42ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp42ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							72
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp72WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp72WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp72ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp72ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							12
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp12WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp12WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp12ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp12ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							42
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp42WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp42WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp42ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp42ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							72
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp72WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp72WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp72ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp72ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							13
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp13WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp13WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp13ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp13ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							43
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp43WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp43WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp43ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp43ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							73
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp73WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp73WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp73ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp73ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							13
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp13WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp13WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp13ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp13ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							43
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp43WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp43WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp43ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp43ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							73
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp73WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp73WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp73ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp73ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							14
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp14WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp14WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp14ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp14ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							44
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp44WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp44WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp44ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp44ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							74
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp74WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp74WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp74ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp74ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							14
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp14WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp14WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp14ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp14ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							44
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp44WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp44WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp44ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp44ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							74
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp74WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp74WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp74ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp74ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							15
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp15WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp15WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp15ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp15ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							45
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp45WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp45WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp45ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp45ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							75
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp75WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp75WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp75ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp75ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							15
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp15WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp15WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp15ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp15ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							45
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp45WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp45WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp45ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp45ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							75
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp75WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp75WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp75ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp75ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							16
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp16WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp16WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp16ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp16ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							46
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp46WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp46WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp46ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp46ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							76
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp76WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp76WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp76ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp76ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							16
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp16WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp16WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp16ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp16ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							46
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp46WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp46WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp46ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp46ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							76
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp76WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp76WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp76ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp76ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							17
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp17WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp17WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp17ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp17ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							47
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp47WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp47WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp47ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp47ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							77
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp77WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp77WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp77ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp77ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							17
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp17WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp17WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp17ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp17ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							47
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp47WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp47WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp47ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp47ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							77
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp77WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp77WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp77ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp77ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							18
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp18WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp18WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp18ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp18ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							48
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp48WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp48WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp48ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp48ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							78
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp78WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp78WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp78ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp78ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							18
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp18WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp18WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp18ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp18ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							48
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp48WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp48WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp48ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp48ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							78
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp78WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp78WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp78ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp78ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							19
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp19WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp19WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp19ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp19ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							49
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp49WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp49WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp49ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp49ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							79
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp79WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp79WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp79ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp79ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							19
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp19WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp19WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp19ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp19ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							49
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp49WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp49WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp49ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp49ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							79
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp79WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp79WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp79ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp79ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							20
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp20WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp20WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp20ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp20ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							50
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp50WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp50WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp50ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp50ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							80
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp80WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp80WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp80ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp80ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							20
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp20WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp20WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp20ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp20ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							50
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp50WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp50WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp50ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp50ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							80
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp80WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp80WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp80ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp80ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							21
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp21WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp21WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp21ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp21ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							51
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp51WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp51WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp51ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp51ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							81
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp81WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp81WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp81ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp81ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							21
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp21WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp21WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp21ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp21ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							51
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp51WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp51WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp51ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp51ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							81
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp81WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp81WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp81ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp81ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							22
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp22WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp22WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp22ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp22ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							52
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp52WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp52WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp52ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp52ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							82
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp82WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp82WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp82ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp82ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							22
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp22WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp22WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp22ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp22ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							52
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp52WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp52WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp52ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp52ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							82
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp82WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp82WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp82ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp82ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							23
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp23WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp23WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp23ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp23ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							53
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp53WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp53WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp53ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp53ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							83
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp83WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp83WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp83ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp83ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							23
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp23WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp23WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp23ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp23ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							53
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp53WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp53WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp53ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp53ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							83
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp83WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp83WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp83ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp83ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							24
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp24WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp24WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp24ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp24ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							54
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp54WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp54WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp54ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp54ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							84
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp84WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp84WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp84ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp84ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							24
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp24WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp24WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp24ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp24ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							54
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp54WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp54WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp54ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp54ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							84
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp84WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp84WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp84ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp84ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							25
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp25WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp25WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp25ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp25ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							55
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp55WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp55WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp55ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp55ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							85
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp85WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp85WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp85ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp85ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							25
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp25WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp25WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp25ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp25ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							55
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp55WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp55WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp55ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp55ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							85
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp85WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp85WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp85ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp85ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							26
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp26WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp26WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp26ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp26ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							56
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp56WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp56WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp56ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp56ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							86
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp86WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp86WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp86ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp86ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							26
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp26WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp26WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp26ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp26ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							56
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp56WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp56WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp56ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp56ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							86
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp86WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp86WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp86ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp86ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							27
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp27WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp27WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp27ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp27ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							57
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp57WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp57WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp57ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp57ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							87
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp87WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp87WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp87ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp87ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							27
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp27WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp27WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp27ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp27ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							57
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp57WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp57WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp57ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp57ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							87
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp87WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp87WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp87ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp87ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							28
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp28WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp28WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp28ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp28ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							58
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp58WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp58WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp58ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp58ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							88
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp88WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp88WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp88ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp88ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							28
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp28WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp28WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp28ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp28ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							58
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp58WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp58WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp58ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp58ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							88
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp88WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp88WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp88ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp88ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							29
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp29WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp29WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp29ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp29ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							59
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp59WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp59WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp59ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp59ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							89
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp89WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp89WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp89ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp89ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							29
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp29WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp29WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp29ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp29ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							59
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp59WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp59WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp59ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp59ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							89
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp89" type="text" value="" class="enterdata" style="width:100%" title="Samp89"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp89ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp89ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:13pt">
+						<td class="allbdrCenMid">
+							30
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp30WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp30WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp30ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp30ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							60
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp60WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp60WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp60ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp60ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							90
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp90WtL" type="text" value="" class="enterdata" style="width:100%" title="Samp90WtL"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp90ThkL" type="text" value="" class="enterdata" style="width:100%" title="Samp90ThkL"/>
+						</td>
+						<td class="allbdrCenMid">
+							30
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp30WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp30WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp30ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp30ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							60
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp60WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp60WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp60ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp60ThkR"/>
+						</td>
+						<td class="allbdrCenMid">
+							90
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp90WtR" type="text" value="" class="enterdata" style="width:100%" title="Samp90WtR"/>
+						</td>
+						<td class="allbdrCenMid">
+							<input id="Samp90ThkR" type="text" value="" class="enterdata" style="width:100%" title="Samp90ThkR"/>
+						</td>
+                    </tr>
+                    <tr style="height:30pt">
+                        <td class="allbdrRtTop" style="height:30pt;" colspan="3">Remarks:</td>
+                        <td class="allbdrLtTop" style="height:30pt;" colspan = "15">
+                            <textarea id="Remarks" class="allbdrLtTop" style="width:100%;
+                            overflow-y: scroll;height:30pt;" title="Remarks"></textarea>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+				<br>
+<div class="sectionHeading" style="margin-left:20px;">
+	<input type="text" id="mastercontrol.route.stepnameat.step1" name="mastercontrol.route.stepnameat.step1"
+		   title="Step1 Esig Meaning" value="Inspection" size="100" class="sigmeaning" readonly="yes"/>
+</div>
+<div class="subSection">
+	<div class="signatureData">
+		<table class="signatureTable" cellpadding="0" cellspacing="0">
+			<thead>
+			<tr>
+				<th scope="col" class="signatureName"><label
+						for="mastercontrol.route.esig.users.step1">Name</label></th>
+				<th scope="col" class="signatureDate"><label
+						for="mastercontrol.route.esig.timestamps.step1">Date</label>
+				</th>
+				<th scope="col" class="signatureStatus"><label for="mastercontrol.route.esig.sigstatus.step1">Signoff
+					Status</label></th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td><textarea id="mastercontrol.route.esig.users.step1"
+							  name="mastercontrol.route.esig.users.step1" class="signatureField"
+							  title="Step1 Name" readonly="readonly"></textarea></td>
+				<td><textarea id="mastercontrol.route.esig.timestamps.step1"
+                              name="mastercontrol.route.esig.timestamps.step1" class="signatureField"
+							  title="Step1 Date" readonly="readonly"></textarea></td>
+				<td><textarea id="mastercontrol.route.esig.sigstatus.step1"
+                              name="mastercontrol.route.esig.sigstatus.step1" class="signatureField"
+							  title="Step1 Signoff Status" readonly="readonly"></textarea></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!-- Signature Section Ends -->
+<!-- Signature Section Starts -->
+<div class="sectionHeading" style="margin-left:20px;">
+	<input type="text" id="mastercontrol.route.stepnameat.step2" name="mastercontrol.route.stepnameat.step2"
+		   title="Step2 Esig Meaning" value="Verification" size="100" class="sigmeaning" readonly="yes"/>
+</div>
+<div class="subSection">
+	<div class="signatureData">
+
+		<table class="signatureTable" cellpadding="0" cellspacing="0">
+			<thead>
+			<tr>
+				<th scope="col" class="signatureName"><label
+						for="mastercontrol.route.esig.users.step2">Name</label></th>
+				<th scope="col" class="signatureDate"><label
+						for="mastercontrol.route.esig.timestamps.step2">Date</label>
+				</th>
+				<th scope="col" class="signatureStatus"><label for="mastercontrol.route.esig.sigstatus.step2">Signoff
+					Status</label></th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td><textarea id="mastercontrol.route.esig.users.step2"
+                              name="mastercontrol.route.esig.users.step2" class="signatureField"
+							  title="Step2 Name" readonly="readonly"></textarea></td>
+				<td><textarea id="mastercontrol.route.esig.timestamps.step2"
+                              name="mastercontrol.route.esig.timestamps.step2" class="signatureField"
+							  title="Step2 Date" readonly="readonly"></textarea></td>
+				<td><textarea id="mastercontrol.route.esig.sigstatus.step2"
+                              name="mastercontrol.route.esig.sigstatus.step2" class="signatureField"
+							  title="Step2 Signoff Status" readonly="readonly"></textarea></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!-- Signature Section Ends -->
+        </form>
+    </body>
+</html>
